@@ -1,0 +1,2402 @@
+[
+  {
+    "id": "QA-001",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-002",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-003",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-004",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-005",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-006",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-007",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-008",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-009",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-010",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-011",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-012",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-013",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-014",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-015",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-016",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-017",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-018",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-019",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-020",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-021",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-022",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-023",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-024",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-025",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-026",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-027",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-028",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-029",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-030",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-031",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-032",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-033",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-034",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-035",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名材料是什么？",
+    "expected": "姓名、学号、学院信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-036",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的开放时间是什么？",
+    "expected": "2026 年 7 月 6 日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-037",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的活动地点是什么？",
+    "expected": "信息楼 C502",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-038",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的报名材料是什么？",
+    "expected": "预约表、校园卡",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-039",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-040",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-041",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-042",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-043",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-044",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-045",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-046",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-047",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-048",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-049",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-050",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-051",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-052",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-053",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-054",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-055",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-056",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-057",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-058",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-059",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-060",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-061",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-062",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-063",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-064",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-065",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-066",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-067",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-068",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-069",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-070",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-071",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-072",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-073",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名材料是什么？",
+    "expected": "姓名、学号、学院信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-074",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的开放时间是什么？",
+    "expected": "2026 年 7 月 6 日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-075",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的活动地点是什么？",
+    "expected": "信息楼 C502",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-076",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的报名材料是什么？",
+    "expected": "预约表、校园卡",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-077",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-078",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-079",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-080",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-081",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-082",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-083",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-084",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-085",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-086",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-087",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-088",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-089",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-090",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-091",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-092",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-093",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-094",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-095",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-096",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-097",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-098",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-099",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-100",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-101",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-102",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-103",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-104",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-105",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-106",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-107",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-108",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-109",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-110",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-111",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名材料是什么？",
+    "expected": "姓名、学号、学院信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-112",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的开放时间是什么？",
+    "expected": "2026 年 7 月 6 日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-113",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的活动地点是什么？",
+    "expected": "信息楼 C502",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-114",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的报名材料是什么？",
+    "expected": "预约表、校园卡",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-115",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-116",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-117",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-118",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-119",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-120",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-121",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-122",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-123",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-124",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-125",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-126",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-127",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-128",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-129",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-130",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-131",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-132",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-133",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-134",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-135",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-136",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-137",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-138",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-139",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-140",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-141",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-142",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-143",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-144",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-145",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-146",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-147",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-148",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-149",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名材料是什么？",
+    "expected": "姓名、学号、学院信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-150",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的开放时间是什么？",
+    "expected": "2026 年 7 月 6 日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-151",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的活动地点是什么？",
+    "expected": "信息楼 C502",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-152",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的报名材料是什么？",
+    "expected": "预约表、校园卡",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-153",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-154",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-155",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-156",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-157",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-158",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-159",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-160",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-161",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-162",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-163",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-164",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-165",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-166",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-167",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-168",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-169",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-170",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-171",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-172",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-173",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-174",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-175",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-176",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-177",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-178",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-179",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-180",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-181",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-182",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-183",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-184",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-185",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-186",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-187",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名材料是什么？",
+    "expected": "姓名、学号、学院信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-188",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的开放时间是什么？",
+    "expected": "2026 年 7 月 6 日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-189",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的活动地点是什么？",
+    "expected": "信息楼 C502",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-190",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的报名材料是什么？",
+    "expected": "预约表、校园卡",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-191",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-192",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-193",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-194",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-195",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-196",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-197",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-198",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-199",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-200",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-201",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-202",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-203",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-204",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-205",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-206",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-207",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-208",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-209",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-210",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-211",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-212",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-213",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-214",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-215",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-216",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-217",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-218",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-219",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-220",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-221",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-222",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-223",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-224",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-225",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名材料是什么？",
+    "expected": "姓名、学号、学院信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-226",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的开放时间是什么？",
+    "expected": "2026 年 7 月 6 日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-227",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的活动地点是什么？",
+    "expected": "信息楼 C502",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-228",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的报名材料是什么？",
+    "expected": "预约表、校园卡",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-229",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-230",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-231",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-232",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-233",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-234",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-235",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-236",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-237",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-238",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-239",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-240",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-241",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-242",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-243",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-244",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-245",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-246",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-247",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-248",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-249",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-250",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-251",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-252",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-253",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-254",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-255",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-256",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-257",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-258",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-259",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-260",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-261",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-262",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-263",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名材料是什么？",
+    "expected": "姓名、学号、学院信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-264",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的开放时间是什么？",
+    "expected": "2026 年 7 月 6 日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-265",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的活动地点是什么？",
+    "expected": "信息楼 C502",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-266",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "question": "智能计算实验室开放日的报名材料是什么？",
+    "expected": "预约表、校园卡",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-267",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名截止时间是什么？",
+    "expected": "2026 年 6 月 28 日 24:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-268",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的初赛地点是什么？",
+    "expected": "综合楼 A203",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-269",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的报名材料是什么？",
+    "expected": "报名表、项目说明书、诚信承诺书",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-270",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "question": "人工智能创新赛的联系方式是什么？",
+    "expected": "010-66881234",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-271",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的考试地点是什么？",
+    "expected": "教学楼 B401",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-272",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名截止时间是什么？",
+    "expected": "2026 年 6 月 18 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-273",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的报名材料是什么？",
+    "expected": "学生证、身份证复印件",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-274",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "question": "大学英语四级模拟考试的联系方式是什么？",
+    "expected": "010-66882345",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-275",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的开放时间是什么？",
+    "expected": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-276",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的办理地点是什么？",
+    "expected": "图书馆一层服务台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-277",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "question": "图书馆暑期开放的联系方式是什么？",
+    "expected": "010-66883456",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-278",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请截止时间是什么？",
+    "expected": "2026 年 9 月 10 日 17:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-279",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请条件是什么？",
+    "expected": "上一学年无不及格课程且实践项目获校级以上奖励",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-280",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的申请材料是什么？",
+    "expected": "申请表、成绩单、项目证明材料",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-281",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "question": "创新实践奖学金的联系方式是什么？",
+    "expected": "010-66884567",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-282",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请截止时间是什么？",
+    "expected": "2026 年 6 月 20 日 18:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-283",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的办理地点是什么？",
+    "expected": "学生事务中心 205",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-284",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "question": "学生宿舍暑期留宿的申请材料是什么？",
+    "expected": "留宿申请表、导师意见、紧急联系人信息",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-285",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名截止时间是什么？",
+    "expected": "2026 年 6 月 25 日 20:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-286",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的初赛地点是什么？",
+    "expected": "线上教学平台",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-287",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "question": "暑期数据分析课程的报名材料是什么？",
+    "expected": "课程报名表、先修课程证明",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-288",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的开放时间是什么？",
+    "expected": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-289",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的办理地点是什么？",
+    "expected": "校医院二层体检中心",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-290",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "question": "校医院体检预约的申请材料是什么？",
+    "expected": "校园卡、身份证",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-291",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的开放时间是什么？",
+    "expected": "工作日 9:00-16:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-292",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的办理地点是什么？",
+    "expected": "第一食堂北门一卡通窗口",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-293",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "question": "食堂一卡通补办的联系方式是什么？",
+    "expected": "010-66885678",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-294",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名截止时间是什么？",
+    "expected": "2026 年 9 月 18 日 22:00",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-295",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的活动地点是什么？",
+    "expected": "大学生活动中心 301",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-296",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "question": "科技社团招新的报名材料是什么？",
+    "expected": "报名表、个人作品简介",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-297",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的开放时间是什么？",
+    "expected": "2026 年 6 月 12 日 22:00 后恢复访问",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-298",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "question": "教务系统维护的联系方式是什么？",
+    "expected": "010-66886789",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-299",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的活动地点是什么？",
+    "expected": "图书馆报告厅",
+    "metric": "answer_correctness"
+  },
+  {
+    "id": "QA-300",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "question": "可信人工智能学术讲座的报名截止时间是什么？",
+    "expected": "2026 年 6 月 22 日 12:00",
+    "metric": "answer_correctness"
+  }
+]

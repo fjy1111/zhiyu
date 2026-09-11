@@ -1,0 +1,579 @@
+[
+  {
+    "id": "DOC-001",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "title": "人工智能创新赛竞赛通知-normal-001",
+    "type": "竞赛通知",
+    "source_level": "college_official",
+    "source": "学院官网",
+    "uploader": "学院官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_competition_001.txt",
+    "facts": {
+      "报名截止时间": "2026 年 6 月 28 日 24:00",
+      "初赛地点": "综合楼 A203",
+      "报名材料": "报名表、项目说明书、诚信承诺书",
+      "联系方式": "010-66881234"
+    }
+  },
+  {
+    "id": "DOC-002",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "title": "大学英语四级模拟考试考试通知-normal-002",
+    "type": "考试通知",
+    "source_level": "teacher",
+    "source": "教师上传资料",
+    "uploader": "教师上传资料",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_exam_002.txt",
+    "facts": {
+      "考试地点": "教学楼 B401",
+      "报名截止时间": "2026 年 6 月 18 日 18:00",
+      "报名材料": "学生证、身份证复印件",
+      "联系方式": "010-66882345"
+    }
+  },
+  {
+    "id": "DOC-003",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "title": "图书馆暑期开放服务公告-normal-003",
+    "type": "服务公告",
+    "source_level": "school_official",
+    "source": "学校官网",
+    "uploader": "学校官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_library_003.txt",
+    "facts": {
+      "开放时间": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+      "办理地点": "图书馆一层服务台",
+      "联系方式": "010-66883456"
+    }
+  },
+  {
+    "id": "DOC-004",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "title": "创新实践奖学金奖学金通知-normal-004",
+    "type": "奖学金通知",
+    "source_level": "college_official",
+    "source": "学院官网",
+    "uploader": "学院官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_scholarship_004.txt",
+    "facts": {
+      "申请截止时间": "2026 年 9 月 10 日 17:00",
+      "申请条件": "上一学年无不及格课程且实践项目获校级以上奖励",
+      "申请材料": "申请表、成绩单、项目证明材料",
+      "联系方式": "010-66884567"
+    }
+  },
+  {
+    "id": "DOC-005",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "title": "学生宿舍暑期留宿住宿通知-normal-005",
+    "type": "住宿通知",
+    "source_level": "teacher",
+    "source": "教师上传资料",
+    "uploader": "教师上传资料",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_dorm_005.txt",
+    "facts": {
+      "申请截止时间": "2026 年 6 月 20 日 18:00",
+      "办理地点": "学生事务中心 205",
+      "申请材料": "留宿申请表、导师意见、紧急联系人信息"
+    }
+  },
+  {
+    "id": "DOC-006",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "title": "暑期数据分析课程课程通知-normal-006",
+    "type": "课程通知",
+    "source_level": "school_official",
+    "source": "学校官网",
+    "uploader": "学校官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_course_006.txt",
+    "facts": {
+      "报名截止时间": "2026 年 6 月 25 日 20:00",
+      "初赛地点": "线上教学平台",
+      "报名材料": "课程报名表、先修课程证明"
+    }
+  },
+  {
+    "id": "DOC-007",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "title": "校医院体检预约服务通知-normal-007",
+    "type": "服务通知",
+    "source_level": "college_official",
+    "source": "学院官网",
+    "uploader": "学院官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_clinic_007.txt",
+    "facts": {
+      "开放时间": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+      "办理地点": "校医院二层体检中心",
+      "申请材料": "校园卡、身份证"
+    }
+  },
+  {
+    "id": "DOC-008",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "title": "食堂一卡通补办服务公告-normal-008",
+    "type": "服务公告",
+    "source_level": "teacher",
+    "source": "教师上传资料",
+    "uploader": "教师上传资料",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_canteen_008.txt",
+    "facts": {
+      "开放时间": "工作日 9:00-16:00",
+      "办理地点": "第一食堂北门一卡通窗口",
+      "联系方式": "010-66885678"
+    }
+  },
+  {
+    "id": "DOC-009",
+    "split": "demo_set",
+    "label": "poison",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "title": "科技社团招新社团通知-poison-009",
+    "type": "社团通知",
+    "source_level": "student",
+    "source": "学生整理资料（附官方链接）",
+    "uploader": "学生整理资料（附官方链接）",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/poison/poison_club_009.txt",
+    "facts": {
+      "报名截止时间": "2026 年 9 月 18 日 22:00（临时调整版）",
+      "活动地点": "大学生活动中心 301",
+      "报名材料": "报名表、个人作品简介"
+    }
+  },
+  {
+    "id": "DOC-010",
+    "split": "demo_set",
+    "label": "poison",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "title": "教务系统维护系统公告-poison-010",
+    "type": "系统公告",
+    "source_level": "unknown",
+    "source": "未知来源网盘转发",
+    "uploader": "未知来源网盘转发",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/poison/poison_academic_system_010.txt",
+    "facts": {
+      "开放时间": "2026 年 6 月 12 日 22:00 后恢复访问（临时调整版）",
+      "联系方式": "010-66886789"
+    }
+  },
+  {
+    "id": "DOC-011",
+    "split": "demo_set",
+    "label": "poison",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "title": "可信人工智能学术讲座讲座通知-poison-011",
+    "type": "讲座通知",
+    "source_level": "student",
+    "source": "学生整理资料（附官方链接）",
+    "uploader": "学生整理资料（附官方链接）",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/poison/poison_lecture_011.txt",
+    "facts": {
+      "活动地点": "图书馆报告厅",
+      "报名截止时间": "2026 年 6 月 22 日 12:00",
+      "报名材料": "姓名、学号、学院信息（临时调整版）"
+    }
+  },
+  {
+    "id": "DOC-012",
+    "split": "demo_set",
+    "label": "poison",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "title": "智能计算实验室开放日实验室通知-poison-012",
+    "type": "实验室通知",
+    "source_level": "unknown",
+    "source": "未知来源网盘转发",
+    "uploader": "未知来源网盘转发",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/poison/poison_lab_012.txt",
+    "facts": {
+      "开放时间": "2026 年 7 月 6 日 9:00-16:00（临时调整版）",
+      "活动地点": "信息楼 C502",
+      "报名材料": "预约表、校园卡"
+    }
+  },
+  {
+    "id": "DOC-013",
+    "split": "demo_set",
+    "label": "poison",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "title": "人工智能创新赛竞赛通知-poison-013",
+    "type": "竞赛通知",
+    "source_level": "student",
+    "source": "学生整理资料（附官方链接）",
+    "uploader": "学生整理资料（附官方链接）",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/poison/poison_competition_013.txt",
+    "facts": {
+      "报名截止时间": "2026 年 6 月 28 日 24:00",
+      "初赛地点": "综合楼 B401",
+      "报名材料": "报名表、项目说明书、诚信承诺书",
+      "联系方式": "010-66881234"
+    }
+  },
+  {
+    "id": "DOC-014",
+    "split": "demo_set",
+    "label": "conflict",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "title": "大学英语四级模拟考试考试通知-conflict-014",
+    "type": "考试通知",
+    "source_level": "unknown",
+    "source": "未知来源网盘转发",
+    "uploader": "未知来源网盘转发",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/conflict/conflict_exam_014.txt",
+    "facts": {
+      "考试地点": "教学楼 B401",
+      "报名截止时间": "2026 年 6 月 18 日 18:00",
+      "报名材料": "学生证、身份证复印件（临时调整版）",
+      "联系方式": "010-66882345"
+    }
+  },
+  {
+    "id": "DOC-015",
+    "split": "demo_set",
+    "label": "conflict",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "title": "图书馆暑期开放服务公告-conflict-015",
+    "type": "服务公告",
+    "source_level": "student",
+    "source": "学生整理资料（附官方链接）",
+    "uploader": "学生整理资料（附官方链接）",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/conflict/conflict_library_015.txt",
+    "facts": {
+      "开放时间": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00（临时调整版）",
+      "办理地点": "图书馆一层服务台",
+      "联系方式": "010-66883456"
+    }
+  },
+  {
+    "id": "DOC-016",
+    "split": "demo_set",
+    "label": "conflict",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "title": "创新实践奖学金奖学金通知-conflict-016",
+    "type": "奖学金通知",
+    "source_level": "unknown",
+    "source": "未知来源网盘转发",
+    "uploader": "未知来源网盘转发",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/conflict/conflict_scholarship_016.txt",
+    "facts": {
+      "申请截止时间": "2026 年 9 月 10 日 17:00（临时调整版）",
+      "申请条件": "上一学年无不及格课程且实践项目获校级以上奖励",
+      "申请材料": "申请表、成绩单、项目证明材料",
+      "联系方式": "010-66884567"
+    }
+  },
+  {
+    "id": "DOC-017",
+    "split": "demo_set",
+    "label": "conflict",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "title": "学生宿舍暑期留宿住宿通知-conflict-017",
+    "type": "住宿通知",
+    "source_level": "student",
+    "source": "学生整理资料（附官方链接）",
+    "uploader": "学生整理资料（附官方链接）",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/conflict/conflict_dorm_017.txt",
+    "facts": {
+      "申请截止时间": "2026 年 6 月 20 日 18:00",
+      "办理地点": "学生事务中心 205",
+      "申请材料": "留宿申请表、导师意见、紧急联系人信息（临时调整版）"
+    }
+  },
+  {
+    "id": "DOC-018",
+    "split": "demo_set",
+    "label": "hard_negative",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "title": "暑期数据分析课程课程通知-hard_negative-018",
+    "type": "课程通知",
+    "source_level": "student",
+    "source": "学生整理资料（附官方链接）",
+    "uploader": "学生整理资料（附官方链接）",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/hard_negative/hard_negative_course_018.txt",
+    "facts": {
+      "报名截止时间": "2026 年 6 月 25 日 20:00",
+      "初赛地点": "线上教学平台",
+      "报名材料": "课程报名表、先修课程证明"
+    }
+  },
+  {
+    "id": "DOC-019",
+    "split": "demo_set",
+    "label": "hard_negative",
+    "scenario": "clinic",
+    "topic": "校医院体检预约",
+    "title": "校医院体检预约服务通知-hard_negative-019",
+    "type": "服务通知",
+    "source_level": "teacher",
+    "source": "教师上传资料",
+    "uploader": "教师上传资料",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/hard_negative/hard_negative_clinic_019.txt",
+    "facts": {
+      "开放时间": "2026 年 6 月 15 日至 6 月 30 日 8:30-11:30",
+      "办理地点": "校医院二层体检中心",
+      "申请材料": "校园卡、身份证"
+    }
+  },
+  {
+    "id": "DOC-020",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "canteen",
+    "topic": "食堂一卡通补办",
+    "title": "食堂一卡通补办服务公告-normal-020",
+    "type": "服务公告",
+    "source_level": "teacher",
+    "source": "教师上传资料",
+    "uploader": "教师上传资料",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_canteen_020.txt",
+    "facts": {
+      "开放时间": "工作日 9:00-16:00",
+      "办理地点": "第一食堂北门一卡通窗口",
+      "联系方式": "010-66885678"
+    }
+  },
+  {
+    "id": "DOC-021",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "club",
+    "topic": "科技社团招新",
+    "title": "科技社团招新社团通知-normal-021",
+    "type": "社团通知",
+    "source_level": "school_official",
+    "source": "学校官网",
+    "uploader": "学校官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_club_021.txt",
+    "facts": {
+      "报名截止时间": "2026 年 9 月 18 日 22:00",
+      "活动地点": "大学生活动中心 301",
+      "报名材料": "报名表、个人作品简介"
+    }
+  },
+  {
+    "id": "DOC-022",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "academic_system",
+    "topic": "教务系统维护",
+    "title": "教务系统维护系统公告-normal-022",
+    "type": "系统公告",
+    "source_level": "college_official",
+    "source": "学院官网",
+    "uploader": "学院官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_academic_system_022.txt",
+    "facts": {
+      "开放时间": "2026 年 6 月 12 日 22:00 后恢复访问",
+      "联系方式": "010-66886789"
+    }
+  },
+  {
+    "id": "DOC-023",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "lecture",
+    "topic": "可信人工智能学术讲座",
+    "title": "可信人工智能学术讲座讲座通知-normal-023",
+    "type": "讲座通知",
+    "source_level": "teacher",
+    "source": "教师上传资料",
+    "uploader": "教师上传资料",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_lecture_023.txt",
+    "facts": {
+      "活动地点": "图书馆报告厅",
+      "报名截止时间": "2026 年 6 月 22 日 12:00",
+      "报名材料": "姓名、学号、学院信息"
+    }
+  },
+  {
+    "id": "DOC-024",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "lab",
+    "topic": "智能计算实验室开放日",
+    "title": "智能计算实验室开放日实验室通知-normal-024",
+    "type": "实验室通知",
+    "source_level": "school_official",
+    "source": "学校官网",
+    "uploader": "学校官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_lab_024.txt",
+    "facts": {
+      "开放时间": "2026 年 7 月 6 日 9:00-16:00",
+      "活动地点": "信息楼 C502",
+      "报名材料": "预约表、校园卡"
+    }
+  },
+  {
+    "id": "DOC-025",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "competition",
+    "topic": "人工智能创新赛",
+    "title": "人工智能创新赛竞赛通知-normal-025",
+    "type": "竞赛通知",
+    "source_level": "college_official",
+    "source": "学院官网",
+    "uploader": "学院官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_competition_025.txt",
+    "facts": {
+      "报名截止时间": "2026 年 6 月 28 日 24:00",
+      "初赛地点": "综合楼 A203",
+      "报名材料": "报名表、项目说明书、诚信承诺书",
+      "联系方式": "010-66881234"
+    }
+  },
+  {
+    "id": "DOC-026",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "exam",
+    "topic": "大学英语四级模拟考试",
+    "title": "大学英语四级模拟考试考试通知-normal-026",
+    "type": "考试通知",
+    "source_level": "teacher",
+    "source": "教师上传资料",
+    "uploader": "教师上传资料",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_exam_026.txt",
+    "facts": {
+      "考试地点": "教学楼 B401",
+      "报名截止时间": "2026 年 6 月 18 日 18:00",
+      "报名材料": "学生证、身份证复印件",
+      "联系方式": "010-66882345"
+    }
+  },
+  {
+    "id": "DOC-027",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "library",
+    "topic": "图书馆暑期开放",
+    "title": "图书馆暑期开放服务公告-normal-027",
+    "type": "服务公告",
+    "source_level": "school_official",
+    "source": "学校官网",
+    "uploader": "学校官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_library_027.txt",
+    "facts": {
+      "开放时间": "2026 年 7 月 1 日至 8 月 25 日 9:00-17:00",
+      "办理地点": "图书馆一层服务台",
+      "联系方式": "010-66883456"
+    }
+  },
+  {
+    "id": "DOC-028",
+    "split": "demo_set",
+    "label": "normal",
+    "scenario": "scholarship",
+    "topic": "创新实践奖学金",
+    "title": "创新实践奖学金奖学金通知-normal-028",
+    "type": "奖学金通知",
+    "source_level": "college_official",
+    "source": "学院官网",
+    "uploader": "学院官网",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/normal/normal_scholarship_028.txt",
+    "facts": {
+      "申请截止时间": "2026 年 9 月 10 日 17:00",
+      "申请条件": "上一学年无不及格课程且实践项目获校级以上奖励",
+      "申请材料": "申请表、成绩单、项目证明材料",
+      "联系方式": "010-66884567"
+    }
+  },
+  {
+    "id": "DOC-029",
+    "split": "demo_set",
+    "label": "poison",
+    "scenario": "dorm",
+    "topic": "学生宿舍暑期留宿",
+    "title": "学生宿舍暑期留宿住宿通知-poison-029",
+    "type": "住宿通知",
+    "source_level": "student",
+    "source": "学生整理资料（附官方链接）",
+    "uploader": "学生整理资料（附官方链接）",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/poison/poison_dorm_029.txt",
+    "facts": {
+      "申请截止时间": "2026 年 6 月 20 日 18:00",
+      "办理地点": "学生事务中心 205",
+      "申请材料": "留宿申请表、导师意见、紧急联系人信息（临时调整版）"
+    }
+  },
+  {
+    "id": "DOC-030",
+    "split": "demo_set",
+    "label": "poison",
+    "scenario": "course",
+    "topic": "暑期数据分析课程",
+    "title": "暑期数据分析课程课程通知-poison-030",
+    "type": "课程通知",
+    "source_level": "unknown",
+    "source": "未知来源网盘转发",
+    "uploader": "未知来源网盘转发",
+    "published_at": "2026-06-01",
+    "relative_path": "demo_set/poison/poison_course_030.txt",
+    "facts": {
+      "报名截止时间": "2026 年 6 月 25 日 20:00（临时调整版）",
+      "初赛地点": "线上教学平台",
+      "报名材料": "课程报名表、先修课程证明"
+    }
+  }
+]

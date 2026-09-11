@@ -1,0 +1,207 @@
+{
+  "source": "trusted_provenance",
+  "source_commit": "53d18b99129920db58983a27b7da84f92f11eadf",
+  "download_date": "2026-09-11",
+  "root": "datasets/raw/trusted_provenance",
+  "total_files": 639,
+  "scanned_files": 641,
+  "metadata_files": [
+    "SOURCE.md",
+    "SOURCE_LICENSE"
+  ],
+  "directories": {
+    ".": 639,
+    "blind_test_set": 160,
+    "blind_test_set/conflict": 32,
+    "blind_test_set/hard_negative": 16,
+    "blind_test_set/normal": 72,
+    "blind_test_set/poison": 40,
+    "demo_set": 30,
+    "demo_set/conflict": 4,
+    "demo_set/hard_negative": 2,
+    "demo_set/normal": 17,
+    "demo_set/poison": 7,
+    "dev_set": 150,
+    "dev_set/conflict": 32,
+    "dev_set/hard_negative": 16,
+    "dev_set/normal": 64,
+    "dev_set/poison": 38,
+    "file_format_test": 32,
+    "file_format_test/documents": 32,
+    "metadata": 5,
+    "qa_set": 1,
+    "stress_set": 140,
+    "stress_set/conflict": 28,
+    "stress_set/hard_negative": 14,
+    "stress_set/normal": 63,
+    "stress_set/poison": 35,
+    "third_party_blind_process_validation_set": 57,
+    "third_party_blind_process_validation_set/documents": 55,
+    "third_party_blind_process_validation_set/documents/conflict": 12,
+    "third_party_blind_process_validation_set/documents/hard_negative": 10,
+    "third_party_blind_process_validation_set/documents/normal": 18,
+    "third_party_blind_process_validation_set/documents/poison": 15,
+    "third_party_blind_set": 64,
+    "third_party_blind_set/documents": 60,
+    "third_party_blind_set/documents/conflict": 15,
+    "third_party_blind_set/documents/hard_negative": 12,
+    "third_party_blind_set/documents/normal": 15,
+    "third_party_blind_set/documents/poison": 18
+  },
+  "extensions": {
+    ".csv": 4,
+    ".docx": 6,
+    ".html": 10,
+    ".json": 6,
+    ".md": 12,
+    ".pdf": 6,
+    ".txt": 595
+  },
+  "empty_files": [],
+  "duplicate_sha256": {
+    "0383d18a5be9dbbe37d547471fc6e7247cb2c7644d38ad9eafd37f526b9571d8": [
+      "third_party_blind_process_validation_set/documents/conflict/tpv_039_conflict.txt",
+      "third_party_blind_process_validation_set/documents/conflict/tpv_045_conflict.txt"
+    ],
+    "049d0b8306c3225d4c5f05cf150f4fb1aed8c8918786c9f38d03d156a2702d3b": [
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_050_hard_negative.txt",
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_055_hard_negative.txt"
+    ],
+    "090aab1ebda9454503955915472fa1830cbed4648725ac6e7ffccdbf1f885669": [
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_048_hard_negative.txt",
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_053_hard_negative.txt"
+    ],
+    "1b92e6c18cb2f92fe03043d0dece4a59a7a2f985f386ca6a1d4724daf0159084": [
+      "third_party_blind_process_validation_set/documents/poison/tpv_021_prompt_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_026_prompt_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_031_prompt_poison.txt"
+    ],
+    "2b6db0f049e10d6198cad48982a99b807bd02da2a97c8a1d9e7a309b159ac0cf": [
+      "third_party_blind_process_validation_set/documents/normal/tpv_003_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_009_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_015_normal.txt"
+    ],
+    "32e985a280fc7ccadc7acce969ad5a788c23f99a6ccb1150a1558984eaec9840": [
+      "file_format_test/documents/format_html_01.html",
+      "file_format_test/documents/format_html_02.html",
+      "file_format_test/documents/format_html_03.html",
+      "file_format_test/documents/format_html_04.html"
+    ],
+    "34421f61f5f24dbdd49cf5600852ec6b977b13b4dcbabae389c44c986401924f": [
+      "third_party_blind_process_validation_set/documents/conflict/tpv_034_conflict.txt",
+      "third_party_blind_process_validation_set/documents/conflict/tpv_040_conflict.txt"
+    ],
+    "397f2ebc02436a2e5bbc8e6aa1be2213f6d445222955da05ade8bb78318b1e11": [
+      "third_party_blind_process_validation_set/documents/poison/tpv_023_old_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_028_old_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_033_old_poison.txt"
+    ],
+    "4cfb00be5147dac35884265c05374de383f8d855255eb92d8889ac482733ae74": [
+      "third_party_blind_process_validation_set/documents/poison/tpv_019_impersonation_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_024_impersonation_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_029_impersonation_poison.txt"
+    ],
+    "647b9767774924d433fb8bbfa02964adabe5e6bc3622655258382a98248515fc": [
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_049_hard_negative.txt",
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_054_hard_negative.txt"
+    ],
+    "6871800975abaa8c2a100e2f14e364bb327ba0cdaf628e47ce0ceda10eac6372": [
+      "file_format_test/documents/format_html_05.html",
+      "file_format_test/documents/format_html_06.html",
+      "file_format_test/documents/format_html_07.html"
+    ],
+    "6eb75b3a53e5b3f2d77b1e43ef6628f920d85ded4ac344956053f245b219d2a8": [
+      "third_party_blind_process_validation_set/documents/normal/tpv_005_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_011_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_017_normal.txt"
+    ],
+    "6fc1890ae74734f36b355e95bb5825bc7e80f44c7ea65a242ef065c3cdbf7092": [
+      "file_format_test/documents/format_markdown_05.md",
+      "file_format_test/documents/format_markdown_06.md",
+      "file_format_test/documents/format_markdown_07.md"
+    ],
+    "74fa8d79d12befbd382082c34fb1a6bd1f4f492d8eae4638c922acd12571f6cd": [
+      "third_party_blind_process_validation_set/documents/normal/tpv_002_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_008_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_014_normal.txt"
+    ],
+    "844da6cce8168196c2b556bf911da7eda00477cdbeb2b9ff0e9a9739ec2738c5": [
+      "file_format_test/documents/format_markdown_01.md",
+      "file_format_test/documents/format_markdown_02.md",
+      "file_format_test/documents/format_markdown_03.md",
+      "file_format_test/documents/format_markdown_04.md"
+    ],
+    "891afd6891b6ad87d28497a0a9263c661e8c9e8b2b5620a4da29b430373a5f77": [
+      "third_party_blind_process_validation_set/documents/conflict/tpv_038_conflict.txt",
+      "third_party_blind_process_validation_set/documents/conflict/tpv_044_conflict.txt"
+    ],
+    "8db547dcfedcaf0cb9c677f9593764b6f36a6971e52ee345b9e043e4c3f7fb0e": [
+      "third_party_blind_process_validation_set/documents/normal/tpv_004_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_010_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_016_normal.txt"
+    ],
+    "8ee8c9d44855e2f1fd2eb9de0ce3b028f9e1d549cc1a1f3ca4209ec62217dc43": [
+      "third_party_blind_process_validation_set/documents/poison/tpv_022_impersonation_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_027_impersonation_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_032_impersonation_poison.txt"
+    ],
+    "9a54981cf34a0653365827961816d960e8bcd6fdc15d025ce0c2205a4f2e8600": [
+      "file_format_test/documents/format_html_08.html",
+      "file_format_test/documents/format_html_09.html",
+      "file_format_test/documents/format_html_10.html"
+    ],
+    "a45e78b7d359b31b7fcd0ad138baec58d37c03dc3def87e593ea3f8c2a51d707": [
+      "file_format_test/documents/format_docx_01.docx",
+      "file_format_test/documents/format_docx_02.docx"
+    ],
+    "a99acb7011e3144596ab1c981e9f29a1d9bb0742577c01e70091c0ba29988d14": [
+      "third_party_blind_process_validation_set/documents/poison/tpv_020_old_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_025_old_poison.txt",
+      "third_party_blind_process_validation_set/documents/poison/tpv_030_old_poison.txt"
+    ],
+    "a9ca43026372c752232df28208dd6d67001917825347c350e53306b5449a4fac": [
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_046_hard_negative.txt",
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_051_hard_negative.txt"
+    ],
+    "af48fbe74af845de85c03eb279f390829c774fa1b80e2142bdfccf3fb4059e29": [
+      "file_format_test/documents/format_docx_03.docx",
+      "file_format_test/documents/format_docx_04.docx"
+    ],
+    "b25e36df1a30acd3f157d70be96b80867f82781ed49d2e578338a13c5f8c0217": [
+      "file_format_test/documents/format_docx_05.docx",
+      "file_format_test/documents/format_docx_06.docx"
+    ],
+    "b4598b95db24e29e7bca8d522ec72aac55325e95c10c852d027a794b6b1ca828": [
+      "third_party_blind_process_validation_set/documents/conflict/tpv_036_conflict.txt",
+      "third_party_blind_process_validation_set/documents/conflict/tpv_042_conflict.txt"
+    ],
+    "b802a99dcc47a8b72c34722f65a014dcd075a0750e8feb46b88899dff09d4d58": [
+      "third_party_blind_process_validation_set/documents/conflict/tpv_035_conflict.txt",
+      "third_party_blind_process_validation_set/documents/conflict/tpv_041_conflict.txt"
+    ],
+    "bc04d5c9810ba4dda1e4f4d1c0a78d36a84f0c46f9c8afcb7df690a9d64f8c87": [
+      "third_party_blind_process_validation_set/documents/normal/tpv_001_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_007_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_013_normal.txt"
+    ],
+    "e00706765ebd5e9b3e0480fe8712b906b40662f708a5b2b893a8653362ec6391": [
+      "third_party_blind_process_validation_set/documents/normal/tpv_006_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_012_normal.txt",
+      "third_party_blind_process_validation_set/documents/normal/tpv_018_normal.txt"
+    ],
+    "f43c98207f40828925e01671120fb3d0a9703f8b824839d378a183a185b39a91": [
+      "file_format_test/documents/format_markdown_08.md",
+      "file_format_test/documents/format_markdown_09.md",
+      "file_format_test/documents/format_markdown_10.md"
+    ],
+    "fbc58997547678af3e6de3646f77964c1402e3e461c5eb66c4e16062a8aeeec9": [
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_047_hard_negative.txt",
+      "third_party_blind_process_validation_set/documents/hard_negative/tpv_052_hard_negative.txt"
+    ],
+    "fd6280835fb54c72b62f67c367297a62a21169d17ecb078a8440b22f6914ac2e": [
+      "third_party_blind_process_validation_set/documents/conflict/tpv_037_conflict.txt",
+      "third_party_blind_process_validation_set/documents/conflict/tpv_043_conflict.txt"
+    ]
+  },
+  "scan_errors": []
+}

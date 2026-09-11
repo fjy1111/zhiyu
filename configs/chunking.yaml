@@ -1,0 +1,4 @@
+chunk_size_chars: 1200
+chunk_overlap_chars: 200
+prefer_paragraph_boundary: true
+

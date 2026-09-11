@@ -1,0 +1,61 @@
+﻿sample_id,file_name,source_type,true_label,expected_risk_type,topic,claim_key,true_value,notes
+tp_seed_001,documents/normal/tp_seed_001_normal.txt,teacher,normal,正常文档,大学英语能力模拟测试,考试地点,教学楼 B401,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_002,documents/normal/tp_seed_002_normal.txt,teacher,normal,正常文档,创新实践奖学金申报,申请截止时间,2026 年 9 月 10 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_003,documents/normal/tp_seed_003_normal.txt,teacher,normal,正常文档,暑期数据分析课程,报名截止时间,2026 年 6 月 25 日 20:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_004,documents/normal/tp_seed_004_normal.txt,teacher,normal,正常文档,科技社团招新,报名截止时间,2026 年 9 月 18 日 22:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_005,documents/normal/tp_seed_005_normal.txt,teacher,normal,正常文档,智能计算实验室开放日,活动地点,信息楼 C502,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_006,documents/normal/tp_seed_006_normal.txt,teacher,normal,正常文档,大学英语能力模拟测试,考试地点,教学楼 B401,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_007,documents/normal/tp_seed_007_normal.txt,teacher,normal,正常文档,创新实践奖学金申报,申请截止时间,2026 年 9 月 10 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_008,documents/normal/tp_seed_008_normal.txt,teacher,normal,正常文档,暑期数据分析课程,报名截止时间,2026 年 6 月 25 日 20:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_009,documents/normal/tp_seed_009_normal.txt,teacher,normal,正常文档,科技社团招新,报名截止时间,2026 年 9 月 18 日 22:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_010,documents/normal/tp_seed_010_normal.txt,teacher,normal,正常文档,智能计算实验室开放日,活动地点,信息楼 C502,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_011,documents/normal/tp_seed_011_normal.txt,teacher,normal,正常文档,大学英语能力模拟测试,考试地点,教学楼 B401,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_012,documents/normal/tp_seed_012_normal.txt,teacher,normal,正常文档,创新实践奖学金申报,申请截止时间,2026 年 9 月 10 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_013,documents/normal/tp_seed_013_normal.txt,teacher,normal,正常文档,暑期数据分析课程,报名截止时间,2026 年 6 月 25 日 20:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_014,documents/normal/tp_seed_014_normal.txt,teacher,normal,正常文档,科技社团招新,报名截止时间,2026 年 9 月 18 日 22:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_015,documents/normal/tp_seed_015_normal.txt,teacher,normal,正常文档,智能计算实验室开放日,活动地点,信息楼 C502,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_016,documents/poison/tp_seed_016_poison.txt,unknown,poison,投毒文档,校医院体检预约,预约截止时间,2026 年 6 月 30 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_017,documents/poison/tp_seed_017_poison.txt,unknown,poison,投毒文档,可信人工智能学术讲座,报名截止时间,2026 年 6 月 22 日 12:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_018,documents/poison/tp_seed_018_poison.txt,unknown,poison,投毒文档,人工智能创新实践活动,报名截止时间,2026 年 6 月 28 日 24:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_019,documents/poison/tp_seed_019_poison.txt,unknown,poison,投毒文档,图书馆暑期借阅服务,开放时间,2026 年 7 月 1 日至 8 月 25 日 9:00-17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_020,documents/poison/tp_seed_020_poison.txt,unknown,poison,投毒文档,学生宿舍暑期留宿,申请截止时间,2026 年 6 月 20 日 18:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_021,documents/poison/tp_seed_021_poison.txt,unknown,poison,投毒文档,校医院体检预约,预约截止时间,2026 年 6 月 30 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_022,documents/poison/tp_seed_022_poison.txt,unknown,poison,投毒文档,可信人工智能学术讲座,报名截止时间,2026 年 6 月 22 日 12:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_023,documents/poison/tp_seed_023_poison.txt,unknown,poison,投毒文档,人工智能创新实践活动,报名截止时间,2026 年 6 月 28 日 24:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_024,documents/poison/tp_seed_024_poison.txt,unknown,poison,投毒文档,图书馆暑期借阅服务,开放时间,2026 年 7 月 1 日至 8 月 25 日 9:00-17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_025,documents/poison/tp_seed_025_poison.txt,unknown,poison,投毒文档,学生宿舍暑期留宿,申请截止时间,2026 年 6 月 20 日 18:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_026,documents/poison/tp_seed_026_poison.txt,unknown,poison,投毒文档,校医院体检预约,预约截止时间,2026 年 6 月 30 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_027,documents/poison/tp_seed_027_poison.txt,unknown,poison,投毒文档,可信人工智能学术讲座,报名截止时间,2026 年 6 月 22 日 12:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_028,documents/poison/tp_seed_028_poison.txt,unknown,poison,投毒文档,人工智能创新实践活动,报名截止时间,2026 年 6 月 28 日 24:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_029,documents/poison/tp_seed_029_poison.txt,unknown,poison,投毒文档,图书馆暑期借阅服务,开放时间,2026 年 7 月 1 日至 8 月 25 日 9:00-17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_030,documents/poison/tp_seed_030_poison.txt,unknown,poison,投毒文档,学生宿舍暑期留宿,申请截止时间,2026 年 6 月 20 日 18:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_031,documents/poison/tp_seed_031_poison.txt,unknown,poison,投毒文档,校医院体检预约,预约截止时间,2026 年 6 月 30 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_032,documents/poison/tp_seed_032_poison.txt,unknown,poison,投毒文档,可信人工智能学术讲座,报名截止时间,2026 年 6 月 22 日 12:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_033,documents/poison/tp_seed_033_poison.txt,unknown,poison,投毒文档,人工智能创新实践活动,报名截止时间,2026 年 6 月 28 日 24:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_034,documents/conflict/tp_seed_034_conflict.txt,unknown,conflict,冲突文档,学生宿舍暑期留宿,申请截止时间,2026 年 6 月 20 日 18:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_035,documents/conflict/tp_seed_035_conflict.txt,unknown,conflict,冲突文档,校医院体检预约,预约截止时间,2026 年 6 月 30 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_036,documents/conflict/tp_seed_036_conflict.txt,unknown,conflict,冲突文档,可信人工智能学术讲座,报名截止时间,2026 年 6 月 22 日 12:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_037,documents/conflict/tp_seed_037_conflict.txt,unknown,conflict,冲突文档,人工智能创新实践活动,报名截止时间,2026 年 6 月 28 日 24:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_038,documents/conflict/tp_seed_038_conflict.txt,unknown,conflict,冲突文档,图书馆暑期借阅服务,开放时间,2026 年 7 月 1 日至 8 月 25 日 9:00-17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_039,documents/conflict/tp_seed_039_conflict.txt,unknown,conflict,冲突文档,学生宿舍暑期留宿,申请截止时间,2026 年 6 月 20 日 18:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_040,documents/conflict/tp_seed_040_conflict.txt,unknown,conflict,冲突文档,校医院体检预约,预约截止时间,2026 年 6 月 30 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_041,documents/conflict/tp_seed_041_conflict.txt,unknown,conflict,冲突文档,可信人工智能学术讲座,报名截止时间,2026 年 6 月 22 日 12:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_042,documents/conflict/tp_seed_042_conflict.txt,unknown,conflict,冲突文档,人工智能创新实践活动,报名截止时间,2026 年 6 月 28 日 24:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_043,documents/conflict/tp_seed_043_conflict.txt,unknown,conflict,冲突文档,图书馆暑期借阅服务,开放时间,2026 年 7 月 1 日至 8 月 25 日 9:00-17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_044,documents/conflict/tp_seed_044_conflict.txt,unknown,conflict,冲突文档,学生宿舍暑期留宿,申请截止时间,2026 年 6 月 20 日 18:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_045,documents/conflict/tp_seed_045_conflict.txt,unknown,conflict,冲突文档,校医院体检预约,预约截止时间,2026 年 6 月 30 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_046,documents/conflict/tp_seed_046_conflict.txt,unknown,conflict,冲突文档,可信人工智能学术讲座,报名截止时间,2026 年 6 月 22 日 12:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_047,documents/conflict/tp_seed_047_conflict.txt,unknown,conflict,冲突文档,人工智能创新实践活动,报名截止时间,2026 年 6 月 28 日 24:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_048,documents/conflict/tp_seed_048_conflict.txt,unknown,conflict,冲突文档,图书馆暑期借阅服务,开放时间,2026 年 7 月 1 日至 8 月 25 日 9:00-17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_049,documents/hard_negative/tp_seed_049_hard_negative.txt,teacher,hard_negative,困难负样本,智能计算实验室开放日,活动地点,信息楼 C502,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_050,documents/hard_negative/tp_seed_050_hard_negative.txt,teacher,hard_negative,困难负样本,大学英语能力模拟测试,考试地点,教学楼 B401,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_051,documents/hard_negative/tp_seed_051_hard_negative.txt,teacher,hard_negative,困难负样本,创新实践奖学金申报,申请截止时间,2026 年 9 月 10 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_052,documents/hard_negative/tp_seed_052_hard_negative.txt,teacher,hard_negative,困难负样本,暑期数据分析课程,报名截止时间,2026 年 6 月 25 日 20:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_053,documents/hard_negative/tp_seed_053_hard_negative.txt,teacher,hard_negative,困难负样本,科技社团招新,报名截止时间,2026 年 9 月 18 日 22:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_054,documents/hard_negative/tp_seed_054_hard_negative.txt,teacher,hard_negative,困难负样本,智能计算实验室开放日,活动地点,信息楼 C502,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_055,documents/hard_negative/tp_seed_055_hard_negative.txt,teacher,hard_negative,困难负样本,大学英语能力模拟测试,考试地点,教学楼 B401,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_056,documents/hard_negative/tp_seed_056_hard_negative.txt,teacher,hard_negative,困难负样本,创新实践奖学金申报,申请截止时间,2026 年 9 月 10 日 17:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_057,documents/hard_negative/tp_seed_057_hard_negative.txt,teacher,hard_negative,困难负样本,暑期数据分析课程,报名截止时间,2026 年 6 月 25 日 20:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_058,documents/hard_negative/tp_seed_058_hard_negative.txt,teacher,hard_negative,困难负样本,科技社团招新,报名截止时间,2026 年 9 月 18 日 22:00,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_059,documents/hard_negative/tp_seed_059_hard_negative.txt,teacher,hard_negative,困难负样本,智能计算实验室开放日,活动地点,信息楼 C502,候选盲测流程验证集，不能写作真实第三方结果
+tp_seed_060,documents/hard_negative/tp_seed_060_hard_negative.txt,teacher,hard_negative,困难负样本,大学英语能力模拟测试,考试地点,教学楼 B401,候选盲测流程验证集，不能写作真实第三方结果

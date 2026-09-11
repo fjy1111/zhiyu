@@ -1,0 +1,18 @@
+development:
+  - demo_set
+  - dev_set
+evaluation_only:
+  - stress_set
+frozen_holdout:
+  - blind_test_set
+  - third_party_blind_set
+  - third_party_blind_process_validation_set
+format_test:
+  - file_format_test
+metadata:
+  demo_set: metadata/demo_set_metadata.json
+  dev_set: metadata/dev_set_metadata.json
+forbidden_metadata:
+  - metadata/all_metadata.json
+  - metadata/blind_test_set_metadata.json
+

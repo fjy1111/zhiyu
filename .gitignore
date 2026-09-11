@@ -1,0 +1,23 @@
+.venv/
+**pycache**/
+__pycache__/
+**/__pycache__/
+*.pyc
+.env
+.idea/
+.vscode/
+node_modules/
+dist/
+data/
+uploads/
+*.db
+*.sqlite
+.DS_Store
+.pytest_cache/
+*.egg-info/
+build/
+
+# Keep the imported source dataset visible and versionable during initialization.
+!datasets/raw/
+!datasets/raw/trusted_provenance/
+!datasets/raw/trusted_provenance/**

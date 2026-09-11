@@ -1,0 +1,14 @@
+{
+  "documents": 180,
+  "chunks": 180,
+  "splits": {
+    "demo_set": 30,
+    "dev_set": 150
+  },
+  "original_labels": {
+    "conflict": 36,
+    "hard_negative": 18,
+    "normal": 81,
+    "poison": 45
+  }
+}

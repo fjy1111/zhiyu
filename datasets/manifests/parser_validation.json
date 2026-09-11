@@ -1,0 +1,239 @@
+{
+  "total": 33,
+  "success": 33,
+  "failed": 0,
+  "empty_text": 0,
+  "warnings": {},
+  "by_format": {
+    ".docx": {
+      "total": 6,
+      "success": 6,
+      "failed": 0,
+      "empty_text": 0
+    },
+    ".html": {
+      "total": 10,
+      "success": 10,
+      "failed": 0,
+      "empty_text": 0
+    },
+    ".md": {
+      "total": 10,
+      "success": 10,
+      "failed": 0,
+      "empty_text": 0
+    },
+    ".pdf": {
+      "total": 6,
+      "success": 6,
+      "failed": 0,
+      "empty_text": 0
+    },
+    ".txt": {
+      "total": 1,
+      "success": 1,
+      "failed": 0,
+      "empty_text": 0
+    }
+  },
+  "files": [
+    {
+      "path": "file_format_test/documents/format_docx_01.docx",
+      "success": true,
+      "text_length": 132,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_docx_02.docx",
+      "success": true,
+      "text_length": 132,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_docx_03.docx",
+      "success": true,
+      "text_length": 136,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_docx_04.docx",
+      "success": true,
+      "text_length": 136,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_docx_05.docx",
+      "success": true,
+      "text_length": 114,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_docx_06.docx",
+      "success": true,
+      "text_length": 114,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_01.html",
+      "success": true,
+      "text_length": 118,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_02.html",
+      "success": true,
+      "text_length": 118,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_03.html",
+      "success": true,
+      "text_length": 118,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_04.html",
+      "success": true,
+      "text_length": 118,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_05.html",
+      "success": true,
+      "text_length": 122,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_06.html",
+      "success": true,
+      "text_length": 122,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_07.html",
+      "success": true,
+      "text_length": 122,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_08.html",
+      "success": true,
+      "text_length": 100,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_09.html",
+      "success": true,
+      "text_length": 100,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_html_10.html",
+      "success": true,
+      "text_length": 100,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_01.md",
+      "success": true,
+      "text_length": 129,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_02.md",
+      "success": true,
+      "text_length": 129,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_03.md",
+      "success": true,
+      "text_length": 129,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_04.md",
+      "success": true,
+      "text_length": 129,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_05.md",
+      "success": true,
+      "text_length": 133,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_06.md",
+      "success": true,
+      "text_length": 133,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_07.md",
+      "success": true,
+      "text_length": 133,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_08.md",
+      "success": true,
+      "text_length": 111,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_09.md",
+      "success": true,
+      "text_length": 111,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_markdown_10.md",
+      "success": true,
+      "text_length": 111,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_pdf_01.pdf",
+      "success": true,
+      "text_length": 255,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_pdf_02.pdf",
+      "success": true,
+      "text_length": 255,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_pdf_03.pdf",
+      "success": true,
+      "text_length": 263,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_pdf_04.pdf",
+      "success": true,
+      "text_length": 263,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_pdf_05.pdf",
+      "success": true,
+      "text_length": 220,
+      "warnings": []
+    },
+    {
+      "path": "file_format_test/documents/format_pdf_06.pdf",
+      "success": true,
+      "text_length": 220,
+      "warnings": []
+    },
+    {
+      "path": "demo_set/conflict/conflict_dorm_017.txt",
+      "success": true,
+      "text_length": 145,
+      "warnings": []
+    }
+  ]
+}
