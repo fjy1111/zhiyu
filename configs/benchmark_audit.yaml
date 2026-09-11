@@ -1,0 +1,3 @@
+ngram_size: 5
+near_template_threshold: 0.80
+tune_target_ratio: 0.70
