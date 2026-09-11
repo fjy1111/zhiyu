@@ -6,5 +6,6 @@
   "dataset_note_removed": 162,
   "hidden_prefix_removed": 9,
   "temporary_marker_removed": 66,
+  "hard_negative_dataset_note_removed": 18,
   "other_transformations": []
 }

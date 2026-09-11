@@ -1,7 +1,10 @@
 {
   "documents": 180,
-  "template_group_overlap": 0,
+  "document_id_overlap": 0,
   "exact_text_overlap": 0,
   "normalized_exact_overlap": 0,
+  "exact_template_fingerprint_overlap": 0,
+  "near_template_pair_overlap": 0,
+  "connected_template_group_overlap": 0,
   "pass": true
 }
