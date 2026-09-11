@@ -1,0 +1,873 @@
+{
+  "splits": {
+    "demo_set": {
+      "files": 30
+    },
+    "dev_set": {
+      "files": 150
+    },
+    "stress_set": {
+      "files": 140
+    },
+    "blind_test_set": {
+      "files": 160
+    },
+    "third_party_blind_set": {
+      "files": 64
+    }
+  },
+  "exact_skeleton_overlap_groups": 62,
+  "cross_split_template_overlap": 42,
+  "template_clusters": [
+    {
+      "cluster_id": "43",
+      "paths": [
+        "demo_set/conflict/conflict_dorm_017.txt",
+        "dev_set/conflict/conflict_dorm_077.txt",
+        "dev_set/conflict/conflict_dorm_137.txt",
+        "stress_set/conflict/conflict_dorm_377.txt",
+        "stress_set/conflict/conflict_dorm_437.txt",
+        "blind_test_set/conflict/conflict_dorm_197.txt",
+        "blind_test_set/conflict/conflict_dorm_257.txt",
+        "blind_test_set/conflict/conflict_dorm_317.txt"
+      ]
+    },
+    {
+      "cluster_id": "11",
+      "paths": [
+        "demo_set/conflict/conflict_exam_014.txt",
+        "dev_set/conflict/conflict_exam_074.txt",
+        "dev_set/conflict/conflict_exam_134.txt",
+        "stress_set/conflict/conflict_exam_374.txt",
+        "stress_set/conflict/conflict_exam_434.txt",
+        "blind_test_set/conflict/conflict_exam_194.txt",
+        "blind_test_set/conflict/conflict_exam_254.txt",
+        "blind_test_set/conflict/conflict_exam_314.txt"
+      ]
+    },
+    {
+      "cluster_id": "22",
+      "paths": [
+        "demo_set/conflict/conflict_library_015.txt",
+        "dev_set/conflict/conflict_library_075.txt",
+        "dev_set/conflict/conflict_library_135.txt",
+        "stress_set/conflict/conflict_library_375.txt",
+        "stress_set/conflict/conflict_library_435.txt",
+        "blind_test_set/conflict/conflict_library_195.txt",
+        "blind_test_set/conflict/conflict_library_255.txt",
+        "blind_test_set/conflict/conflict_library_315.txt"
+      ]
+    },
+    {
+      "cluster_id": "18",
+      "paths": [
+        "demo_set/conflict/conflict_scholarship_016.txt",
+        "dev_set/conflict/conflict_scholarship_076.txt",
+        "dev_set/conflict/conflict_scholarship_136.txt",
+        "stress_set/conflict/conflict_scholarship_376.txt",
+        "stress_set/conflict/conflict_scholarship_436.txt",
+        "blind_test_set/conflict/conflict_scholarship_196.txt",
+        "blind_test_set/conflict/conflict_scholarship_256.txt",
+        "blind_test_set/conflict/conflict_scholarship_316.txt"
+      ]
+    },
+    {
+      "cluster_id": "27",
+      "paths": [
+        "demo_set/hard_negative/hard_negative_clinic_019.txt",
+        "dev_set/hard_negative/hard_negative_clinic_079.txt",
+        "dev_set/hard_negative/hard_negative_clinic_139.txt",
+        "stress_set/hard_negative/hard_negative_clinic_379.txt",
+        "stress_set/hard_negative/hard_negative_clinic_439.txt",
+        "blind_test_set/hard_negative/hard_negative_clinic_199.txt",
+        "blind_test_set/hard_negative/hard_negative_clinic_259.txt",
+        "blind_test_set/hard_negative/hard_negative_clinic_319.txt"
+      ]
+    },
+    {
+      "cluster_id": "61",
+      "paths": [
+        "demo_set/hard_negative/hard_negative_course_018.txt",
+        "dev_set/hard_negative/hard_negative_course_078.txt",
+        "dev_set/hard_negative/hard_negative_course_138.txt",
+        "stress_set/hard_negative/hard_negative_course_378.txt",
+        "stress_set/hard_negative/hard_negative_course_438.txt",
+        "blind_test_set/hard_negative/hard_negative_course_198.txt",
+        "blind_test_set/hard_negative/hard_negative_course_258.txt",
+        "blind_test_set/hard_negative/hard_negative_course_318.txt"
+      ]
+    },
+    {
+      "cluster_id": "14",
+      "paths": [
+        "demo_set/normal/normal_academic_system_022.txt",
+        "dev_set/normal/normal_academic_system_046.txt",
+        "dev_set/normal/normal_academic_system_082.txt",
+        "dev_set/normal/normal_academic_system_106.txt",
+        "dev_set/normal/normal_academic_system_142.txt",
+        "dev_set/normal/normal_academic_system_166.txt",
+        "stress_set/normal/normal_academic_system_346.txt",
+        "stress_set/normal/normal_academic_system_382.txt",
+        "stress_set/normal/normal_academic_system_406.txt",
+        "stress_set/normal/normal_academic_system_442.txt",
+        "stress_set/normal/normal_academic_system_466.txt",
+        "blind_test_set/normal/normal_academic_system_202.txt",
+        "blind_test_set/normal/normal_academic_system_226.txt",
+        "blind_test_set/normal/normal_academic_system_262.txt",
+        "blind_test_set/normal/normal_academic_system_286.txt",
+        "blind_test_set/normal/normal_academic_system_322.txt"
+      ]
+    },
+    {
+      "cluster_id": "10",
+      "paths": [
+        "demo_set/normal/normal_canteen_008.txt",
+        "demo_set/normal/normal_canteen_020.txt",
+        "dev_set/normal/normal_canteen_044.txt",
+        "dev_set/normal/normal_canteen_068.txt",
+        "dev_set/normal/normal_canteen_080.txt",
+        "dev_set/normal/normal_canteen_104.txt",
+        "dev_set/normal/normal_canteen_128.txt",
+        "dev_set/normal/normal_canteen_140.txt",
+        "dev_set/normal/normal_canteen_164.txt",
+        "stress_set/normal/normal_canteen_344.txt",
+        "stress_set/normal/normal_canteen_368.txt",
+        "stress_set/normal/normal_canteen_380.txt",
+        "stress_set/normal/normal_canteen_404.txt",
+        "stress_set/normal/normal_canteen_428.txt",
+        "stress_set/normal/normal_canteen_440.txt",
+        "stress_set/normal/normal_canteen_464.txt",
+        "blind_test_set/normal/normal_canteen_188.txt",
+        "blind_test_set/normal/normal_canteen_200.txt",
+        "blind_test_set/normal/normal_canteen_224.txt",
+        "blind_test_set/normal/normal_canteen_248.txt",
+        "blind_test_set/normal/normal_canteen_260.txt",
+        "blind_test_set/normal/normal_canteen_284.txt",
+        "blind_test_set/normal/normal_canteen_308.txt",
+        "blind_test_set/normal/normal_canteen_320.txt"
+      ]
+    },
+    {
+      "cluster_id": "33",
+      "paths": [
+        "demo_set/normal/normal_clinic_007.txt",
+        "dev_set/normal/normal_clinic_043.txt",
+        "dev_set/normal/normal_clinic_067.txt",
+        "dev_set/normal/normal_clinic_103.txt",
+        "dev_set/normal/normal_clinic_127.txt",
+        "dev_set/normal/normal_clinic_163.txt",
+        "stress_set/normal/normal_clinic_343.txt",
+        "stress_set/normal/normal_clinic_367.txt",
+        "stress_set/normal/normal_clinic_403.txt",
+        "stress_set/normal/normal_clinic_427.txt",
+        "stress_set/normal/normal_clinic_463.txt",
+        "blind_test_set/normal/normal_clinic_187.txt",
+        "blind_test_set/normal/normal_clinic_223.txt",
+        "blind_test_set/normal/normal_clinic_247.txt",
+        "blind_test_set/normal/normal_clinic_283.txt",
+        "blind_test_set/normal/normal_clinic_307.txt"
+      ]
+    },
+    {
+      "cluster_id": "59",
+      "paths": [
+        "demo_set/normal/normal_club_021.txt",
+        "dev_set/normal/normal_club_045.txt",
+        "dev_set/normal/normal_club_081.txt",
+        "dev_set/normal/normal_club_105.txt",
+        "dev_set/normal/normal_club_141.txt",
+        "dev_set/normal/normal_club_165.txt",
+        "stress_set/normal/normal_club_345.txt",
+        "stress_set/normal/normal_club_381.txt",
+        "stress_set/normal/normal_club_405.txt",
+        "stress_set/normal/normal_club_441.txt",
+        "stress_set/normal/normal_club_465.txt",
+        "blind_test_set/normal/normal_club_201.txt",
+        "blind_test_set/normal/normal_club_225.txt",
+        "blind_test_set/normal/normal_club_261.txt",
+        "blind_test_set/normal/normal_club_285.txt",
+        "blind_test_set/normal/normal_club_321.txt"
+      ]
+    },
+    {
+      "cluster_id": "53",
+      "paths": [
+        "demo_set/normal/normal_competition_001.txt",
+        "demo_set/normal/normal_competition_025.txt",
+        "dev_set/normal/normal_competition_061.txt",
+        "dev_set/normal/normal_competition_085.txt",
+        "dev_set/normal/normal_competition_121.txt",
+        "dev_set/normal/normal_competition_145.txt",
+        "stress_set/normal/normal_competition_361.txt",
+        "stress_set/normal/normal_competition_385.txt",
+        "stress_set/normal/normal_competition_421.txt",
+        "stress_set/normal/normal_competition_445.txt",
+        "blind_test_set/normal/normal_competition_181.txt",
+        "blind_test_set/normal/normal_competition_205.txt",
+        "blind_test_set/normal/normal_competition_241.txt",
+        "blind_test_set/normal/normal_competition_265.txt",
+        "blind_test_set/normal/normal_competition_301.txt",
+        "blind_test_set/normal/normal_competition_325.txt"
+      ]
+    },
+    {
+      "cluster_id": "58",
+      "paths": [
+        "demo_set/normal/normal_course_006.txt",
+        "dev_set/normal/normal_course_042.txt",
+        "dev_set/normal/normal_course_066.txt",
+        "dev_set/normal/normal_course_102.txt",
+        "dev_set/normal/normal_course_126.txt",
+        "dev_set/normal/normal_course_162.txt",
+        "stress_set/normal/normal_course_342.txt",
+        "stress_set/normal/normal_course_366.txt",
+        "stress_set/normal/normal_course_402.txt",
+        "stress_set/normal/normal_course_426.txt",
+        "stress_set/normal/normal_course_462.txt",
+        "blind_test_set/normal/normal_course_186.txt",
+        "blind_test_set/normal/normal_course_222.txt",
+        "blind_test_set/normal/normal_course_246.txt",
+        "blind_test_set/normal/normal_course_282.txt",
+        "blind_test_set/normal/normal_course_306.txt"
+      ]
+    },
+    {
+      "cluster_id": "2",
+      "paths": [
+        "demo_set/normal/normal_dorm_005.txt",
+        "dev_set/normal/normal_dorm_041.txt",
+        "dev_set/normal/normal_dorm_065.txt",
+        "dev_set/normal/normal_dorm_101.txt",
+        "dev_set/normal/normal_dorm_125.txt",
+        "dev_set/normal/normal_dorm_161.txt",
+        "stress_set/normal/normal_dorm_341.txt",
+        "stress_set/normal/normal_dorm_365.txt",
+        "stress_set/normal/normal_dorm_401.txt",
+        "stress_set/normal/normal_dorm_425.txt",
+        "stress_set/normal/normal_dorm_461.txt",
+        "blind_test_set/normal/normal_dorm_185.txt",
+        "blind_test_set/normal/normal_dorm_221.txt",
+        "blind_test_set/normal/normal_dorm_245.txt",
+        "blind_test_set/normal/normal_dorm_281.txt",
+        "blind_test_set/normal/normal_dorm_305.txt"
+      ]
+    },
+    {
+      "cluster_id": "4",
+      "paths": [
+        "demo_set/normal/normal_exam_002.txt",
+        "demo_set/normal/normal_exam_026.txt",
+        "dev_set/normal/normal_exam_062.txt",
+        "dev_set/normal/normal_exam_086.txt",
+        "dev_set/normal/normal_exam_122.txt",
+        "dev_set/normal/normal_exam_146.txt",
+        "stress_set/normal/normal_exam_362.txt",
+        "stress_set/normal/normal_exam_386.txt",
+        "stress_set/normal/normal_exam_422.txt",
+        "stress_set/normal/normal_exam_446.txt",
+        "blind_test_set/normal/normal_exam_182.txt",
+        "blind_test_set/normal/normal_exam_206.txt",
+        "blind_test_set/normal/normal_exam_242.txt",
+        "blind_test_set/normal/normal_exam_266.txt",
+        "blind_test_set/normal/normal_exam_302.txt",
+        "blind_test_set/normal/normal_exam_326.txt"
+      ]
+    },
+    {
+      "cluster_id": "31",
+      "paths": [
+        "demo_set/normal/normal_lab_024.txt",
+        "dev_set/normal/normal_lab_048.txt",
+        "dev_set/normal/normal_lab_060.txt",
+        "dev_set/normal/normal_lab_084.txt",
+        "dev_set/normal/normal_lab_108.txt",
+        "dev_set/normal/normal_lab_120.txt",
+        "dev_set/normal/normal_lab_144.txt",
+        "dev_set/normal/normal_lab_168.txt",
+        "dev_set/normal/normal_lab_180.txt",
+        "stress_set/normal/normal_lab_348.txt",
+        "stress_set/normal/normal_lab_360.txt",
+        "stress_set/normal/normal_lab_384.txt",
+        "stress_set/normal/normal_lab_408.txt",
+        "stress_set/normal/normal_lab_420.txt",
+        "stress_set/normal/normal_lab_444.txt",
+        "stress_set/normal/normal_lab_468.txt",
+        "stress_set/normal/normal_lab_480.txt",
+        "blind_test_set/normal/normal_lab_204.txt",
+        "blind_test_set/normal/normal_lab_228.txt",
+        "blind_test_set/normal/normal_lab_240.txt",
+        "blind_test_set/normal/normal_lab_264.txt",
+        "blind_test_set/normal/normal_lab_288.txt",
+        "blind_test_set/normal/normal_lab_300.txt",
+        "blind_test_set/normal/normal_lab_324.txt"
+      ]
+    },
+    {
+      "cluster_id": "45",
+      "paths": [
+        "demo_set/normal/normal_lecture_023.txt",
+        "dev_set/normal/normal_lecture_047.txt",
+        "dev_set/normal/normal_lecture_083.txt",
+        "dev_set/normal/normal_lecture_107.txt",
+        "dev_set/normal/normal_lecture_143.txt",
+        "dev_set/normal/normal_lecture_167.txt",
+        "stress_set/normal/normal_lecture_347.txt",
+        "stress_set/normal/normal_lecture_383.txt",
+        "stress_set/normal/normal_lecture_407.txt",
+        "stress_set/normal/normal_lecture_443.txt",
+        "stress_set/normal/normal_lecture_467.txt",
+        "blind_test_set/normal/normal_lecture_203.txt",
+        "blind_test_set/normal/normal_lecture_227.txt",
+        "blind_test_set/normal/normal_lecture_263.txt",
+        "blind_test_set/normal/normal_lecture_287.txt",
+        "blind_test_set/normal/normal_lecture_323.txt"
+      ]
+    },
+    {
+      "cluster_id": "29",
+      "paths": [
+        "demo_set/normal/normal_library_003.txt",
+        "demo_set/normal/normal_library_027.txt",
+        "dev_set/normal/normal_library_063.txt",
+        "dev_set/normal/normal_library_087.txt",
+        "dev_set/normal/normal_library_123.txt",
+        "dev_set/normal/normal_library_147.txt",
+        "stress_set/normal/normal_library_363.txt",
+        "stress_set/normal/normal_library_387.txt",
+        "stress_set/normal/normal_library_423.txt",
+        "stress_set/normal/normal_library_447.txt",
+        "blind_test_set/normal/normal_library_183.txt",
+        "blind_test_set/normal/normal_library_207.txt",
+        "blind_test_set/normal/normal_library_243.txt",
+        "blind_test_set/normal/normal_library_267.txt",
+        "blind_test_set/normal/normal_library_303.txt",
+        "blind_test_set/normal/normal_library_327.txt"
+      ]
+    },
+    {
+      "cluster_id": "54",
+      "paths": [
+        "demo_set/normal/normal_scholarship_004.txt",
+        "demo_set/normal/normal_scholarship_028.txt",
+        "dev_set/normal/normal_scholarship_040.txt",
+        "dev_set/normal/normal_scholarship_064.txt",
+        "dev_set/normal/normal_scholarship_088.txt",
+        "dev_set/normal/normal_scholarship_100.txt",
+        "dev_set/normal/normal_scholarship_124.txt",
+        "dev_set/normal/normal_scholarship_148.txt",
+        "dev_set/normal/normal_scholarship_160.txt",
+        "stress_set/normal/normal_scholarship_364.txt",
+        "stress_set/normal/normal_scholarship_388.txt",
+        "stress_set/normal/normal_scholarship_400.txt",
+        "stress_set/normal/normal_scholarship_424.txt",
+        "stress_set/normal/normal_scholarship_448.txt",
+        "stress_set/normal/normal_scholarship_460.txt",
+        "blind_test_set/normal/normal_scholarship_184.txt",
+        "blind_test_set/normal/normal_scholarship_208.txt",
+        "blind_test_set/normal/normal_scholarship_220.txt",
+        "blind_test_set/normal/normal_scholarship_244.txt",
+        "blind_test_set/normal/normal_scholarship_268.txt",
+        "blind_test_set/normal/normal_scholarship_280.txt",
+        "blind_test_set/normal/normal_scholarship_304.txt",
+        "blind_test_set/normal/normal_scholarship_328.txt",
+        "blind_test_set/normal/normal_scholarship_340.txt"
+      ]
+    },
+    {
+      "cluster_id": "16",
+      "paths": [
+        "demo_set/poison/poison_academic_system_010.txt",
+        "dev_set/poison/poison_academic_system_070.txt",
+        "dev_set/poison/poison_academic_system_130.txt",
+        "stress_set/poison/poison_academic_system_370.txt",
+        "stress_set/poison/poison_academic_system_430.txt",
+        "blind_test_set/poison/poison_academic_system_190.txt",
+        "blind_test_set/poison/poison_academic_system_250.txt",
+        "blind_test_set/poison/poison_academic_system_310.txt"
+      ]
+    },
+    {
+      "cluster_id": "46",
+      "paths": [
+        "demo_set/poison/poison_club_009.txt",
+        "dev_set/poison/poison_club_033.txt",
+        "dev_set/poison/poison_club_069.txt",
+        "dev_set/poison/poison_club_093.txt",
+        "dev_set/poison/poison_club_129.txt",
+        "dev_set/poison/poison_club_153.txt",
+        "stress_set/poison/poison_club_369.txt",
+        "stress_set/poison/poison_club_393.txt",
+        "stress_set/poison/poison_club_429.txt",
+        "stress_set/poison/poison_club_453.txt",
+        "blind_test_set/poison/poison_club_189.txt",
+        "blind_test_set/poison/poison_club_213.txt",
+        "blind_test_set/poison/poison_club_249.txt",
+        "blind_test_set/poison/poison_club_273.txt",
+        "blind_test_set/poison/poison_club_309.txt",
+        "blind_test_set/poison/poison_club_333.txt"
+      ]
+    },
+    {
+      "cluster_id": "57",
+      "paths": [
+        "demo_set/poison/poison_competition_013.txt",
+        "dev_set/poison/poison_competition_049.txt",
+        "dev_set/poison/poison_competition_073.txt",
+        "dev_set/poison/poison_competition_109.txt",
+        "dev_set/poison/poison_competition_133.txt",
+        "dev_set/poison/poison_competition_169.txt",
+        "stress_set/poison/poison_competition_349.txt",
+        "stress_set/poison/poison_competition_373.txt",
+        "stress_set/poison/poison_competition_409.txt",
+        "stress_set/poison/poison_competition_433.txt",
+        "stress_set/poison/poison_competition_469.txt",
+        "blind_test_set/poison/poison_competition_193.txt",
+        "blind_test_set/poison/poison_competition_229.txt",
+        "blind_test_set/poison/poison_competition_253.txt",
+        "blind_test_set/poison/poison_competition_289.txt",
+        "blind_test_set/poison/poison_competition_313.txt"
+      ]
+    },
+    {
+      "cluster_id": "42",
+      "paths": [
+        "demo_set/poison/poison_course_030.txt",
+        "dev_set/poison/poison_course_090.txt",
+        "dev_set/poison/poison_course_150.txt",
+        "stress_set/poison/poison_course_390.txt",
+        "stress_set/poison/poison_course_450.txt",
+        "blind_test_set/poison/poison_course_210.txt",
+        "blind_test_set/poison/poison_course_270.txt",
+        "blind_test_set/poison/poison_course_330.txt"
+      ]
+    },
+    {
+      "cluster_id": "40",
+      "paths": [
+        "demo_set/poison/poison_dorm_029.txt",
+        "dev_set/poison/poison_dorm_053.txt",
+        "dev_set/poison/poison_dorm_089.txt",
+        "dev_set/poison/poison_dorm_113.txt",
+        "dev_set/poison/poison_dorm_149.txt",
+        "dev_set/poison/poison_dorm_173.txt",
+        "stress_set/poison/poison_dorm_353.txt",
+        "stress_set/poison/poison_dorm_389.txt",
+        "stress_set/poison/poison_dorm_413.txt",
+        "stress_set/poison/poison_dorm_449.txt",
+        "stress_set/poison/poison_dorm_473.txt",
+        "blind_test_set/poison/poison_dorm_209.txt",
+        "blind_test_set/poison/poison_dorm_233.txt",
+        "blind_test_set/poison/poison_dorm_269.txt",
+        "blind_test_set/poison/poison_dorm_293.txt",
+        "blind_test_set/poison/poison_dorm_329.txt"
+      ]
+    },
+    {
+      "cluster_id": "30",
+      "paths": [
+        "demo_set/poison/poison_lab_012.txt",
+        "dev_set/poison/poison_lab_072.txt",
+        "dev_set/poison/poison_lab_132.txt",
+        "stress_set/poison/poison_lab_372.txt",
+        "stress_set/poison/poison_lab_432.txt",
+        "blind_test_set/poison/poison_lab_192.txt",
+        "blind_test_set/poison/poison_lab_252.txt",
+        "blind_test_set/poison/poison_lab_312.txt"
+      ]
+    },
+    {
+      "cluster_id": "56",
+      "paths": [
+        "demo_set/poison/poison_lecture_011.txt",
+        "dev_set/poison/poison_lecture_071.txt",
+        "dev_set/poison/poison_lecture_131.txt",
+        "stress_set/poison/poison_lecture_371.txt",
+        "stress_set/poison/poison_lecture_431.txt",
+        "blind_test_set/poison/poison_lecture_191.txt",
+        "blind_test_set/poison/poison_lecture_251.txt",
+        "blind_test_set/poison/poison_lecture_311.txt"
+      ]
+    },
+    {
+      "cluster_id": "38",
+      "paths": [
+        "dev_set/conflict/conflict_academic_system_034.txt",
+        "dev_set/conflict/conflict_academic_system_094.txt",
+        "dev_set/conflict/conflict_academic_system_154.txt",
+        "stress_set/conflict/conflict_academic_system_394.txt",
+        "stress_set/conflict/conflict_academic_system_454.txt",
+        "blind_test_set/conflict/conflict_academic_system_214.txt",
+        "blind_test_set/conflict/conflict_academic_system_274.txt",
+        "blind_test_set/conflict/conflict_academic_system_334.txt"
+      ]
+    },
+    {
+      "cluster_id": "19",
+      "paths": [
+        "dev_set/conflict/conflict_canteen_056.txt",
+        "dev_set/conflict/conflict_canteen_116.txt",
+        "dev_set/conflict/conflict_canteen_176.txt",
+        "stress_set/conflict/conflict_canteen_356.txt",
+        "stress_set/conflict/conflict_canteen_416.txt",
+        "stress_set/conflict/conflict_canteen_476.txt",
+        "blind_test_set/conflict/conflict_canteen_236.txt",
+        "blind_test_set/conflict/conflict_canteen_296.txt"
+      ]
+    },
+    {
+      "cluster_id": "37",
+      "paths": [
+        "dev_set/conflict/conflict_clinic_055.txt",
+        "dev_set/conflict/conflict_clinic_115.txt",
+        "dev_set/conflict/conflict_clinic_175.txt",
+        "stress_set/conflict/conflict_clinic_355.txt",
+        "stress_set/conflict/conflict_clinic_415.txt",
+        "stress_set/conflict/conflict_clinic_475.txt",
+        "blind_test_set/conflict/conflict_clinic_235.txt",
+        "blind_test_set/conflict/conflict_clinic_295.txt"
+      ]
+    },
+    {
+      "cluster_id": "15",
+      "paths": [
+        "dev_set/conflict/conflict_club_057.txt",
+        "dev_set/conflict/conflict_club_117.txt",
+        "dev_set/conflict/conflict_club_177.txt",
+        "stress_set/conflict/conflict_club_357.txt",
+        "stress_set/conflict/conflict_club_417.txt",
+        "stress_set/conflict/conflict_club_477.txt",
+        "blind_test_set/conflict/conflict_club_237.txt",
+        "blind_test_set/conflict/conflict_club_297.txt"
+      ]
+    },
+    {
+      "cluster_id": "12",
+      "paths": [
+        "dev_set/conflict/conflict_competition_037.txt",
+        "dev_set/conflict/conflict_competition_097.txt",
+        "dev_set/conflict/conflict_competition_157.txt",
+        "stress_set/conflict/conflict_competition_397.txt",
+        "stress_set/conflict/conflict_competition_457.txt",
+        "blind_test_set/conflict/conflict_competition_217.txt",
+        "blind_test_set/conflict/conflict_competition_277.txt",
+        "blind_test_set/conflict/conflict_competition_337.txt"
+      ]
+    },
+    {
+      "cluster_id": "20",
+      "paths": [
+        "dev_set/conflict/conflict_course_054.txt",
+        "dev_set/conflict/conflict_course_114.txt",
+        "dev_set/conflict/conflict_course_174.txt",
+        "stress_set/conflict/conflict_course_354.txt",
+        "stress_set/conflict/conflict_course_414.txt",
+        "stress_set/conflict/conflict_course_474.txt",
+        "blind_test_set/conflict/conflict_course_234.txt",
+        "blind_test_set/conflict/conflict_course_294.txt"
+      ]
+    },
+    {
+      "cluster_id": "5",
+      "paths": [
+        "dev_set/conflict/conflict_lab_036.txt",
+        "dev_set/conflict/conflict_lab_096.txt",
+        "dev_set/conflict/conflict_lab_156.txt",
+        "stress_set/conflict/conflict_lab_396.txt",
+        "stress_set/conflict/conflict_lab_456.txt",
+        "blind_test_set/conflict/conflict_lab_216.txt",
+        "blind_test_set/conflict/conflict_lab_276.txt",
+        "blind_test_set/conflict/conflict_lab_336.txt"
+      ]
+    },
+    {
+      "cluster_id": "41",
+      "paths": [
+        "dev_set/conflict/conflict_lecture_035.txt",
+        "dev_set/conflict/conflict_lecture_095.txt",
+        "dev_set/conflict/conflict_lecture_155.txt",
+        "stress_set/conflict/conflict_lecture_395.txt",
+        "stress_set/conflict/conflict_lecture_455.txt",
+        "blind_test_set/conflict/conflict_lecture_215.txt",
+        "blind_test_set/conflict/conflict_lecture_275.txt",
+        "blind_test_set/conflict/conflict_lecture_335.txt"
+      ]
+    },
+    {
+      "cluster_id": "32",
+      "paths": [
+        "dev_set/hard_negative/hard_negative_academic_system_058.txt",
+        "dev_set/hard_negative/hard_negative_academic_system_118.txt",
+        "dev_set/hard_negative/hard_negative_academic_system_178.txt",
+        "stress_set/hard_negative/hard_negative_academic_system_358.txt",
+        "stress_set/hard_negative/hard_negative_academic_system_418.txt",
+        "stress_set/hard_negative/hard_negative_academic_system_478.txt",
+        "blind_test_set/hard_negative/hard_negative_academic_system_238.txt",
+        "blind_test_set/hard_negative/hard_negative_academic_system_298.txt"
+      ]
+    },
+    {
+      "cluster_id": "35",
+      "paths": [
+        "dev_set/hard_negative/hard_negative_exam_038.txt",
+        "dev_set/hard_negative/hard_negative_exam_098.txt",
+        "dev_set/hard_negative/hard_negative_exam_158.txt",
+        "stress_set/hard_negative/hard_negative_exam_398.txt",
+        "stress_set/hard_negative/hard_negative_exam_458.txt",
+        "blind_test_set/hard_negative/hard_negative_exam_218.txt",
+        "blind_test_set/hard_negative/hard_negative_exam_278.txt",
+        "blind_test_set/hard_negative/hard_negative_exam_338.txt"
+      ]
+    },
+    {
+      "cluster_id": "51",
+      "paths": [
+        "dev_set/hard_negative/hard_negative_lecture_059.txt",
+        "dev_set/hard_negative/hard_negative_lecture_119.txt",
+        "dev_set/hard_negative/hard_negative_lecture_179.txt",
+        "stress_set/hard_negative/hard_negative_lecture_359.txt",
+        "stress_set/hard_negative/hard_negative_lecture_419.txt",
+        "stress_set/hard_negative/hard_negative_lecture_479.txt",
+        "blind_test_set/hard_negative/hard_negative_lecture_239.txt",
+        "blind_test_set/hard_negative/hard_negative_lecture_299.txt"
+      ]
+    },
+    {
+      "cluster_id": "36",
+      "paths": [
+        "dev_set/hard_negative/hard_negative_library_039.txt",
+        "dev_set/hard_negative/hard_negative_library_099.txt",
+        "dev_set/hard_negative/hard_negative_library_159.txt",
+        "stress_set/hard_negative/hard_negative_library_399.txt",
+        "stress_set/hard_negative/hard_negative_library_459.txt",
+        "blind_test_set/hard_negative/hard_negative_library_219.txt",
+        "blind_test_set/hard_negative/hard_negative_library_279.txt",
+        "blind_test_set/hard_negative/hard_negative_library_339.txt"
+      ]
+    },
+    {
+      "cluster_id": "0",
+      "paths": [
+        "dev_set/poison/poison_canteen_032.txt",
+        "dev_set/poison/poison_canteen_092.txt",
+        "dev_set/poison/poison_canteen_152.txt",
+        "stress_set/poison/poison_canteen_392.txt",
+        "stress_set/poison/poison_canteen_452.txt",
+        "blind_test_set/poison/poison_canteen_212.txt",
+        "blind_test_set/poison/poison_canteen_272.txt",
+        "blind_test_set/poison/poison_canteen_332.txt"
+      ]
+    },
+    {
+      "cluster_id": "47",
+      "paths": [
+        "dev_set/poison/poison_clinic_031.txt",
+        "dev_set/poison/poison_clinic_091.txt",
+        "dev_set/poison/poison_clinic_151.txt",
+        "stress_set/poison/poison_clinic_391.txt",
+        "stress_set/poison/poison_clinic_451.txt",
+        "blind_test_set/poison/poison_clinic_211.txt",
+        "blind_test_set/poison/poison_clinic_271.txt",
+        "blind_test_set/poison/poison_clinic_331.txt"
+      ]
+    },
+    {
+      "cluster_id": "7",
+      "paths": [
+        "dev_set/poison/poison_exam_050.txt",
+        "dev_set/poison/poison_exam_110.txt",
+        "dev_set/poison/poison_exam_170.txt",
+        "stress_set/poison/poison_exam_350.txt",
+        "stress_set/poison/poison_exam_410.txt",
+        "stress_set/poison/poison_exam_470.txt",
+        "blind_test_set/poison/poison_exam_230.txt",
+        "blind_test_set/poison/poison_exam_290.txt"
+      ]
+    },
+    {
+      "cluster_id": "26",
+      "paths": [
+        "dev_set/poison/poison_library_051.txt",
+        "dev_set/poison/poison_library_111.txt",
+        "dev_set/poison/poison_library_171.txt",
+        "stress_set/poison/poison_library_351.txt",
+        "stress_set/poison/poison_library_411.txt",
+        "stress_set/poison/poison_library_471.txt",
+        "blind_test_set/poison/poison_library_231.txt",
+        "blind_test_set/poison/poison_library_291.txt"
+      ]
+    },
+    {
+      "cluster_id": "39",
+      "paths": [
+        "dev_set/poison/poison_scholarship_052.txt",
+        "dev_set/poison/poison_scholarship_112.txt",
+        "dev_set/poison/poison_scholarship_172.txt",
+        "stress_set/poison/poison_scholarship_352.txt",
+        "stress_set/poison/poison_scholarship_412.txt",
+        "stress_set/poison/poison_scholarship_472.txt",
+        "blind_test_set/poison/poison_scholarship_232.txt",
+        "blind_test_set/poison/poison_scholarship_292.txt"
+      ]
+    },
+    {
+      "cluster_id": "49",
+      "paths": [
+        "third_party_blind_set/documents/conflict/tp_seed_034_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_039_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_044_conflict.txt"
+      ]
+    },
+    {
+      "cluster_id": "25",
+      "paths": [
+        "third_party_blind_set/documents/conflict/tp_seed_035_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_040_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_045_conflict.txt"
+      ]
+    },
+    {
+      "cluster_id": "9",
+      "paths": [
+        "third_party_blind_set/documents/conflict/tp_seed_036_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_041_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_046_conflict.txt"
+      ]
+    },
+    {
+      "cluster_id": "44",
+      "paths": [
+        "third_party_blind_set/documents/conflict/tp_seed_037_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_042_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_047_conflict.txt"
+      ]
+    },
+    {
+      "cluster_id": "55",
+      "paths": [
+        "third_party_blind_set/documents/conflict/tp_seed_038_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_043_conflict.txt",
+        "third_party_blind_set/documents/conflict/tp_seed_048_conflict.txt"
+      ]
+    },
+    {
+      "cluster_id": "52",
+      "paths": [
+        "third_party_blind_set/documents/hard_negative/tp_seed_049_hard_negative.txt",
+        "third_party_blind_set/documents/hard_negative/tp_seed_054_hard_negative.txt",
+        "third_party_blind_set/documents/hard_negative/tp_seed_059_hard_negative.txt"
+      ]
+    },
+    {
+      "cluster_id": "21",
+      "paths": [
+        "third_party_blind_set/documents/hard_negative/tp_seed_050_hard_negative.txt",
+        "third_party_blind_set/documents/hard_negative/tp_seed_055_hard_negative.txt",
+        "third_party_blind_set/documents/hard_negative/tp_seed_060_hard_negative.txt"
+      ]
+    },
+    {
+      "cluster_id": "48",
+      "paths": [
+        "third_party_blind_set/documents/hard_negative/tp_seed_051_hard_negative.txt",
+        "third_party_blind_set/documents/hard_negative/tp_seed_056_hard_negative.txt"
+      ]
+    },
+    {
+      "cluster_id": "50",
+      "paths": [
+        "third_party_blind_set/documents/hard_negative/tp_seed_052_hard_negative.txt",
+        "third_party_blind_set/documents/hard_negative/tp_seed_057_hard_negative.txt"
+      ]
+    },
+    {
+      "cluster_id": "24",
+      "paths": [
+        "third_party_blind_set/documents/hard_negative/tp_seed_053_hard_negative.txt",
+        "third_party_blind_set/documents/hard_negative/tp_seed_058_hard_negative.txt"
+      ]
+    },
+    {
+      "cluster_id": "23",
+      "paths": [
+        "third_party_blind_set/documents/normal/tp_seed_001_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_006_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_011_normal.txt"
+      ]
+    },
+    {
+      "cluster_id": "17",
+      "paths": [
+        "third_party_blind_set/documents/normal/tp_seed_002_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_007_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_012_normal.txt"
+      ]
+    },
+    {
+      "cluster_id": "60",
+      "paths": [
+        "third_party_blind_set/documents/normal/tp_seed_003_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_008_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_013_normal.txt"
+      ]
+    },
+    {
+      "cluster_id": "28",
+      "paths": [
+        "third_party_blind_set/documents/normal/tp_seed_004_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_009_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_014_normal.txt"
+      ]
+    },
+    {
+      "cluster_id": "3",
+      "paths": [
+        "third_party_blind_set/documents/normal/tp_seed_005_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_010_normal.txt",
+        "third_party_blind_set/documents/normal/tp_seed_015_normal.txt"
+      ]
+    },
+    {
+      "cluster_id": "1",
+      "paths": [
+        "third_party_blind_set/documents/poison/tp_seed_016_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_021_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_026_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_031_poison.txt"
+      ]
+    },
+    {
+      "cluster_id": "13",
+      "paths": [
+        "third_party_blind_set/documents/poison/tp_seed_017_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_022_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_027_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_032_poison.txt"
+      ]
+    },
+    {
+      "cluster_id": "34",
+      "paths": [
+        "third_party_blind_set/documents/poison/tp_seed_018_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_023_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_028_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_033_poison.txt"
+      ]
+    },
+    {
+      "cluster_id": "6",
+      "paths": [
+        "third_party_blind_set/documents/poison/tp_seed_019_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_024_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_029_poison.txt"
+      ]
+    },
+    {
+      "cluster_id": "8",
+      "paths": [
+        "third_party_blind_set/documents/poison/tp_seed_020_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_025_poison.txt",
+        "third_party_blind_set/documents/poison/tp_seed_030_poison.txt"
+      ]
+    }
+  ]
+}
