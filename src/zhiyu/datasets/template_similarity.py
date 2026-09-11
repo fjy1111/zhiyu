@@ -1,4 +1,6 @@
 import hashlib, re
+from pathlib import Path
+import yaml
 def normalize_template(text):
     text=re.sub(r'(?im)^\s*(?:sample\s*id|样本编号|文档编号)\s*[:：].*$', 'SAMPLE_ID', text)
     text=re.sub(r'https?://\S+|www\.\S+', 'URL', text, flags=re.I)
@@ -28,4 +30,12 @@ def build_template_groups(records,n=5,threshold=.8):
     groups={}
     for i in range(len(records)): groups.setdefault(find(i),[]).append(i)
     return [[records[i] for i in ids] for ids in groups.values()],pairs
+
+def load_benchmark_audit_config(path):
+    data = yaml.safe_load(Path(path).read_text(encoding='utf-8'))
+    return {
+        'ngram_size': int(data['ngram_size']),
+        'near_template_threshold': float(data['near_template_threshold']),
+        'tune_target_ratio': float(data['tune_target_ratio']),
+    }
 ngrams=character_ngrams

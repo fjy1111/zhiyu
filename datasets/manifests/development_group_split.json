@@ -669,55 +669,55 @@
     "document_id": "87ed7f4883375c815e9b90f5f6666b39a0fe4d5a32cb79139b6cfc3b50a69f79",
     "original_label": "normal",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "a63af27a6545a81791053d304f22589b6b8c1c35c1b6feadcd9c0ec9a54e9efd",
     "original_label": "normal",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "8f513008f3d9bbb33251438cd64d9dba76342d9396afb3ee3b720870a60b720b",
     "original_label": "conflict",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "211f40eb25088d65f056a1d9f18ddabe64dbe6942952cc271bf0f185911ba628",
     "original_label": "conflict",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "bf23222c85d0ca49f080bc9c421177aadfc4069a7687762069bbeb1c2146f766",
     "original_label": "conflict",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "08d862d1a9751eb671d5d3c7c0f073ae00060ded47b21f118694b1b9d39bfe6d",
     "original_label": "normal",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "5d2e564f5f16896d4fd481b2b1370a4185c1238d684c085170c51c8d053b3cf9",
     "original_label": "normal",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "b221527437ab68653e652d5358a11bcab9adfcc398263fc877d33fa31fcad5a6",
     "original_label": "normal",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "429843cef8e5c61d58b65f62126351f24da775adbeb72c2d9808ff7f3a7409b7",
     "original_label": "normal",
     "group_id": "a7295ed6f65b2544",
-    "assigned_split": "development_tune"
+    "assigned_split": "development_generalization"
   },
   {
     "document_id": "651f5d68a68c8961ce0137a6e5f34ae194074019f82c55bc309cdb8c5fdf282b",
@@ -831,19 +831,19 @@
     "document_id": "7b53d7f76a93ec9d8ebc6682a17a3ead4ea04b919a8284d0d45ff1553f5944ac",
     "original_label": "poison",
     "group_id": "ce6d5964c5abb828",
-    "assigned_split": "development_generalization"
+    "assigned_split": "development_tune"
   },
   {
     "document_id": "04a61d1a4026b350b8f77ce48d58096bb603f3874fb9775ffe17a2cdb831d466",
     "original_label": "poison",
     "group_id": "ce6d5964c5abb828",
-    "assigned_split": "development_generalization"
+    "assigned_split": "development_tune"
   },
   {
     "document_id": "8ab905a6265830f2c83f36c2b8d8da551b717880aa032e64aea5d0a54447f4d3",
     "original_label": "poison",
     "group_id": "ce6d5964c5abb828",
-    "assigned_split": "development_generalization"
+    "assigned_split": "development_tune"
   },
   {
     "document_id": "a5b61822b7135e317e0710979390758792e311553df4aa0cb8ac2c56ae468499",
