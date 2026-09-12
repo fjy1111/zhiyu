@@ -56,7 +56,7 @@ Judge 是证据解释器，不是最终裁决器。Risk Engine 独占最终三�
 
 ### 2.1 Allowed
 
-**RuleEvent[]：** `rule_id`, `mechanism`, `event_class`, `confidence`, `document_id` / `chunk_id`, bound excerpt / span, `rationale`, statistical `measurement`（若有）
+**RuleEvent[]：** 冻结 Phase 2 对象原样保留。Phase 5 在 bundle 物化时为每条 RuleEvent 派生确定性 `rule_event_ref`（SHA256 of `document_id`, `chunk_id`, `rule_id`, `span_start`, `span_end`, `mechanism`, `event_class`, `confidence`）。不修改 Phase 2 schema。Judge 必须引用 `cited_rule_event_refs[]`，不得只靠可能重复的 `rule_id`。未知 / 重复 / 跨文档 ref → Judge `INVALID_OUTPUT`。原始 `rule_id` 仅用于解释与审计。
 
 **BehaviorEvidence[]：** `evidence_id`, `intent`, `mechanism`, `confidence`, `document_id` / `chunk_id`, bound excerpt / span, `rationale`, `source_rule_ids`
 
@@ -92,7 +92,7 @@ Judge **禁止**输出：`SAFE`, `REVIEW`, `POISON`, `final_risk_level`, final r
 ```text
 UnifiedRiskAssessment
   document_id
-  cited_rule_ids[]
+  cited_rule_event_refs[]
   cited_behavior_evidence_ids[]
   cited_factual_evidence_ids[]
   behavior_assessment: NONE | SUSPICIOUS | STRONG_CONTROL
@@ -211,11 +211,83 @@ SAFE = “计划中的安全分析已可靠完成，且没有留下未解决风�
 
 ---
 
-## 6. Evaluation
+## 6. Decision granularity and expected execution
+
+Phase 5 最终决策是 **DOCUMENT-LEVEL**。
+
+一条 `Phase5EvidenceBundle` 记录对应一个 candidate document，包含其全部 expected chunks 的正式证据与状态。
+
+### 6.1 ExpectedExecutionPlan
+
+至少记录：
+
+- `document_id`
+- `expected_chunk_ids`
+
+对每个 expected chunk，必须能判定哪些组件应当执行，哪些是合法不必执行。
+
+`UNEXPECTED_MISSING` = expected execution − actual formal result/status。
+
+禁止从 `None` / 缺失数据推断 `SKIPPED`。
+
+依赖（在该 ablation 期望该层时）：
+
+- 每个 candidate chunk 都应有 Rule scan
+- 每个 candidate chunk 都应有 Semantic analysis，除非冻结合法 skip 且 prerequisite 可验证
+- 每个 candidate chunk 都应有 Factual Claim Extraction
+- `ClaimExtraction == NO_CLAIM` → retrieval/comparison 不期望
+- `ClaimExtraction == OK` → 每个 AtomicClaim 期望 retrieval
+- Comparison 仅当 `Retrieval == OK` 时期望
+- `NO_EVIDENCE` 按冻结 Phase 4 合法产生 `INSUFFICIENT_EVIDENCE`
+
+### 6.2 Ablation-aware expected components
+
+- `rule_only_baseline`：只期望 RULE
+- `rule_plus_semantic_baseline`：RULE + SEMANTIC
+- `full_evidence_no_judge`：RULE + SEMANTIC + FACTUAL；Judge 故意不期望
+- `full_judge`：RULE + SEMANTIC + FACTUAL + UNIFIED_JUDGE
+
+ablation 中故意省略的组件不得记为 `UNEXPECTED_MISSING`。
+
+## 7. EvidenceBundle materialization
+
+在 ablation 评测之前物化一次 `Phase5EvidenceBundle`。
+
+使用：同一 Phase 4 derived candidate view + 冻结 Phase 2/3/4 实现与配置。
+
+一次生成全部所需正式证据/状态，然后 commit/freeze bundle 并记录 SHA256。
+
+四路 ablation 必须消费同一冻结 bundle。不得为每个 ablation 分别重跑 Phase 2/3/4，以免上游 LLM 随机性污染消融并重复消耗 API。
+
+bundle 可含 per-document 机器可读执行证据；禁止人工/逐样本 generalization 错误检查；报告只做聚合。
+
+Evaluator labels 分开存储，不得进入 runtime EvidenceBundle。
+
+Bundle 不得含：`original_label`、`attack_type`、`facts`、expected answers、evaluator annotations、暴露给 Judge 的 split 字段。
+
+### 7.1 Phase 4 evidence boundary
+
+消费冻结 `FactualEvidence` 原样。不重开 trusted corpus，不重检索，不给 Phase 5 补充新事实证据。
+
+Judge 可消费已有字段：`claim_excerpt`、`normalized_claim`、`relation`、supporting/contradicting/insufficient ids、已有 `reference_provenance`、`aggregation_reason`、`rationale`。
+
+若冻结 `FactualEvidence` 中没有 exact trusted reference excerpt，Phase 5 不得仅为 Judge 解释去拉取。
+
+### 7.2 Cost / provenance
+
+EvidenceBundle 物化是一次受控生成，不是 ablation 重跑。
+
+记录：`evidence_bundle_build_commit`、candidate snapshot SHA256、bundle SHA256、Phase 2/3/4 frozen commit 与 model/prompt/reference/config、execution-plan version、RuleEvent-ref derivation version。
+
+bundle 冻结后，不得因 Phase 5 指标重新生成。
+
+official `full_judge` 评测只新增 Phase 5 所需 Judge 调用。禁止根据 generalization 样本调 Prompt。
+
+## 8. Evaluation
 
 目标不是调高 Recall，而是证明：三路证据可统一消费；决策可审计可复现；failure/uncertainty 不会错误 SAFE；Judge 不会凭空 POISON；ablation 公平。
 
-### 6.1 Same candidate set
+### 8.1 Same candidate set
 
 不得把历史 Phase 2/3/4 官方数字直接横向比（candidate pool 不同）。
 
@@ -226,7 +298,7 @@ V1 统一 candidate view = 当前合法 Phase 4 derived view：
 
 所有 ablation 在同一 set 上重跑冻结的 Phase 2/3 逻辑。不得改 Phase 2 rules、Phase 3 prompt、Phase 4 prompt/corpus/retrieval/aggregation。
 
-### 6.2 Frozen Phase5EvidenceBundle
+### 8.2 Frozen Phase5EvidenceBundle
 
 正式评测前冻结每条 candidate：
 
@@ -243,14 +315,14 @@ official evaluation 开始后 bundle 不再修改。
 
 `full_evidence_no_judge` 与 `full_judge` 必须消费同一 bundle。
 
-### 6.3 Ablations
+### 8.3 Ablations
 
 - **rule_only_baseline**：只消费 RuleEvent，冻结 Phase 2
 - **rule_plus_semantic_baseline**：RuleEvent + BehaviorEvidence，冻结 Phase 3
 - **full_evidence_no_judge**：三路证据 + statuses，不调 Judge，直接 Q2/Q3 门
 - **full_judge**：同一 bundle + Judge → validated assessment → Risk Engine
 
-### 6.4 Metrics
+### 8.4 Metrics
 
 主阳性：`decision == POISON`。REVIEW 在 binary 中为 negative。GT：poison=positive；normal+hard_negative=negative；conflict 不进主 F1。
 
@@ -262,7 +334,7 @@ conflict 只报三档分布与 review/poison rate。CONTRADICTORY 通常应 REVI
 
 hard_negative_poison_rate 与 hard_negative_review_rate 分开。
 
-### 6.5 Judge diagnostics
+### 8.5 Judge diagnostics
 
 Judge OK/INVALID/ERROR；unknown/duplicate/invented citation rejection；uncertainty / coherence 分布。
 
@@ -273,7 +345,7 @@ full_evidence_no_judge vs full_judge：verdict agreement；SAFE↔REVIEW、REVIE
 
 这些是 correctness invariant，不是性能阈值。
 
-### 6.6 Discipline
+### 8.6 Discipline
 
 tune：可看聚合指标/错误类型/status 分布，禁止为指标改规则/prompt/gate/reference/threshold。
 gen：只允许聚合；禁止单样本、FN/FP 文本、Judge failure 样本、case patch。
@@ -285,9 +357,12 @@ Mock 仅测试。正式数字真实 DeepSeek。流程：mock/unit → 最小 Jud
 
 ---
 
-## 7. Hard Stop
+## 9. Hard Stop
 
-1. UnifiedRiskAssessment schema 实现
+1. UnifiedRiskAssessment schema 实现（`cited_rule_event_refs`）
+1b. ExpectedExecutionPlan；UNEXPECTED_MISSING 由 expected − actual 计算
+1c. Phase5-local deterministic `rule_event_ref` 派生（不改 Phase 2 schema）
+1d. EvidenceBundle 一次物化，四路 ablation 共用
 2. Judge evidence-ID validation 实现
 3. Judge 不输出最终 verdict
 4. deterministic non-compensatory Risk Engine 实现
@@ -311,7 +386,7 @@ Mock 仅测试。正式数字真实 DeepSeek。流程：mock/unit → 最小 Jud
 
 ---
 
-## 8. Not Phase 5
+## 10. Not Phase 5
 
 Protected KB、Retriever、Context Integrity Checker、Vanilla vs Protected RAG、QA generation、Web frontend、Dashboard、Phase 6。
 
