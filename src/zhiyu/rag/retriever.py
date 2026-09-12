@@ -11,11 +11,15 @@ from zhiyu.models.rag import (
 )
 
 NO_CONTEXT = RetrievalStatus.NO_CONTEXT
-_TOKEN = re.compile(r"\w+", re.UNICODE)
+_ASCII = re.compile(r"[A-Za-z0-9]+")
+_CJK_RUN = re.compile(r"[\u4e00-\u9fff]+")
 
 
 def _tokens(text: str) -> set[str]:
-    return {token.lower() for token in _TOKEN.findall(text) if token}
+    tokens = {match.group(0).lower() for match in _ASCII.finditer(text)}
+    for run in _CJK_RUN.findall(text):
+        tokens.update(run[i:i + 2] for i in range(len(run) - 1))
+    return tokens
 
 
 def lexical_score(query: str, document: str) -> float:

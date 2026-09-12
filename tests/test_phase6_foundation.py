@@ -152,3 +152,30 @@ def test_frozen_phase5_admission_against_phase4_chunks():
     assert all(decisions[doc_id] is Decision.SAFE for doc_id in protected_docs)
     vanilla_docs = {chunk.document_id for chunk in built.vanilla.chunks}
     assert vanilla_docs == set(decisions)
+
+def test_chinese_shared_phrase_retrieves():
+    config = RetrieverConfig(k=3)
+    built = build_indexes(_chunks(('safe', 'c0', '图书馆开放时间是每天上午九点。')), {'safe': Decision.SAFE}, config)
+    result = SharedRetriever(config).retrieve(RuntimeQuery('q1', '开放时间是什么？'), built.protected)
+    assert result.status is not NO_CONTEXT
+    assert [hit.document_id for hit in result.hits] == ['safe']
+
+
+def test_unrelated_chinese_has_no_overlap():
+    config = RetrieverConfig(k=3)
+    built = build_indexes(_chunks(('safe', 'c0', '食堂菜单更新通知')), {'safe': Decision.SAFE}, config)
+    result = SharedRetriever(config).retrieve(RuntimeQuery('q1', '开放时间是什么？'), built.protected)
+    assert result.status is NO_CONTEXT
+    assert result.hits == ()
+
+
+def test_chinese_retrieval_parity_vanilla_protected():
+    chunks = _chunks(('safe', 'c0', '报名截止时间为本周五。'), ('poison', 'c0', '食堂菜谱与报名无关'))
+    built = build_indexes(chunks, {'safe': Decision.SAFE, 'poison': Decision.POISON}, RetrieverConfig(k=3))
+    retriever = SharedRetriever(built.config)
+    query = RuntimeQuery('q1', '报名截止时间是什么？')
+    vanilla = retriever.retrieve(query, built.vanilla)
+    protected = retriever.retrieve(query, built.protected)
+    assert built.vanilla.config is built.protected.config
+    assert [hit.document_id for hit in protected.hits] == ['safe']
+    assert 'safe' in [hit.document_id for hit in vanilla.hits]
