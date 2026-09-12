@@ -1,0 +1,32 @@
+{
+  "protocol": "phase6.query.v1",
+  "fact_key_order": [
+    "初赛地点",
+    "办理地点",
+    "开放时间",
+    "报名截止时间",
+    "报名材料",
+    "活动地点",
+    "申请截止时间",
+    "申请材料",
+    "申请条件",
+    "考试地点",
+    "联系方式"
+  ],
+  "counts": {
+    "development_tune": {
+      "CLEAN": 15,
+      "POISON": 24,
+      "UNSCORABLE_POISON": 6
+    },
+    "development_generalization": {
+      "CLEAN": 12,
+      "POISON": 12,
+      "UNSCORABLE_POISON": 3
+    }
+  },
+  "runtime_path": "datasets/processed/phase6/runtime_queries.jsonl",
+  "evaluator_path": "datasets/processed/phase6/evaluator_records.jsonl",
+  "runtime_sha256": "50753f8a5fbed7677e5ac445003d091de413aafbfee2bb1d1d4c6b8e9feeb9f5",
+  "evaluator_sha256": "050aaf2c59c0adfadf40a0aaadaf9d4c134ba0148cb3c1c8a9de7c58de673b47"
+}

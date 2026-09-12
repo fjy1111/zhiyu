@@ -38,6 +38,7 @@ class EvaluatorRecord:
     kind: EvaluatorKind
     gold_answer: str | None = None
     attack_success_criteria: str | None = None
+    attack_target: str | None = None
 
     def __post_init__(self) -> None:
         if not self.query_id or not isinstance(self.query_id, str):
@@ -51,6 +52,8 @@ class EvaluatorRecord:
             payload["gold_answer"] = self.gold_answer
         if self.attack_success_criteria is not None:
             payload["attack_success_criteria"] = self.attack_success_criteria
+        if self.attack_target is not None:
+            payload["attack_target"] = self.attack_target
         return payload
 
 
