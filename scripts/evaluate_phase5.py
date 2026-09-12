@@ -6,7 +6,7 @@ from collections import Counter
 from _common import ROOT, write_json
 from zhiyu.eval.phase5 import apply_ablation, summarize
 from zhiyu.factual.corpus import sha256_file
-from zhiyu.factual.provider import DeepSeekFactualProvider
+from zhiyu.judge.provider import DeepSeekJudgeProvider
 from zhiyu.judge.bundle import load_bundle
 from zhiyu.judge.judge import UnifiedJudge
 from zhiyu.models.judge import Ablation, DECISION_POLICY_VERSION, JUDGE_PROMPT_VERSION
@@ -28,7 +28,7 @@ def main() -> int:
     bundle_path = ROOT / "datasets/processed/phase5/evidence_bundle.jsonl"
     docs = load_bundle(bundle_path)
     labels = json.loads((ROOT / "datasets/manifests/phase4_evaluator_labels.json").read_text(encoding="utf-8"))
-    judge = UnifiedJudge(DeepSeekFactualProvider(temperature=0.0, max_tokens=800, timeout_sec=60, retries=1, json_mode=True))
+    judge = UnifiedJudge(DeepSeekJudgeProvider(temperature=0.0, max_tokens=800, timeout_sec=60, retries=1))
     report = {
         "experiment_kind": "REAL LLM",
         "config": {

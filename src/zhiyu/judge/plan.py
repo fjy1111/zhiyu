@@ -65,6 +65,12 @@ def unexpected_missing(doc: DocumentEvidence, ablation: Ablation) -> tuple[str, 
                 if not retrievals and not claim_ids:
                     # OK but no claims materialized unexpectedly
                     missing.append(f"FACTUAL_RETRIEVAL:{chunk_id}")
+                for claim_id in claim_ids:
+                    cretr = _status(doc, Component.FACTUAL_RETRIEVAL, chunk_id, claim_id)
+                    if not cretr:
+                        missing.append(f"FACTUAL_RETRIEVAL:{claim_id}")
+                    elif cretr[0].status is StatusKind.OK and Component.FACTUAL_COMPARE in expected and not _status(doc, Component.FACTUAL_COMPARE, chunk_id, claim_id):
+                        missing.append(f"FACTUAL_COMPARE:{claim_id}")
                 for rec in retrievals:
                     if rec.status is StatusKind.OK and Component.FACTUAL_COMPARE in expected:
                         if rec.claim_id and not _status(doc, Component.FACTUAL_COMPARE, chunk_id, rec.claim_id):

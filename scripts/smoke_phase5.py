@@ -6,7 +6,7 @@ from zhiyu.judge.judge import UnifiedJudge
 from zhiyu.judge.refs import rule_event_ref
 from zhiyu.models.detection import Confidence, Decision, EventClass, Mechanism, RuleEvent
 from zhiyu.models.judge import Ablation, AnalysisStatusRecord, Component, DocumentEvidence, RuleEventRecord, StatusKind
-from zhiyu.factual.provider import DeepSeekFactualProvider
+from zhiyu.judge.provider import DeepSeekJudgeProvider
 from zhiyu.semantic.env import load_project_env, public_llm_config
 
 
@@ -29,7 +29,7 @@ def main() -> int:
          AnalysisStatusRecord(Component.FACTUAL_CLAIM, StatusKind.NO_CLAIM, True, chunk_id="c0"),
          AnalysisStatusRecord(Component.UNIFIED_JUDGE, StatusKind.OK, True)),
     )
-    judge = UnifiedJudge(DeepSeekFactualProvider(temperature=0.0, max_tokens=400, timeout_sec=60, retries=1, json_mode=True))
+    judge = UnifiedJudge(DeepSeekJudgeProvider(temperature=0.0, max_tokens=400, timeout_sec=60, retries=1))
     # strip extra UNIFIED_JUDGE placeholder before assess
     raw_doc = DocumentEvidence(doc.document_id, doc.expected_chunk_ids, doc.rule_events, (), (), doc.statuses[:-1])
     status, assessment = judge.assess(raw_doc)

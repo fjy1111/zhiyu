@@ -30,6 +30,9 @@ def parse_assessment(raw: str, doc: DocumentEvidence) -> UnifiedRiskAssessment:
         raise InvalidJudgeOutput("json decode failed") from exc
     if not isinstance(payload, dict):
         raise InvalidJudgeOutput("payload must be an object")
+    required = {"document_id", "cited_rule_event_refs", "cited_behavior_evidence_ids", "cited_factual_evidence_ids", "behavior_assessment", "factual_assessment", "evidence_coherence", "uncertainty", "analyzer_failures", "rationale"}
+    if set(payload) != required:
+        raise InvalidJudgeOutput("schema keys mismatch")
     if any(key in payload for key in FORBIDDEN_VERDICT):
         raise InvalidJudgeOutput("forbidden verdict field")
     if payload.get("document_id") != doc.document_id:
