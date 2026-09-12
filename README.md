@@ -11,7 +11,9 @@
 
 - Phase 3 completed：Semantic Behavior Layer（Rule Only vs Rule + Semantic）
 
-未经明确要求不进入 Phase 4。
+- Phase 4 completed：Factual Evidence Layer（SUPPORTED / CONTRADICTORY / INSUFFICIENT_EVIDENCE）
+
+未经明确要求不进入 Phase 5。
 
 `datasets/raw/trusted_provenance/` 中保留的原始 `test_data/` 内容来自 GitHub 仓库 [rag-poisoning-detection-trusted-provenance](https://github.com/rodriguezrobertbfrkx6857-sudo/rag-poisoning-detection-trusted-provenance.git)。这些文件当前仅作为知御的外部研究/实验数据来源，并按原始目录层级只读保存。
 

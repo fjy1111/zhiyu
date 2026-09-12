@@ -1,0 +1,10 @@
+{
+  "excluded_from_candidate_view": 54,
+  "remaining_overlap": {
+    "document_id": [],
+    "relative_path": [],
+    "content_hash": []
+  },
+  "remaining_overlap_count": 0,
+  "pass": true
+}
