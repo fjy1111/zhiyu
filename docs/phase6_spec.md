@@ -2,6 +2,8 @@
 
 定位：Phase 5 文档级 `SAFE` / `REVIEW` / `POISON` 冻结之后。Phase 5 **PASS - FROZEN**（`9f033385eee2fda7df35dfbdc25a2bfa636b20e4`）。本阶段只构建公平的 Vanilla RAG vs Protected RAG 闭环。
 
+Phase 6 **PASS — FROZEN**. Official development_generalization replacement evaluation provenance: 6ea3f4cd6c5b4569d8893c82cafc94d5aba64dce. Protected gen DSR comes from empty SAFE-index NO_CONTEXT, not CIC. See experiments/phase6/official_generalization.md.
+
 Phase 6 **不修改** Phase 2/3/4/5 冻结实现、Prompt、reference corpus、bundle、Judge、Risk Engine。不重跑 Phase 5 LLM evaluation。不引入 Phase 6R。不实现 Phase 7。
 
 本文件冻结 Q1-Q4，不得改写其语义。

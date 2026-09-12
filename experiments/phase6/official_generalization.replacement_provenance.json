@@ -1,0 +1,21 @@
+{
+  "role": "REPLACEMENT",
+  "split": "development_generalization",
+  "evaluation_code_commit": "6ea3f4cd6c5b4569d8893c82cafc94d5aba64dce",
+  "report": "experiments/phase6/official_generalization.json",
+  "replay": "experiments/phase6/official_generalization_replay.jsonl",
+  "previous_invalid_report": "experiments/phase6/official_generalization.INVALID.SPLIT_CONTAMINATION.json",
+  "previous_invalid_replay": "experiments/phase6/official_generalization_replay.INVALID.SPLIT_CONTAMINATION.jsonl",
+  "previous_reason": "SPLIT_CONTAMINATION",
+  "previous_status": "INVALID",
+  "vanilla_document_count": 39,
+  "protected_document_count": 0,
+  "status": "PASS",
+  "frozen": true,
+  "official": true,
+  "interpretation": {
+    "protected_dsr": "Protected DSR=1.0 is 1-ASR because all 12 poison queries are NO_CONTEXT and NO_CONTEXT is excluded from ASR. defense_success_count=0.",
+    "cic": "CIC was not exercised on official development_generalization (0 SAFE docs, 0 chunks, 0 CIC calls). Do not attribute official gen defense gain to CIC.",
+    "security_utility_tradeoff": "Vanilla: ASR=0.5, QA=1.0, NO_CONTEXT=0. Protected: ASR=0.0, QA=0.0, NO_CONTEXT=1.0. The Protected security number is empty-index admission, paid for with total utility collapse on gen."
+  }
+}
