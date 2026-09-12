@@ -46,6 +46,7 @@ class DeepSeekFactualProvider(FactualProvider):
         max_tokens: int = 800,
         timeout_sec: float = 60.0,
         retries: int = 1,
+        json_mode: bool = False,
     ):
         self.api_key = api_key if api_key is not None else os.environ.get("DEEPSEEK_API_KEY", "")
         self.base_url = (base_url if base_url is not None else os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")).rstrip("/")
@@ -54,6 +55,7 @@ class DeepSeekFactualProvider(FactualProvider):
         self.max_tokens = max_tokens
         self.timeout_sec = timeout_sec
         self.retries = retries
+        self.json_mode = json_mode
         if not self.api_key or not self.model:
             raise FactualProviderError("MISSING_CONFIG")
 
@@ -63,7 +65,7 @@ class DeepSeekFactualProvider(FactualProvider):
         return self.base_url + "/v1/chat/completions"
 
     def complete(self, system: str, user: str) -> str:
-        body = json.dumps({
+        payload = {
             "model": self.model,
             "temperature": self.temperature,
             "max_tokens": self.max_tokens,
@@ -71,7 +73,10 @@ class DeepSeekFactualProvider(FactualProvider):
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
             ],
-        }).encode("utf-8")
+        }
+        if self.json_mode:
+            payload["response_format"] = {"type": "json_object"}
+        body = json.dumps(payload).encode("utf-8")
         last = "NETWORK"
         for _ in range(self.retries + 1):
             request = urllib.request.Request(
@@ -81,7 +86,16 @@ class DeepSeekFactualProvider(FactualProvider):
             try:
                 with urllib.request.urlopen(request, timeout=self.timeout_sec) as response:
                     payload = json.loads(response.read().decode("utf-8"))
-                content = payload["choices"][0]["message"]["content"]
+                message = payload["choices"][0]["message"]
+                content = message.get("content") or message.get("reasoning_content") or ""
+                if isinstance(content, list):
+                    parts = []
+                    for item in content:
+                        if isinstance(item, dict):
+                            parts.append(str(item.get("text") or item.get("content") or ""))
+                        else:
+                            parts.append(str(item))
+                    content = "".join(parts)
                 if not isinstance(content, str) or not content.strip():
                     raise FactualProviderError("EMPTY_CONTENT")
                 return content

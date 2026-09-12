@@ -1,0 +1,6 @@
+judge_prompt_version: phase5.judge.v1
+decision_policy_version: phase5.risk_engine.v1
+temperature: 0.0
+max_tokens: 800
+timeout_sec: 60
+retries: 1
