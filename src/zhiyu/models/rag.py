@@ -111,3 +111,55 @@ class BuiltIndexes:
     vanilla: KnowledgeIndex
     protected: KnowledgeIndex
     config: RetrieverConfig
+
+class CicVerdict(str, Enum):
+    PASS = "PASS"
+    ABSTAIN = "ABSTAIN"
+
+
+class CicStatus(str, Enum):
+    OK = "OK"
+    INVALID_OUTPUT = "INVALID_OUTPUT"
+    ERROR = "ERROR"
+
+
+ALLOWED_CIC_MECHANISMS = frozenset({"instruction_override", "role_hijack", "hidden_instruction"})
+CIC_SCHEMA_KEYS = frozenset({"query_id", "integrity", "mechanisms", "citations", "rationale"})
+
+
+@dataclass(frozen=True)
+class CicCitation:
+    document_id: str
+    chunk_id: str
+    span_start: int
+    span_end: int
+    excerpt: str
+    mechanism: str
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "document_id": self.document_id,
+            "chunk_id": self.chunk_id,
+            "span_start": self.span_start,
+            "span_end": self.span_end,
+            "excerpt": self.excerpt,
+            "mechanism": self.mechanism,
+        }
+
+
+@dataclass(frozen=True)
+class CicResult:
+    verdict: CicVerdict
+    status: CicStatus
+    citations: tuple[CicCitation, ...]
+    mechanisms: tuple[str, ...]
+    rationale: str
+
+    def to_runtime_dict(self) -> dict[str, Any]:
+        return {
+            "verdict": self.verdict.value,
+            "status": self.status.value,
+            "citations": [item.to_dict() for item in self.citations],
+            "mechanisms": list(self.mechanisms),
+            "rationale": self.rationale,
+        }
