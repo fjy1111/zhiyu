@@ -1,0 +1,6 @@
+prompt_version: phase3.semantic.v1
+schema_version: phase3.observations.v1
+temperature: 0.0
+max_tokens: 800
+timeout_sec: 60
+retries: 1

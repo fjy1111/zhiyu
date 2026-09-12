@@ -108,25 +108,38 @@ class RuleEvent:
         return payload
 
 
+ALLOWED_DECISION_KINDS = frozenset({
+    "rule_only_baseline",
+    "rule_plus_semantic_baseline",
+})
+
+
 @dataclass(frozen=True)
 class DetectionResult:
     document_id: str
     decision: Decision
     decision_kind: str
     rule_events: tuple[RuleEvent, ...]
+    semantic_results: tuple[Any, ...] = ()
 
     def __post_init__(self):
         if not isinstance(self.decision, Decision):
             raise TypeError("decision must be Decision")
-        if self.decision_kind != "rule_only_baseline":
-            raise ValueError("Phase 2 decision_kind must be rule_only_baseline")
+        if self.decision_kind not in ALLOWED_DECISION_KINDS:
+            raise ValueError("unsupported decision_kind")
         if any(event.document_id != self.document_id for event in self.rule_events):
             raise ValueError("rule_events document_id mismatch")
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        payload = {
             "document_id": self.document_id,
             "decision": self.decision.value,
             "decision_kind": self.decision_kind,
             "rule_events": [event.to_dict() for event in self.rule_events],
         }
+        if self.semantic_results:
+            payload["semantic_results"] = [
+                result.to_dict() if hasattr(result, "to_dict") else result
+                for result in self.semantic_results
+            ]
+        return payload
