@@ -1,7 +1,13 @@
 retriever:
   method: lexical
   k: 3
+  version: phase6.retriever.v1
 generator:
+  model: deepseek-flash
+  base_url: https://api.deepseek.com
   temperature: 0.0
   max_tokens: 800
   system_prompt: Answer using only the provided retrieved context.
+  version: phase6.generator.v1
+cic:
+  version: phase6.cic.v1
