@@ -1,0 +1,13 @@
+{
+  "evidence_bundle_build_commit": "68b8901a8967e44512a0e45a08e57238dfc55535",
+  "documents": 93,
+  "bundle_path": "datasets/processed/phase5/evidence_bundle.jsonl",
+  "bundle_sha256": "7751429e3674571c9bd500e93f65e250ab2f95722148e5b0472871cdbbabc25c",
+  "candidate_snapshot_sha256": {
+    "tune_docs": "8575bc6a602a67b775412cd0344fddf0c413f7f1d1367a2b14f9f70ac0d3f364",
+    "gen_docs": "4ac3659c93e93df1bf9c04f7b8e441a8524705a895c4383e21aa036757901efe"
+  },
+  "execution_plan_version": "phase5.execution_plan.v1",
+  "rule_event_ref_version": "phase5.rule_event_ref.v1",
+  "working_tree_tracked_clean": true
+}
