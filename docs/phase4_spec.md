@@ -58,7 +58,9 @@ V1 从 source trusted-provenance 语料中，**确定性**划出一份 reference
 
 这些文档 **只** 进入 Trusted Reference Corpus：
 
-- 必须从所有 candidate pool 中移除（development_tune、development_generalization、以及任何 Phase 4 candidate evaluation pool）
+- 必须从所有 Phase 4 candidate pool 中排除这些 reference-only 文档
+- **不得修改** Phase 2 / Phase 3 已冻结的 development_tune / development_generalization 原有 benchmark artifacts（包括现有 enchmark_tune_*.jsonl / enchmark_generalization_*.jsonl 及对应评测输出）
+- Phase 4 必须自建 derived candidate view（新的 candidate 清单/JSONL），在该视图中排除 reference-only 文档；评测只读取该 derived view，不改写既有 Phase 2/3 产物
 - candidate 与 reference 必须按 path / `document_id` / content hash 分离
 - reference 文本必须像 candidate `benchmark_text` 一样剥离 benchmark construction artifacts
 - **不得**把 `qa_set` expected answers 当作 trusted evidence
@@ -458,6 +460,7 @@ Ground truth / `metadata["facts"]` / expected answers **只允许 evaluator 读�
 - 为事实性/原子性编写 regex 规则
 - 为 Phase 4 调任意相似度阈值
 - 按 FN/FP 动态增补 Trusted Reference Corpus
+- 修改 Phase 2 / Phase 3 已冻结的 development_tune / development_generalization benchmark artifacts
 
 ---
 
