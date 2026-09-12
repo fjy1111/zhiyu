@@ -8,11 +8,13 @@ from zhiyu.eval.phase4 import load_phase4_split
 from zhiyu.factual.corpus import load_references, sha256_file
 from zhiyu.factual.pipeline import FactualEvidencePipeline
 from zhiyu.factual.provider import DeepSeekFactualProvider
+from zhiyu.semantic.env import load_project_env
 from zhiyu.judge.bundle import load_bundle
 from zhiyu.models.detection import DetectionInput
 from zhiyu.models.judge import AnalysisStatusRecord, Component, DocumentEvidence, StatusKind
 
 def main() -> int:
+    load_project_env(ROOT)
     parser=argparse.ArgumentParser(); parser.add_argument('--output',default='datasets/processed/phase5/evidence_bundle_replacement.jsonl'); parser.add_argument('--manifest',default='datasets/manifests/phase5_evidence_bundle_replacement_manifest.json'); args=parser.parse_args()
     old_path=ROOT/'datasets/processed/phase5/evidence_bundle.jsonl'; old=load_bundle(old_path)
     by_id={d.document_id:d for d in old}; refs=load_references(ROOT/'datasets/processed/phase4/references.jsonl')
