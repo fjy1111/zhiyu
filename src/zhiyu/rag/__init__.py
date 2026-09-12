@@ -1,2 +1,1 @@
-"""ZhiYu Phase 1."""
-
+"""Phase 6 Vanilla vs Protected RAG foundation."""
