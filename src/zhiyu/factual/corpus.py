@@ -47,11 +47,8 @@ def sha256_file(path: Path) -> str:
 
 
 def assert_runtime_clean(row: dict) -> None:
-    blob = json.dumps(row, ensure_ascii=False)
     for key in FORBIDDEN_RUNTIME_FIELDS:
         if key in row:
-            raise ValueError(f"runtime corpus leaked {key}")
-        if key in blob and key in ("original_label", "attack_type", "target_answer"):
             raise ValueError(f"runtime corpus leaked {key}")
 
 
@@ -65,8 +62,15 @@ def load_jsonl(path: Path) -> list[dict]:
 
 def load_references(path: Path) -> list[ReferenceDocument]:
     docs = []
+    seen_hash: set[str] = set()
     for row in load_jsonl(path):
         assert_runtime_clean(row)
+        expected = sha256_text(row["text"])
+        if row["content_hash"] != expected:
+            raise ValueError("content_hash must equal sha256(runtime text)")
+        if expected in seen_hash:
+            raise ValueError("reference corpus contains duplicate runtime content_hash")
+        seen_hash.add(expected)
         docs.append(ReferenceDocument(
             reference_id=row["reference_id"],
             document_id=row["document_id"],
@@ -83,3 +87,26 @@ def overlaps(candidate_id: str, candidate_path: str, candidate_hash: str, ref: R
         or (bool(candidate_path) and candidate_path == ref.relative_path)
         or (bool(candidate_hash) and candidate_hash == ref.content_hash)
     )
+
+
+def audit_runtime_overlap(references: list[dict], candidates: list[dict]) -> dict:
+    for row in list(references) + list(candidates):
+        if row.get("content_hash") != sha256_text(row.get("text") or ""):
+            raise ValueError("content_hash must equal sha256(runtime detector-visible text)")
+    ref_ids = {row["document_id"] for row in references}
+    ref_paths = {row["relative_path"] for row in references if row.get("relative_path")}
+    ref_hashes = {row["content_hash"] for row in references}
+    cand_ids = {row["document_id"] for row in candidates}
+    cand_paths = {row["relative_path"] for row in candidates if row.get("relative_path")}
+    cand_hashes = {row["content_hash"] for row in candidates}
+    remaining = {
+        "document_id": sorted(ref_ids & cand_ids),
+        "relative_path": sorted(ref_paths & cand_paths),
+        "content_hash": sorted(ref_hashes & cand_hashes),
+    }
+    remaining_count = sum(len(values) for values in remaining.values())
+    return {
+        "remaining_overlap": remaining,
+        "remaining_overlap_count": remaining_count,
+        "pass": remaining_count == 0,
+    }

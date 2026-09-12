@@ -1,7 +1,7 @@
 import hashlib
 import json
 from pathlib import Path
-from zhiyu.factual.corpus import load_references, overlaps, sha256_file
+from zhiyu.factual.corpus import audit_runtime_overlap, load_references, overlaps, sha256_file, sha256_text
 
 ROOT = Path(__file__).resolve().parents[1]
 FROZEN = {
@@ -46,3 +46,42 @@ def test_overlap_helpers_reject_id_path_hash():
     assert overlaps("other", ref.relative_path, "otherhash", ref)
     assert overlaps("other", "other", ref.content_hash, ref)
     assert not overlaps("other", "other", "otherhash", ref)
+
+
+def test_runtime_content_hash_is_sha256_of_visible_text():
+    refs = [json.loads(line) for line in (ROOT / "datasets/processed/phase4/references.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    assert refs
+    hashes = [row["content_hash"] for row in refs]
+    assert len(hashes) == len(set(hashes))
+    for row in refs:
+        assert row["content_hash"] == sha256_text(row["text"])
+    for name in (
+        "candidate_development_tune_documents.jsonl",
+        "candidate_development_generalization_documents.jsonl",
+    ):
+        for line in (ROOT / "datasets/processed/phase4" / name).read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            assert row["content_hash"] == sha256_text(row["text"])
+
+
+def test_identical_runtime_text_different_ids_is_overlap():
+    text = "shared detector-visible sentence for overlap audit"
+    digest = sha256_text(text)
+    refs = [{
+        "reference_id": "ref:alpha",
+        "document_id": "alpha",
+        "relative_path": "ref/alpha.txt",
+        "content_hash": digest,
+        "text": text,
+    }]
+    cands = [{
+        "document_id": "beta",
+        "relative_path": "cand/beta.txt",
+        "content_hash": digest,
+        "text": text,
+    }]
+    audit = audit_runtime_overlap(refs, cands)
+    assert audit["pass"] is False
+    assert digest in audit["remaining_overlap"]["content_hash"]

@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from _common import ROOT, MANIFESTS, write_json
 from zhiyu.datasets.trusted_provenance_adapter import adapt
-from zhiyu.factual.corpus import OFFICIAL_SOURCE_LEVELS, sha256_file, sha256_text
+from zhiyu.factual.corpus import OFFICIAL_SOURCE_LEVELS, audit_runtime_overlap, sha256_file, sha256_text
 
 PROCESSED = ROOT / "datasets/processed/trusted_provenance"
 PHASE4 = ROOT / "datasets/processed/phase4"
@@ -32,13 +32,16 @@ def _runtime_candidate(row: dict, identity: dict[str, dict]) -> dict:
     text = row.get("benchmark_text") or row.get("text") or ""
     source = identity.get(row["document_id"], {})
     rel = source.get("relative_path") or (row.get("metadata") or {}).get("relative_path") or row.get("relative_path") or ""
-    content_hash = source.get("sha256") or row.get("sha256") or sha256_text(text)
-    return {
+    payload = {
         "document_id": row["document_id"],
         "relative_path": rel,
-        "content_hash": content_hash,
+        "content_hash": sha256_text(text),
         "text": text,
     }
+    source_file_hash = source.get("sha256") or row.get("sha256")
+    if source_file_hash and source_file_hash != payload["content_hash"]:
+        payload["source_file_hash"] = source_file_hash
+    return payload
 
 
 def _runtime_chunk(row: dict, documents: dict[str, dict]) -> dict | None:
@@ -82,8 +85,27 @@ def main() -> int:
             "text": text,
         })
     selected.sort(key=lambda item: item["document_id"])
+    source_count = len(selected)
+    unique = []
+    duplicates = []
+    seen_hash: dict[str, str] = {}
+    for item in selected:
+        digest = item["content_hash"]
+        if digest in seen_hash:
+            duplicates.append({
+                "content_hash": digest,
+                "kept_document_id": seen_hash[digest],
+                "duplicate_document_id": item["document_id"],
+            })
+            continue
+        seen_hash[digest] = item["document_id"]
+        unique.append(item)
+    selected = unique
+    source_ids = {item["document_id"] for item in selected} | {row["duplicate_document_id"] for row in duplicates}
+    # also keep source ids from original official-normal set
+    official_ids = source_ids
     ref_ids = {item["document_id"] for item in selected}
-    ref_paths = {item["relative_path"] for item in selected}
+    ref_paths = {item["relative_path"] for item in selected if item["relative_path"]}
     ref_hashes = {item["content_hash"] for item in selected}
 
     PHASE4.mkdir(parents=True, exist_ok=True)
@@ -104,8 +126,9 @@ def main() -> int:
                 "split": split,
             }
             if (
-                runtime["document_id"] in ref_ids
-                or runtime["relative_path"] in ref_paths
+                runtime["document_id"] in official_ids
+                or runtime["document_id"] in ref_ids
+                or (runtime["relative_path"] and runtime["relative_path"] in ref_paths)
                 or runtime["content_hash"] in ref_hashes
             ):
                 overlap.append({
@@ -133,12 +156,13 @@ def main() -> int:
             cand_ids.add(row["document_id"])
             cand_paths.add(row["relative_path"])
             cand_hashes.add(row["content_hash"])
-    remaining = {
-        "document_id": sorted(ref_ids & cand_ids),
-        "relative_path": sorted(p for p in (ref_paths & cand_paths) if p),
-        "content_hash": sorted(ref_hashes & cand_hashes),
-    }
-    remaining_count = sum(len(v) for v in remaining.values())
+    refs_written = _jsonl(PHASE4 / "references.jsonl")
+    cands_written = []
+    for split in FROZEN_DOCS:
+        cands_written.extend(_jsonl(PHASE4 / f"candidate_{split}_documents.jsonl"))
+    audit = audit_runtime_overlap(refs_written, cands_written)
+    remaining = audit["remaining_overlap"]
+    remaining_count = audit["remaining_overlap_count"]
     corpus_hash = sha256_text("\n".join(
         f"{item['reference_id']}|{item['content_hash']}" for item in selected
     ))
@@ -147,8 +171,11 @@ def main() -> int:
             "source": "datasets/processed/trusted_provenance/development_documents.jsonl",
             "rule": "original_label==normal AND source_level in {school_official, college_official}",
             "models": "administrator-curated official reference documents",
+            "source_reference_document_count": source_count,
+            "unique_reference_text_count": len(selected),
             "count": len(selected),
         },
+        "duplicates": duplicates,
         "reference_ids": [item["reference_id"] for item in selected],
         "corpus_sha256": corpus_hash,
         "frozen_phase2_phase3_snapshot_sha256": snapshot,
@@ -163,10 +190,12 @@ def main() -> int:
         "remaining_overlap": remaining,
         "remaining_overlap_count": remaining_count,
         "pass": remaining_count == 0,
+        "hash_definition": "sha256(runtime detector-visible text)",
     })
     write_json(MANIFESTS / "phase4_evaluator_labels.json", evaluator_labels)
     print(json.dumps({
-        "references": len(selected),
+        "source_reference_document_count": source_count,
+        "unique_reference_text_count": len(selected),
         "overlap_pass": remaining_count == 0,
         "excluded": len(overlap),
     }))
