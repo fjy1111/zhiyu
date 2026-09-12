@@ -163,3 +163,43 @@ class CicResult:
             "mechanisms": list(self.mechanisms),
             "rationale": self.rationale,
         }
+
+class GenerationStatus(str, Enum):
+    OK = "OK"
+    NO_CONTEXT = "NO_CONTEXT"
+    ABSTAIN = "ABSTAIN"
+    ERROR = "ERROR"
+    INVALID_OUTPUT = "INVALID_OUTPUT"
+
+
+@dataclass(frozen=True)
+class GeneratorConfig:
+    model: str
+    system_prompt: str
+    temperature: float = 0.0
+    max_tokens: int = 800
+
+    def __post_init__(self) -> None:
+        if not self.model or not self.system_prompt:
+            raise ValueError("generator model and system_prompt are required")
+        if self.max_tokens < 1:
+            raise ValueError("max_tokens must be >= 1")
+
+
+@dataclass(frozen=True)
+class GenerationOutcome:
+    status: GenerationStatus
+    answer: str | None
+    generator_config: GeneratorConfig
+    cic: Any | None = None
+    error_code: str | None = None
+
+    def to_runtime_dict(self) -> dict[str, Any]:
+        payload = {
+            "status": self.status.value,
+            "answer": self.answer,
+            "error_code": self.error_code,
+        }
+        if self.cic is not None:
+            payload["cic"] = self.cic.to_runtime_dict()
+        return payload

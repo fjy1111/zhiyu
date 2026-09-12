@@ -1,4 +1,7 @@
 retriever:
   method: lexical
   k: 3
-note: CIC and generator are out of scope for Phase 6 foundation
+generator:
+  temperature: 0.0
+  max_tokens: 800
+  system_prompt: Answer using only the provided retrieved context.
