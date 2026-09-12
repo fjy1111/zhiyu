@@ -2,44 +2,46 @@
 
 Factual Evidence Layer. No SAFE/REVIEW/POISON mapping. Not Phase 5.
 
-## Implementation
+Previous REAL LLM run is SUPERSEDED because runtime content_hash overlap/provenance was invalid. This replacement run was performed once after the deterministic hash/dedup fix. No prompt change. No generalization sample inspection.
 
-- Independent frozen Trusted Reference Corpus: 54 official-normal documents
-- Derived Phase 4 candidate view (does not rewrite Phase 2/3 benchmark artifacts)
-- Claim extraction + unique source binding
-- Generic lexical retrieval TOP_K=3, overlap filter, no similarity threshold
-- One LLM comparison call per claim
-- Deterministic aggregation to FactualEvidence
+## Implementation-fix commit
 
-## Reference corpus
+e326a181500e5d12ea75914ea2f419dfb90e7c6b
 
-- count: 54
-- corpus_sha256: 62364b82b1481f08d47a681118f1d2f81f19fefe408ca873abab93f599bc76f3
+- content_hash := sha256(runtime detector-visible text) for references and candidates
+- unique reference texts by content_hash (keep lexicographically smallest document_id)
+- overlap audit recomputes hashes from runtime text
+
+## Corpus
+
+- source_reference_document_count: 54
+- unique_reference_text_count: 8
+- candidate tune documents: 54
+- candidate generalization documents: 39
 - overlap audit: pass, remaining_overlap_count=0
 - Phase 2/3 frozen artifact hashes unchanged
 
 ## Tests
 
-- targeted Phase 4 tests passed
-- pytest -q: 184 passed
-- git diff --check: run at commit
-- DeepSeek smoke: claim OK 1, compare OK 2
+- pytest -q: 186 passed (before replacement eval)
+- git diff --check: passed on implementation commit
+- DeepSeek smoke: previously PASS; prompts unchanged
 
-## Official evaluation (REAL LLM, one run)
+## Replacement official evaluation (REAL LLM, one run)
 
-development_tune (81 docs): claims=162; extraction OK/INVALID/ERROR=54/13/14; retrieval OK=162; pairwise SUPPORTS/CONTRADICTS/NOT_ENOUGH=243/76/161; FactualEvidence SUPPORTED/CONTRADICTORY/INSUFFICIENT=81/27/52; llm_calls=243
+evaluation_code_commit: e326a181500e5d12ea75914ea2f419dfb90e7c6b
+working_tree_tracked_clean: true
 
-development_generalization (45 docs): claims=69; extraction OK/INVALID/ERROR=23/7/15; FactualEvidence SUPPORTED/CONTRADICTORY/INSUFFICIENT=7/23/37; llm_calls=114
+development_tune (54 docs): claims=108; extraction OK/INVALID/ERROR=36/5/13; pairwise SUPPORTS/CONTRADICTS/NOT_ENOUGH=27/17/232; FactualEvidence SUPPORTED/CONTRADICTORY/INSUFFICIENT=27/7/58; llm_calls=162
 
-ERROR/INVALID are analysis failures, not poison labels. No second run. No generalization sample inspection.
+development_generalization (39 docs): claims=69; extraction OK/INVALID/ERROR=23/2/14; pairwise SUPPORTS/CONTRADICTS/NOT_ENOUGH=5/14/161; FactualEvidence SUPPORTED/CONTRADICTORY/INSUFFICIENT=5/8/47; llm_calls=108
+
+ERROR/INVALID are analysis failures, not poison labels.
 
 ## Limits
 
 - Phase 4 does not decide SAFE/REVIEW/POISON
 - INSUFFICIENT_EVIDENCE != POISON
-- Some extraction ERROR/INVALID occurred during the official run
-- No Judge / RAG / Web
+- Unique trusted texts are few after dedup (8)
 
-## Hard Stop
-
-Phase 4 complete. STOP. Do not enter Phase 5.
+STOP. Do not enter Phase 5.

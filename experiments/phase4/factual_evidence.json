@@ -11,9 +11,17 @@
     "retries": 1,
     "model": "deepseek-flash",
     "base_url": "https://api.deepseek.com",
-    "evaluation_code_commit": "7d9812c0d172471d83227267c9fa142e969ade65",
+    "evaluation_code_commit": "e326a181500e5d12ea75914ea2f419dfb90e7c6b",
+    "working_tree_tracked_clean": true,
     "api_key_present": true,
-    "reference_corpus_sha256": "62364b82b1481f08d47a681118f1d2f81f19fefe408ca873abab93f599bc76f3",
+    "reference_corpus_sha256": "1fc1f61095c11e25cbbdcdb7e81f909f68f71cb0a8447d79fa8dddef16dbd0fd",
+    "phase4_dataset_snapshot_sha256": {
+      "references": "57beb31cbcee8f8c2375c0607b1e6fee32b71de49c4e47809e52ae91d2dfe41d",
+      "candidate_development_tune_documents": "8575bc6a602a67b775412cd0344fddf0c413f7f1d1367a2b14f9f70ac0d3f364",
+      "candidate_development_tune_chunks": "24a00ea510ce67368df73f94051606a713fb62755b808defec883e509c5c3b85",
+      "candidate_development_generalization_documents": "4ac3659c93e93df1bf9c04f7b8e441a8524705a895c4383e21aa036757901efe",
+      "candidate_development_generalization_chunks": "479a5f2ba91ddfaf33cb6f04e2de3325b2ba2df43c52ccfeff319a1b02074db2"
+    },
     "frozen_phase2_phase3_snapshot_sha256": {
       "datasets/processed/trusted_provenance/benchmark_tune_documents.jsonl": "4f80e90b0184b775b2de3622aed0bdd52a88d9401223a3dc4988bfefc6d6bec8",
       "datasets/processed/trusted_provenance/benchmark_tune_chunks.jsonl": "cf136225c0828bbdb2a945979069792727030fdfd0510f7811a42e50dc64d90d",
@@ -25,71 +33,53 @@
     "source": "datasets/processed/trusted_provenance/development_documents.jsonl",
     "rule": "original_label==normal AND source_level in {school_official, college_official}",
     "models": "administrator-curated official reference documents",
-    "count": 54
+    "source_reference_document_count": 54,
+    "unique_reference_text_count": 8,
+    "count": 8
   },
   "overlap_audit": {
-    "excluded_from_candidate_view": 54,
+    "excluded_from_candidate_view": 87,
     "remaining_overlap": {
       "document_id": [],
       "relative_path": [],
       "content_hash": []
     },
     "remaining_overlap_count": 0,
-    "pass": true
+    "pass": true,
+    "hash_definition": "sha256(runtime detector-visible text)"
   },
   "splits": {
     "development_tune": {
-      "documents": 81,
+      "documents": 54,
       "claim_extraction_status_counts": {
-        "OK": 54,
-        "INVALID_OUTPUT": 13,
-        "ERROR": 14
+        "INVALID_OUTPUT": 5,
+        "OK": 36,
+        "ERROR": 13
       },
-      "claim_count": 162,
+      "claim_count": 108,
       "retrieval_status_counts": {
-        "OK": 162
+        "OK": 108
       },
       "overlap_rejection_count": 0,
       "pairwise_relation_counts": {
-        "NOT_ENOUGH": 161,
-        "CONTRADICTS": 76,
-        "SUPPORTS": 243
+        "NOT_ENOUGH": 232,
+        "CONTRADICTS": 17,
+        "SUPPORTS": 27
       },
       "comparison_status_counts": {
-        "OK": 160,
-        "INVALID_OUTPUT": 2
+        "ERROR": 8,
+        "OK": 92,
+        "INVALID_OUTPUT": 8
       },
       "factual_evidence_relation_counts": {
-        "INSUFFICIENT_EVIDENCE": 52,
-        "CONTRADICTORY": 27,
-        "SUPPORTED": 81
+        "INSUFFICIENT_EVIDENCE": 58,
+        "CONTRADICTORY": 7,
+        "SUPPORTED": 27
       },
-      "llm_call_count": 243,
+      "llm_call_count": 162,
       "details": [
         {
           "document_id": "0c52d904cd88e7d474beae905ed17c4ff4d5f521e3c4d270c733100bd3385fea",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY",
-            "CONTRADICTORY"
-          ]
-        },
-        {
-          "document_id": "0de9b95195c4344f58e3be36fa0da69c4d97d034af629ba185ce408a5516b0d6",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "a74d7e43f02cb245f4dba4213fcf4951eb8a0a817d32b83490416577b8b6ae00",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "5c39ec9c80a674137b035cc2660f23ee82035e2f46f79fb814b27ab16ed6e98e",
           "extraction_status": "INVALID_OUTPUT",
           "claim_count": 0,
           "relations": []
@@ -100,7 +90,6 @@
           "claim_count": 3,
           "relations": [
             "INSUFFICIENT_EVIDENCE",
-            "INSUFFICIENT_EVIDENCE",
             "INSUFFICIENT_EVIDENCE"
           ]
         },
@@ -110,23 +99,26 @@
           "claim_count": 3,
           "relations": [
             "INSUFFICIENT_EVIDENCE",
-            "INSUFFICIENT_EVIDENCE",
             "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
           "document_id": "a4346b8076f57da2ecad7d9ac1aecfbeaff95acc548f27926b3e7783f9f23e0e",
-          "extraction_status": "ERROR",
-          "claim_count": 0,
-          "relations": []
+          "extraction_status": "OK",
+          "claim_count": 3,
+          "relations": [
+            "INSUFFICIENT_EVIDENCE",
+            "CONTRADICTORY",
+            "INSUFFICIENT_EVIDENCE"
+          ]
         },
         {
           "document_id": "a3145fd89cda9e4db7b1ca65a7a0448b65d9c1f678f06eb3737aa3ea4999a4ce",
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
-            "CONTRADICTORY",
-            "CONTRADICTORY"
+            "INSUFFICIENT_EVIDENCE",
+            "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
@@ -156,44 +148,16 @@
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
-            "CONTRADICTORY",
+            "INSUFFICIENT_EVIDENCE",
             "CONTRADICTORY",
             "CONTRADICTORY"
           ]
-        },
-        {
-          "document_id": "8dc2b09d71b3d15840d6c1f8704a07aa921fc18ed2827c0034c85ba1bdeb46a8",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "1e6c34fb4bbaf2c83fe72930467050edb7da7b6d6915e5b25f1e847bb98c5c08",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "b9b56f5ff0b66061b4a2d27d30d781a1da6652343cca08d0a8d52324ab75b702",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
         },
         {
           "document_id": "96a35588230dcf4066c5c3f6c3a89880be6efabca531a54f96ea56b5c2e07446",
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
-            "INSUFFICIENT_EVIDENCE",
-            "INSUFFICIENT_EVIDENCE",
             "INSUFFICIENT_EVIDENCE"
           ]
         },
@@ -218,190 +182,25 @@
           ]
         },
         {
-          "document_id": "545decf4546092fb609309ed276e1d05766cc670657c672a73369707753374d7",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "e79e3f7b7438f3bead376d6d0886327812338abd0aa299b7247b0aacb005914c",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "ea3cff60d43fa5fdf52d6492ec764cee051d758e682f5be452abf759a8f5cc57",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "a200e59bcdb098d4264f16176d0ae6596d6552ab2c95835ccfda990dd62c4c66",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "79426e908a40cdf6c8a9075a3bee0ecd11ea8d76f7ae6dd292d35e272f879cec",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "2ce6c5d542066ccf4fd3fb2ac56f14f7953ca5bdb7326a4e938d238744ac1ac7",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
           "document_id": "668ee7265bb3f505a31c198ccb1007f261763b45e67aa8ac7812d8565aee5cda",
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
             "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY",
-            "CONTRADICTORY"
+            "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
           "document_id": "30c06f9b78b6ad32d62862916e7ded2107e112ddafad6e8512d8d307ec29be13",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY",
-            "CONTRADICTORY"
-          ]
-        },
-        {
-          "document_id": "7128671b265caa00fad7c08daf1ddaf2234e2335c98a3a45420e9fcd61a73e21",
           "extraction_status": "INVALID_OUTPUT",
           "claim_count": 0,
           "relations": []
-        },
-        {
-          "document_id": "6baa181b70a6cbc22c9aad0182ee3128ff7dd46ee220c7d68656e74214c1e261",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "ed829edcb4303dcf7dfcc00e965bd027f85d6a63a939e7664af77ed0fdc149d4",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "42ae6665cf9abe316bd1e26e2de0db46503854a10cbab74976d406a9992c4033",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "8bc05d399ec515e1755f5cf798ec51c1ff4133731f9fdf996d20d92c16785e09",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "d9191b2ff55557d274ae722b7b970d06593d951b067eae99dc884a7141af864a",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "7a47065bc08d62c35fc77e33c28ea0aaab5d21650fb43d800ab204b8d235f175",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "1aecde9af287489b81907f093ce1ce04e413cbab76f7f30e228263524452482e",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "e0e756b39d2fcedeb35f08739b6c9bcc452e4333dc278ef17c17fb8a02fb9fea",
-          "extraction_status": "ERROR",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "987f33112eb45d846d7f6aae07e20c0b817552bdd7ddc843c3e315092ba75379",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "bec10db23e00c0baea9192769dfcf1dd7b518cec0a409db113bd4fbb3bd61373",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "6faf4cf16d2fe9444ba39224819c131abc8980bf5d57f4aa35327bececed2228",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
         },
         {
           "document_id": "e64d212593d00d794762ede6ff61a7356a64ff37704c5915b5aed04567640c14",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY",
-            "CONTRADICTORY"
-          ]
+          "extraction_status": "ERROR",
+          "claim_count": 0,
+          "relations": []
         },
         {
           "document_id": "9aa27de8bdf692dfe0eb00f5e7ec0a073dbf5590b4e1ac39085c1d875bbb67f1",
@@ -409,8 +208,7 @@
           "claim_count": 3,
           "relations": [
             "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY",
-            "CONTRADICTORY"
+            "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
@@ -418,42 +216,18 @@
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
-            "INSUFFICIENT_EVIDENCE",
-            "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY"
-          ]
-        },
-        {
-          "document_id": "0cbb3c1d2246fa2e6b04a072bcf0d060b60fafe1d0efd72b4be3ff754174a1d8",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
-        },
-        {
-          "document_id": "1e853c5a69c48e3756f33d4d0bd618aea0ca3df0457d0422267e3f0c7b9304a9",
-          "extraction_status": "ERROR",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "e3d1dceb772f88333b778ac3c806ea5cd316371e8b0e9a77bdbb79c7f75524aa",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
+            "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
           "document_id": "74c776c6d6a9a0fc8084a5cfc3ac3e29e983d1a4ceeea0eb5f030587e1f908f7",
-          "extraction_status": "INVALID_OUTPUT",
-          "claim_count": 0,
-          "relations": []
+          "extraction_status": "OK",
+          "claim_count": 3,
+          "relations": [
+            "INSUFFICIENT_EVIDENCE",
+            "INSUFFICIENT_EVIDENCE",
+            "INSUFFICIENT_EVIDENCE"
+          ]
         },
         {
           "document_id": "351f9053410431603e8852f7a7897810e069bcbf328d413c164013cae18f50b0",
@@ -502,7 +276,7 @@
           "relations": [
             "INSUFFICIENT_EVIDENCE",
             "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY"
+            "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
@@ -520,9 +294,7 @@
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
-            "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY",
-            "CONTRADICTORY"
+            "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
@@ -531,7 +303,6 @@
           "claim_count": 3,
           "relations": [
             "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY",
             "CONTRADICTORY"
           ]
         },
@@ -541,14 +312,18 @@
           "claim_count": 3,
           "relations": [
             "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY"
+            "INSUFFICIENT_EVIDENCE"
           ]
         },
         {
           "document_id": "054ad330985e60fa593dbb9f72ce21a69bbfa94fb25163f8f99bb69138c55db5",
-          "extraction_status": "ERROR",
-          "claim_count": 0,
-          "relations": []
+          "extraction_status": "OK",
+          "claim_count": 3,
+          "relations": [
+            "INSUFFICIENT_EVIDENCE",
+            "CONTRADICTORY",
+            "INSUFFICIENT_EVIDENCE"
+          ]
         },
         {
           "document_id": "37ce20efd6e9a73ca5e9c83f02e6f944fde64bec6bccc31721a0fd6a41b3c3fa",
@@ -572,9 +347,13 @@
         },
         {
           "document_id": "007198d94374740522374d9f92da1a33f3c0fc840b3edf17a7d3ba850afddbf3",
-          "extraction_status": "ERROR",
-          "claim_count": 0,
-          "relations": []
+          "extraction_status": "OK",
+          "claim_count": 3,
+          "relations": [
+            "INSUFFICIENT_EVIDENCE",
+            "INSUFFICIENT_EVIDENCE",
+            "INSUFFICIENT_EVIDENCE"
+          ]
         },
         {
           "document_id": "e909bac3dee80a0b1252c8b6100607daa785610ffea8471ec1d0ecfc1168d85c",
@@ -604,7 +383,7 @@
         },
         {
           "document_id": "b42208dc4e115e647aba13bacb3df910ee10e76c1955371db6d13899e600a3a7",
-          "extraction_status": "INVALID_OUTPUT",
+          "extraction_status": "ERROR",
           "claim_count": 0,
           "relations": []
         },
@@ -620,12 +399,6 @@
         },
         {
           "document_id": "7ba1106d38eb7e926ca722a4a49805163ba99589f681de18b253c940ed1cb36e",
-          "extraction_status": "ERROR",
-          "claim_count": 0,
-          "relations": []
-        },
-        {
-          "document_id": "a5029302a1882a73a848d414dd95d98faba570d2018f1a461d9253d873aacc74",
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
@@ -635,10 +408,20 @@
           ]
         },
         {
-          "document_id": "989dd9f7db089afcd81d53616f06b6da94e3efcccbef65ad7f61b956b21e06de",
+          "document_id": "a5029302a1882a73a848d414dd95d98faba570d2018f1a461d9253d873aacc74",
           "extraction_status": "ERROR",
           "claim_count": 0,
           "relations": []
+        },
+        {
+          "document_id": "989dd9f7db089afcd81d53616f06b6da94e3efcccbef65ad7f61b956b21e06de",
+          "extraction_status": "OK",
+          "claim_count": 3,
+          "relations": [
+            "SUPPORTED",
+            "SUPPORTED",
+            "SUPPORTED"
+          ]
         },
         {
           "document_id": "ef54722b35131b20df47224514aff39d217d1ea26b3139a457b880587482205b",
@@ -666,23 +449,19 @@
         },
         {
           "document_id": "c385cf7bfc19313ed61f00aac76ab1f7d820c083fface57d390d16add6776a6a",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "INSUFFICIENT_EVIDENCE",
-            "INSUFFICIENT_EVIDENCE",
-            "CONTRADICTORY"
-          ]
-        },
-        {
-          "document_id": "04a61d1a4026b350b8f77ce48d58096bb603f3874fb9775ffe17a2cdb831d466",
           "extraction_status": "ERROR",
           "claim_count": 0,
           "relations": []
         },
         {
-          "document_id": "8ab905a6265830f2c83f36c2b8d8da551b717880aa032e64aea5d0a54447f4d3",
+          "document_id": "04a61d1a4026b350b8f77ce48d58096bb603f3874fb9775ffe17a2cdb831d466",
           "extraction_status": "INVALID_OUTPUT",
+          "claim_count": 0,
+          "relations": []
+        },
+        {
+          "document_id": "8ab905a6265830f2c83f36c2b8d8da551b717880aa032e64aea5d0a54447f4d3",
+          "extraction_status": "ERROR",
           "claim_count": 0,
           "relations": []
         },
@@ -691,8 +470,6 @@
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
-            "CONTRADICTORY",
-            "INSUFFICIENT_EVIDENCE",
             "CONTRADICTORY"
           ]
         },
@@ -701,7 +478,6 @@
           "extraction_status": "OK",
           "claim_count": 3,
           "relations": [
-            "CONTRADICTORY",
             "INSUFFICIENT_EVIDENCE",
             "CONTRADICTORY"
           ]
@@ -718,23 +494,15 @@
         },
         {
           "document_id": "4df2ffa368e104b56818b0c404350e1068328c01d95898b339411d1d28d960c2",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
+          "extraction_status": "ERROR",
+          "claim_count": 0,
+          "relations": []
         },
         {
           "document_id": "fe54a4dbb4537e791454a1f936cac96a951c5f26fe7b196993e09c12d9679fda",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
+          "extraction_status": "ERROR",
+          "claim_count": 0,
+          "relations": []
         },
         {
           "document_id": "a2521392f372d8ead6cad704c604eec267865b64316a7474ec7efe5f1c8963eb",
@@ -758,22 +526,18 @@
         },
         {
           "document_id": "fa4cf3fdce4275d1bbbba2c4f231c9e6d5c42eee39c4b0c98bf0d0218df8961b",
-          "extraction_status": "OK",
-          "claim_count": 3,
-          "relations": [
-            "SUPPORTED",
-            "SUPPORTED",
-            "SUPPORTED"
-          ]
+          "extraction_status": "INVALID_OUTPUT",
+          "claim_count": 0,
+          "relations": []
         }
       ]
     },
     "development_generalization": {
-      "documents": 45,
+      "documents": 39,
       "claim_extraction_status_counts": {
         "OK": 23,
-        "ERROR": 15,
-        "INVALID_OUTPUT": 7
+        "ERROR": 14,
+        "INVALID_OUTPUT": 2
       },
       "claim_count": 69,
       "retrieval_status_counts": {
@@ -781,25 +545,27 @@
       },
       "overlap_rejection_count": 0,
       "pairwise_relation_counts": {
-        "NOT_ENOUGH": 112,
-        "SUPPORTS": 21,
-        "CONTRADICTS": 68
+        "NOT_ENOUGH": 161,
+        "SUPPORTS": 5,
+        "CONTRADICTS": 14
       },
       "comparison_status_counts": {
-        "OK": 67,
-        "INVALID_OUTPUT": 2
+        "OK": 60,
+        "ERROR": 5,
+        "INVALID_OUTPUT": 4
       },
       "factual_evidence_relation_counts": {
-        "INSUFFICIENT_EVIDENCE": 37,
-        "SUPPORTED": 7,
-        "CONTRADICTORY": 23
+        "INSUFFICIENT_EVIDENCE": 47,
+        "SUPPORTED": 5,
+        "CONTRADICTORY": 8
       },
-      "llm_call_count": 114
+      "llm_call_count": 108
     }
   },
   "notes": {
     "phase4_does_not_output_poison": true,
     "insufficient_is_not_poison": true,
-    "mock_not_used": true
+    "mock_not_used": true,
+    "previous_run_superseded": true
   }
 }
