@@ -1,0 +1,451 @@
+{
+  "experiment_kind": "REAL LLM",
+  "config": {
+    "evaluation_code_commit": "e67b04957ec8383ccee5ed2e07c1d65547c0424c",
+    "working_tree_tracked_clean": true,
+    "bundle_sha256": "fbee0a73b54d0ebffd576b66526af21ca1f7c4e1829ad5338983b9082727fe89",
+    "bundle_path": "datasets/processed/phase5/evidence_bundle_replacement.jsonl",
+    "judge_prompt_version": "phase5.judge.v1",
+    "judge_schema_keys": [
+      "document_id",
+      "cited_rule_event_refs",
+      "cited_behavior_evidence_ids",
+      "cited_factual_evidence_ids",
+      "behavior_assessment",
+      "factual_assessment",
+      "evidence_coherence",
+      "uncertainty",
+      "analyzer_failures",
+      "rationale"
+    ],
+    "decision_policy_version": "phase5.risk_engine.v1",
+    "execution_plan_version": "phase5.execution_plan.v1",
+    "rule_event_ref_version": "phase5.rule_event_ref.v1",
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com",
+    "api_key_present": true
+  },
+  "ablations": {
+    "rule_only_baseline": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 75,
+        "REVIEW": 0,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.0,
+      "review_rate_poison": 0.0,
+      "review_rate_normal": 0.0,
+      "review_rate_hard_negative": 0.0,
+      "review_rate_conflict": 0.0,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 1.0,
+        "REVIEW": 0.0,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.6,
+      "poison_non_safe_rate": 0.4,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 0
+    },
+    "rule_plus_semantic_baseline": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 46,
+        "REVIEW": 29,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.3118279569892473,
+      "review_rate_poison": 0.26666666666666666,
+      "review_rate_normal": 0.37037037037037035,
+      "review_rate_hard_negative": 0.5,
+      "review_rate_conflict": 0.26666666666666666,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 0.7333333333333333,
+        "REVIEW": 0.26666666666666666,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.3333333333333333,
+      "poison_non_safe_rate": 0.6666666666666666,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 0
+    },
+    "full_evidence_no_judge": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 4,
+        "REVIEW": 71,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.7634408602150538,
+      "review_rate_poison": 0.5111111111111111,
+      "review_rate_normal": 1.0,
+      "review_rate_hard_negative": 1.0,
+      "review_rate_conflict": 1.0,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 0.0,
+        "REVIEW": 1.0,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.08888888888888889,
+      "poison_non_safe_rate": 0.9111111111111111,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 0
+    },
+    "full_judge": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 1,
+        "REVIEW": 74,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.7956989247311828,
+      "review_rate_poison": 0.5777777777777777,
+      "review_rate_normal": 1.0,
+      "review_rate_hard_negative": 1.0,
+      "review_rate_conflict": 1.0,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 0.0,
+        "REVIEW": 1.0,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.022222222222222223,
+      "poison_non_safe_rate": 0.9777777777777777,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 0
+    }
+  },
+  "split_ablations": {
+    "development_tune": {
+      "rule_only_baseline": {
+        "documents": 54,
+        "primary": {
+          "tp": 18,
+          "fp": 0,
+          "tn": 18,
+          "fn": 12,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 36,
+          "REVIEW": 0,
+          "POISON": 18
+        },
+        "review_rate_overall": 0.0,
+        "review_rate_poison": 0.0,
+        "review_rate_normal": 0.0,
+        "review_rate_hard_negative": 0.0,
+        "review_rate_conflict": 0.0,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 1.0,
+          "REVIEW": 0.0,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 0.4,
+        "poison_non_safe_rate": 0.6,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      },
+      "rule_plus_semantic_baseline": {
+        "documents": 54,
+        "primary": {
+          "tp": 18,
+          "fp": 0,
+          "tn": 18,
+          "fn": 12,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 36,
+          "REVIEW": 0,
+          "POISON": 18
+        },
+        "review_rate_overall": 0.0,
+        "review_rate_poison": 0.0,
+        "review_rate_normal": 0.0,
+        "review_rate_hard_negative": 0.0,
+        "review_rate_conflict": 0.0,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 1.0,
+          "REVIEW": 0.0,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 0.4,
+        "poison_non_safe_rate": 0.6,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      },
+      "full_evidence_no_judge": {
+        "documents": 54,
+        "primary": {
+          "tp": 18,
+          "fp": 0,
+          "tn": 18,
+          "fn": 12,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 4,
+          "REVIEW": 32,
+          "POISON": 18
+        },
+        "review_rate_overall": 0.5925925925925926,
+        "review_rate_poison": 0.26666666666666666,
+        "review_rate_normal": 1.0,
+        "review_rate_hard_negative": 1.0,
+        "review_rate_conflict": 1.0,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 0.0,
+          "REVIEW": 1.0,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 0.13333333333333333,
+        "poison_non_safe_rate": 0.8666666666666667,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      },
+      "full_judge": {
+        "documents": 54,
+        "primary": {
+          "tp": 18,
+          "fp": 0,
+          "tn": 18,
+          "fn": 12,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 1,
+          "REVIEW": 35,
+          "POISON": 18
+        },
+        "review_rate_overall": 0.6481481481481481,
+        "review_rate_poison": 0.36666666666666664,
+        "review_rate_normal": 1.0,
+        "review_rate_hard_negative": 1.0,
+        "review_rate_conflict": 1.0,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 0.0,
+          "REVIEW": 1.0,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 0.03333333333333333,
+        "poison_non_safe_rate": 0.9666666666666667,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      }
+    },
+    "development_generalization": {
+      "rule_only_baseline": {
+        "documents": 39,
+        "primary": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 15,
+          "fn": 15,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 39,
+          "REVIEW": 0,
+          "POISON": 0
+        },
+        "review_rate_overall": 0.0,
+        "review_rate_poison": 0.0,
+        "review_rate_normal": 0.0,
+        "review_rate_hard_negative": 0.0,
+        "review_rate_conflict": 0.0,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 1.0,
+          "REVIEW": 0.0,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 1.0,
+        "poison_non_safe_rate": 0.0,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      },
+      "rule_plus_semantic_baseline": {
+        "documents": 39,
+        "primary": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 15,
+          "fn": 15,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 10,
+          "REVIEW": 29,
+          "POISON": 0
+        },
+        "review_rate_overall": 0.7435897435897436,
+        "review_rate_poison": 0.8,
+        "review_rate_normal": 0.8333333333333334,
+        "review_rate_hard_negative": 1.0,
+        "review_rate_conflict": 0.4444444444444444,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 0.5555555555555556,
+          "REVIEW": 0.4444444444444444,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 0.2,
+        "poison_non_safe_rate": 0.8,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      },
+      "full_evidence_no_judge": {
+        "documents": 39,
+        "primary": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 15,
+          "fn": 15,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 0,
+          "REVIEW": 39,
+          "POISON": 0
+        },
+        "review_rate_overall": 1.0,
+        "review_rate_poison": 1.0,
+        "review_rate_normal": 1.0,
+        "review_rate_hard_negative": 1.0,
+        "review_rate_conflict": 1.0,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 0.0,
+          "REVIEW": 1.0,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 0.0,
+        "poison_non_safe_rate": 1.0,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      },
+      "full_judge": {
+        "documents": 39,
+        "primary": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 15,
+          "fn": 15,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null,
+          "fpr": 0.0
+        },
+        "decision_counts": {
+          "SAFE": 0,
+          "REVIEW": 39,
+          "POISON": 0
+        },
+        "review_rate_overall": 1.0,
+        "review_rate_poison": 1.0,
+        "review_rate_normal": 1.0,
+        "review_rate_hard_negative": 1.0,
+        "review_rate_conflict": 1.0,
+        "hard_negative_poison_rate": 0.0,
+        "conflict_distribution": {
+          "SAFE": 0.0,
+          "REVIEW": 1.0,
+          "POISON": 0.0
+        },
+        "unsafe_auto_admission_rate": 0.0,
+        "poison_non_safe_rate": 1.0,
+        "judge_only_poison_count": 0,
+        "unsafe_safe_on_failure_count": 0
+      }
+    }
+  },
+  "notes": {
+    "review_is_not_positive": true,
+    "same_bundle": true,
+    "replacement_bundle": true,
+    "provider_error_invalid_remain_review": true,
+    "unsafe_safe_on_failure_recomputed_offline": true,
+    "unsafe_safe_on_failure_in_scope_only": true
+  },
+  "judge_call_count": 93,
+  "judge_status_counts": {
+    "OK": 22,
+    "INVALID_OUTPUT": 71,
+    "ERROR": 0
+  },
+  "judge_vs_no_judge_transitions": {
+    "SAFE->REVIEW": 3
+  },
+  "judge_only_poison_count": 0,
+  "unsafe_safe_on_failure_count": 0
+}

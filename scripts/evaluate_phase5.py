@@ -4,7 +4,7 @@ import json
 import subprocess
 from collections import Counter
 from _common import ROOT, write_json
-from zhiyu.eval.phase5 import apply_ablation, summarize
+from zhiyu.eval.phase5 import apply_ablation, in_scope_failure, summarize
 from zhiyu.factual.corpus import sha256_file
 from zhiyu.judge.provider import DeepSeekJudgeProvider
 from zhiyu.judge.bundle import load_bundle
@@ -52,9 +52,8 @@ def main() -> int:
             label = (labels.get(doc.document_id) or {}).get("original_label")
             use_judge = judge if ablation is Ablation.FULL_JUDGE else None
             decision, assessment, judge_status = apply_ablation(doc, ablation, use_judge)
-            had_failure = any(item.status.value in {"ERROR", "INVALID_OUTPUT"} for item in doc.statuses)
-            if judge_status and judge_status.status.value in {"ERROR", "INVALID_OUTPUT"}:
-                had_failure = True
+            extra = (judge_status,) if judge_status is not None else ()
+            had_failure = in_scope_failure(doc, ablation, extra_statuses=extra)
             row = {
                 "document_id": doc.document_id,
                 "original_label": label,

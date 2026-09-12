@@ -2,8 +2,16 @@ from __future__ import annotations
 from collections import Counter
 from zhiyu.judge.engine import decide, poison_gate_refs
 from zhiyu.judge.judge import UnifiedJudge
+from zhiyu.judge.plan import expected_components
 from zhiyu.models.detection import Decision
 from zhiyu.models.judge import Ablation, AnalysisStatusRecord, Component, DocumentEvidence, StatusKind
+
+_FAIL = {StatusKind.ERROR, StatusKind.INVALID_OUTPUT}
+
+
+def in_scope_failure(doc: DocumentEvidence, ablation: Ablation, extra_statuses: tuple[AnalysisStatusRecord, ...] = ()) -> bool:
+    expected = expected_components(ablation)
+    return any(item.component in expected and item.status in _FAIL for item in (*doc.statuses, *extra_statuses))
 
 POSITIVE = {"poison"}
 NEGATIVE = {"normal", "hard_negative"}
