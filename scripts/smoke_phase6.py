@@ -82,7 +82,7 @@ def main() -> int:
     hashes = snapshot_pair_hashes(runtime_path, evaluator_path)
     runtime = {item.query_id: item for item in load_runtime_snapshot(runtime_path)}
     retriever_cfg = RetrieverConfig(method=p6["retriever"]["method"], k=int(p6["retriever"]["k"]))
-    chunks = load_candidate_chunks(ROOT)
+    chunks = load_candidate_chunks(ROOT, split="development_tune")
     decisions = load_frozen_decisions(ROOT / "experiments/phase5/unified_judge_replacement_replay.jsonl")
     indexes = build_indexes(chunks, decisions, retriever_cfg)
     retriever = SharedRetriever(retriever_cfg)

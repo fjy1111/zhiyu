@@ -14,10 +14,16 @@ def _clean_row(row: dict) -> None:
             raise QueryFirewallError(f"GT field leaked into admission input: {key}")
 
 
-def load_candidate_chunks(project: Path) -> tuple[IndexedChunk, ...]:
+def load_candidate_chunks(project: Path, split: str | None = None) -> tuple[IndexedChunk, ...]:
+    if split is None:
+        selected = SPLITS
+    else:
+        if split not in SPLITS:
+            raise ValueError(f"unsupported Phase 6 split: {split}")
+        selected = (split,)
     chunks: list[IndexedChunk] = []
-    for split in SPLITS:
-        path = Path(project) / "datasets/processed/phase4" / f"candidate_{split}_chunks.jsonl"
+    for name in selected:
+        path = Path(project) / "datasets/processed/phase4" / f"candidate_{name}_chunks.jsonl"
         for line in path.read_text(encoding="utf-8").splitlines():
             if not line.strip():
                 continue
