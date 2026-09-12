@@ -195,7 +195,7 @@ LLM 不输出：
 - `span_start` / `span_end`
 - final risk score
 
-一个 chunk 可有多个独立可疑 span，但必须设少量上限（最多 3 条），禁止把整段 chunk 当作超长 excerpt。
+observations 必须满足 1 <= len(observations) <= MAX_DRAFTS（最多 3 条）。空 observations 为 INVALID_OUTPUT，文档级最高 REVIEW，不得当作 OK/SAFE。禁止同一次 response 混合 NO_CONTROL 与 IMPLICIT_CONTROL/UNCERTAIN；语义互相矛盾时整次 INVALID_OUTPUT。禁止把整段 chunk 当作超长 excerpt。
 
 ---
 
@@ -343,7 +343,8 @@ Fail-closed：本应执行 Semantic Analyzer 却发生 `ERROR` 或 `INVALID_OUTP
 - 真实 DeepSeek 只用于最小 smoke test 和最终正式 benchmark
 - 禁止改一个 Prompt 就全量重跑、为调试反复跑完整 tune+gen、因单样本反复调用、自动循环 Prompt optimization
 - 利用已冻结调用门控跳过 Rule HIGH
-- 正式评测统计：`semantic_call_count` / `semantic_skip_count` / `semantic_error_count` / `invalid_output_count`
+- 正式评测统计：`semantic_call_count = OK + ERROR + INVALID_OUTPUT`；`semantic_success_count = OK`；`semantic_skip_count = SKIPPED`；以及 `semantic_error_count` / `invalid_output_count`
+- `phase2_commit` 冻结为 `58b9843b48c77ccd6bc86645c2e2446be477bccf`；另记 `evaluation_code_commit` 与 tune/gen 输入文件 SHA256。不记录 API Key。
 
 Prompt 只描述通用行为机制。允许基于机制定义、synthetic examples、tune 聚合错误类型做机制级修正。禁止把失败原句、dataset entity、benchmark phrase 写进 Prompt；禁止根据 generalization 单样本改 Prompt 或 confidence 规则。generalization 只允许聚合指标。
 

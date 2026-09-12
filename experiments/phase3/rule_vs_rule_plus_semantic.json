@@ -14,7 +14,14 @@
     "model": "deepseek-flash",
     "base_url": "https://api.deepseek.com",
     "phase2_commit": "58b9843b48c77ccd6bc86645c2e2446be477bccf",
-    "api_key_present": true
+    "api_key_present": true,
+    "evaluation_code_commit": "7891ec59198ac02e8bc157a87219197aba009533",
+    "dataset_snapshot_sha256": {
+      "datasets/processed/trusted_provenance/benchmark_tune_documents.jsonl": "4f80e90b0184b775b2de3622aed0bdd52a88d9401223a3dc4988bfefc6d6bec8",
+      "datasets/processed/trusted_provenance/benchmark_tune_chunks.jsonl": "cf136225c0828bbdb2a945979069792727030fdfd0510f7811a42e50dc64d90d",
+      "datasets/processed/trusted_provenance/benchmark_generalization_documents.jsonl": "c29d60c7c7df4d26c44103342db3055e6f93d4e16969e2c7ddc260aa7c0ec2af",
+      "datasets/processed/trusted_provenance/benchmark_generalization_chunks.jsonl": "864fc5298f48e7e52f231ebed13332bbd21c61d7467c75195dbf740662e2ba30"
+    }
   },
   "splits": {
     "development_tune": {
@@ -1879,7 +1886,8 @@
             "SKIPPED": 18
           },
           "behavior_evidence_by_confidence": {},
-          "behavior_evidence_by_mechanism": {}
+          "behavior_evidence_by_mechanism": {},
+          "semantic_success_count": 105
         }
       },
       "deltas": {
@@ -2000,7 +2008,8 @@
             "OK": 57
           },
           "behavior_evidence_by_confidence": {},
-          "behavior_evidence_by_mechanism": {}
+          "behavior_evidence_by_mechanism": {},
+          "semantic_success_count": 57
         }
       },
       "deltas": {
@@ -2015,6 +2024,9 @@
     "review_is_not_positive": true,
     "conflict_excluded_from_primary_binary": true,
     "frozen_external_unused": true,
-    "mock_not_used": true
+    "mock_not_used": true,
+    "official_benchmark_ran_before_review_fix": true,
+    "review_fix_did_not_rerun_full_benchmark": true,
+    "review_fix_did_not_change_prompt": true
   }
 }

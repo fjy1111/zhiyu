@@ -51,6 +51,8 @@ development_generalization (57):
 
 No second-round Prompt patch after seeing remaining FNs.
 
+该正式 benchmark 运行于 review-fix 前，review-fix 未根据 benchmark 样本或指标修改 Prompt。
+
 ## Known limits
 
 - Phase 3 only analyzes implicit/explicit model-control behavior on one chunk.

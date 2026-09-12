@@ -1,6 +1,8 @@
 """Official Phase 3 real-LLM evaluation. Run once after tests and smoke pass."""
+import hashlib
 import subprocess
 from _common import ROOT, write_json
+from zhiyu.eval.phase2 import ALLOWED_SPLITS
 from zhiyu.eval.phase3 import (
     compare_paths,
     evaluate_rule_only,
@@ -12,6 +14,29 @@ from zhiyu.semantic.prompt import PROMPT_VERSION, SCHEMA_VERSION
 from zhiyu.semantic.provider import DeepSeekSemanticProvider
 import yaml
 
+PHASE2_COMMIT = "58b9843b48c77ccd6bc86645c2e2446be477bccf"
+SNAPSHOT_FILES = tuple(
+    name
+    for pair in ALLOWED_SPLITS.values()
+    for name in pair
+)
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def dataset_snapshot(root: Path) -> dict[str, str]:
+    processed = root / "datasets/processed/trusted_provenance"
+    return {
+        f"datasets/processed/trusted_provenance/{name}": _sha256(processed / name)
+        for name in SNAPSHOT_FILES
+    }
+
 
 def main() -> int:
     load_project_env(ROOT)
@@ -20,7 +45,7 @@ def main() -> int:
         print("EVAL BLOCKED: missing DEEPSEEK_API_KEY or DEEPSEEK_MODEL")
         return 2
     frozen = yaml.safe_load((ROOT / "configs/phase3_eval.yaml").read_text(encoding="utf-8"))
-    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    code_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     provider = DeepSeekSemanticProvider(
         temperature=float(frozen["temperature"]),
         max_tokens=int(frozen["max_tokens"]),
@@ -36,7 +61,9 @@ def main() -> int:
             "schema_version": SCHEMA_VERSION,
             "model": cfg["model"],
             "base_url": cfg["base_url"],
-            "phase2_commit": commit,
+            "phase2_commit": PHASE2_COMMIT,
+            "evaluation_code_commit": code_commit,
+            "dataset_snapshot_sha256": dataset_snapshot(ROOT),
             "api_key_present": True,
         },
         "splits": {},

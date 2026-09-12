@@ -32,3 +32,21 @@ def test_compare_paths_does_not_treat_review_as_success():
     delta = compare_paths(left, right)
     assert delta["delta_recall"] == 0.2
     assert delta["delta_hard_negative_poison_rate"] == 0.0
+
+
+def test_semantic_call_count_includes_failures():
+    from zhiyu.eval.phase3 import _semantic_stats
+    rows = [{
+        "semantic_results": [
+            {"status": "OK", "behavior_evidence": []},
+            {"status": "ERROR", "behavior_evidence": []},
+            {"status": "INVALID_OUTPUT", "behavior_evidence": []},
+            {"status": "SKIPPED", "behavior_evidence": []},
+        ]
+    }]
+    stats = _semantic_stats(rows)
+    assert stats["semantic_call_count"] == 3
+    assert stats["semantic_success_count"] == 1
+    assert stats["semantic_skip_count"] == 1
+    assert stats["semantic_error_count"] == 1
+    assert stats["invalid_output_count"] == 1

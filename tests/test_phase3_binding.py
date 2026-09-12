@@ -99,3 +99,26 @@ def test_known_source_rule_id_accepted():
     }]})
     evidence = materialize_behavior_evidence(_input(text, (event,)), raw)
     assert evidence[0].source_rule_ids == ("rh.line_repetition",)
+
+
+def test_empty_observations_are_invalid():
+    raw = json.dumps({"observations": []})
+    with pytest.raises(InvalidSemanticOutput):
+        materialize_behavior_evidence(_input("ordinary office hours"), raw)
+
+
+def test_mixed_no_control_and_implicit_is_invalid():
+    text = "unique control span is here"
+    raw = json.dumps({"observations": [
+        {
+            "intent": "NO_CONTROL", "mechanism": None, "confidence": "HIGH",
+            "excerpt": "", "rationale": "benign",
+        },
+        {
+            "intent": "IMPLICIT_CONTROL", "mechanism": "HIDDEN_INSTRUCTION",
+            "confidence": "HIGH", "excerpt": "unique control span is here",
+            "rationale": "control",
+        },
+    ]})
+    with pytest.raises(InvalidSemanticOutput):
+        materialize_behavior_evidence(_input(text), raw)

@@ -58,3 +58,13 @@ def test_pipeline_mock_implicit_high_is_poison():
     result = baseline.scan_document("d", [DetectionInput("d", "c", text)])
     assert result.decision is Decision.POISON
     assert result.semantic_results[0].behavior_evidence[0].excerpt == excerpt
+
+
+def test_empty_observations_pipeline_is_review():
+    provider = MockSemanticProvider(raw='{"observations":[]}')
+    baseline = RulePlusSemanticBaseline(SemanticAnalyzer(provider))
+    result = baseline.scan_document(
+        "d", [DetectionInput("d", "c", "The water heater manual says to schedule annual service.")]
+    )
+    assert result.semantic_results[0].status is SemanticStatus.INVALID_OUTPUT
+    assert result.decision is Decision.REVIEW

@@ -35,8 +35,8 @@ def parse_observation_payload(raw: str) -> list[dict]:
     if not isinstance(payload, dict) or "observations" not in payload:
         raise InvalidSemanticOutput("missing observations")
     observations = payload["observations"]
-    if not isinstance(observations, list) or len(observations) > MAX_DRAFTS:
-        raise InvalidSemanticOutput("observations must be a short list")
+    if not isinstance(observations, list) or not (1 <= len(observations) <= MAX_DRAFTS):
+        raise InvalidSemanticOutput("observations must contain 1 to MAX_DRAFTS items")
     return observations
 
 
@@ -104,6 +104,9 @@ def materialize_behavior_evidence(
     observations = parse_observation_payload(raw)
     allowed_rule_ids = {event.rule_id for event in analysis_input.rule_events}
     drafts = [_parse_draft(row, allowed_rule_ids) for row in observations]
+    intents = {draft.intent for draft in drafts}
+    if SemanticIntent.NO_CONTROL in intents and intents - {SemanticIntent.NO_CONTROL}:
+        raise InvalidSemanticOutput("NO_CONTROL cannot mix with control intents")
     text = analysis_input.detection_input.text
     document_id = analysis_input.detection_input.document_id
     chunk_id = analysis_input.detection_input.chunk_id

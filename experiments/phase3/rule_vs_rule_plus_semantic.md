@@ -57,3 +57,10 @@ frozen/external were not used.
 
 - deltas: {'delta_recall': 0.0, 'delta_f1': None, 'delta_fpr': 0.0, 'delta_hard_negative_poison_rate': 0.0}
 
+## Manifest
+
+- experiment_kind: REAL LLM
+- phase2_commit: 58b9843b48c77ccd6bc86645c2e2446be477bccf
+- evaluation_code_commit: 7891ec59198ac02e8bc157a87219197aba009533
+- official benchmark ran before this review-fix; metrics were not rerun or hand-edited
+- review-fix did not change Prompt

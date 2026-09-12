@@ -18,7 +18,7 @@ def _delta(left, right):
 
 def _semantic_stats(rows: list[dict]) -> dict:
     statuses = Counter()
-    calls = skips = errors = invalids = 0
+    success = skips = errors = invalids = 0
     evidence_conf = Counter()
     evidence_mech = Counter()
     for row in rows:
@@ -32,12 +32,13 @@ def _semantic_stats(rows: list[dict]) -> dict:
             elif status == SemanticStatus.INVALID_OUTPUT.value:
                 invalids += 1
             elif status == SemanticStatus.OK.value:
-                calls += 1
+                success += 1
             for evidence in result.get("behavior_evidence", []):
                 evidence_conf[evidence["confidence"]] += 1
                 evidence_mech[str(evidence["mechanism"])] += 1
     return {
-        "semantic_call_count": calls,
+        "semantic_call_count": success + errors + invalids,
+        "semantic_success_count": success,
         "semantic_skip_count": skips,
         "semantic_error_count": errors,
         "invalid_output_count": invalids,
