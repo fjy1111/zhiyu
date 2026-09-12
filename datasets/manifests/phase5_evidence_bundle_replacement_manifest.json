@@ -1,0 +1,34 @@
+{
+  "supersedes_bundle_sha": "7751429e3674571c9bd500e93f65e250ab2f95722148e5b0472871cdbbabc25c",
+  "bundle_sha256": "fbee0a73b54d0ebffd576b66526af21ca1f7c4e1829ad5338983b9082727fe89",
+  "phase2_frozen_commit": "58b9843b48c77ccd6bc86645c2e2446be477bccf",
+  "phase3": {
+    "commit": "58b9843b48c77ccd6bc86645c2e2446be477bccf",
+    "model": null,
+    "prompt_version": "phase3.semantic.v1",
+    "config": "configs/phase3_eval.yaml"
+  },
+  "phase4": {
+    "implementation_commit": "e326a181500e5d12ea75914ea2f419dfb90e7c6b",
+    "model": "deepseek-flash",
+    "claim_prompt_version": "phase4.claim.v1",
+    "compare_prompt_version": "phase4.compare.v1",
+    "config": "experiments/phase4/factual_evidence.json",
+    "reference_corpus_sha256": "1fc1f61095c11e25cbbdcdb7e81f909f68f71cb0a8447d79fa8dddef16dbd0fd"
+  },
+  "reused_layers": [
+    "rule",
+    "semantic"
+  ],
+  "recomputed_layers": [
+    "factual"
+  ],
+  "execution_plan_version": "phase5.execution_plan.v1",
+  "rule_event_ref_version": "phase5.rule_event_ref.v1",
+  "generator_commit": "459c2f037e1ef496c444a453cd803e6a17e74485",
+  "generator_base_commit": "8a5055ccba8a13cc1b24f07cc0a9626d9337c46c",
+  "original_run_uncommitted_tracked_code": true,
+  "original_run_working_tree_tracked_clean": false,
+  "only_generator_diff": "load_project_env(ROOT)",
+  "provenance_repair_without_rerun": true
+}
