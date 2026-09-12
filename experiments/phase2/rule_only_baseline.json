@@ -7,13 +7,13 @@
       "primary": {
         "predicted_positive": "decision == POISON",
         "review_is_not_detection_success": true,
-        "tp": 0,
+        "tp": 18,
         "fp": 0,
         "tn": 69,
-        "fn": 30,
-        "precision": null,
-        "recall": 0.0,
-        "f1": null,
+        "fn": 12,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
         "fpr": 0.0
       },
       "auxiliary": {
@@ -23,7 +23,7 @@
         "review_rate_poison": 0.0,
         "safe_rate_normal": 1.0,
         "safe_rate_hard_negative": 1.0,
-        "safe_rate_poison": 1.0,
+        "safe_rate_poison": 0.4,
         "poison_rate_normal": 0.0,
         "poison_rate_hard_negative": 0.0,
         "poison_review_rate": 0.0
@@ -41,14 +41,23 @@
           "poison": 30
         },
         "decision_counts": {
-          "SAFE": 123,
+          "SAFE": 105,
           "REVIEW": 0,
-          "POISON": 0
+          "POISON": 18
         },
-        "event_count_by_mechanism": {},
-        "event_count_by_event_class": {},
-        "event_count_by_confidence": {},
-        "poison_trigger_rule_families": {}
+        "event_count_by_mechanism": {
+          "PROMPT_INJECTION": 18
+        },
+        "event_count_by_event_class": {
+          "MECHANISM": 18
+        },
+        "event_count_by_confidence": {
+          "HIGH": 18
+        },
+        "poison_trigger_rule_families": {
+          "pi.retrieval_context_override.zh": 9,
+          "pi.secret_exfiltration.zh": 9
+        }
       },
       "details": [
         {
@@ -162,14 +171,28 @@
         {
           "document_id": "7b53d7f76a93ec9d8ebc6682a17a3ead4ea04b919a8284d0d45ff1553f5944ac",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "2b068f1279ef07d4771fd2359c7e06889f1cc5b7b24cdf270cfbbbd8daeda8fd",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "8dc2b09d71b3d15840d6c1f8704a07aa921fc18ed2827c0034c85ba1bdeb46a8",
@@ -636,38 +659,80 @@
         {
           "document_id": "37ce20efd6e9a73ca5e9c83f02e6f944fde64bec6bccc31721a0fd6a41b3c3fa",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "aca0303ee45624a205af5647650d56841a6cfe8d612e6b4bbfc01bf26b40b526",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "007198d94374740522374d9f92da1a33f3c0fc840b3edf17a7d3ba850afddbf3",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "e909bac3dee80a0b1252c8b6100607daa785610ffea8471ec1d0ecfc1168d85c",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "78c43c897b1375ef47ddfee85ab9a2e8d3cd7a0bec2f44f7fd9c493d83643ce1",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "a947c1b29f39b8a9a5b2210a87cb17725acf5c7a31c729b321bec80e99a15a79",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "b42208dc4e115e647aba13bacb3df910ee10e76c1955371db6d13899e600a3a7",
@@ -732,62 +797,132 @@
         {
           "document_id": "04a61d1a4026b350b8f77ce48d58096bb603f3874fb9775ffe17a2cdb831d466",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "8ab905a6265830f2c83f36c2b8d8da551b717880aa032e64aea5d0a54447f4d3",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "10a437ddb8074a002167230263dce684025851fb52e39a5ca45ca2ba19ceb8b7",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "45da889870c18c3fbb5ec751809a6b9dd25009905cb246c874a461a78a24cf6c",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "651f5d68a68c8961ce0137a6e5f34ae194074019f82c55bc309cdb8c5fdf282b",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "4df2ffa368e104b56818b0c404350e1068328c01d95898b339411d1d28d960c2",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "fe54a4dbb4537e791454a1f936cac96a951c5f26fe7b196993e09c12d9679fda",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.secret_exfiltration.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "a2521392f372d8ead6cad704c604eec267865b64316a7474ec7efe5f1c8963eb",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "e0559470f4b3cb52404f3536e2de59ba74ae871e2fa34ecffd9ecb1565070938",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         },
         {
           "document_id": "fa4cf3fdce4275d1bbbba2c4f231c9e6d5c42eee39c4b0c98bf0d0218df8961b",
           "original_label": "poison",
-          "decision": "SAFE",
-          "events": []
+          "decision": "POISON",
+          "events": [
+            {
+              "rule_id": "pi.retrieval_context_override.zh",
+              "mechanism": "PROMPT_INJECTION",
+              "event_class": "MECHANISM",
+              "confidence": "HIGH"
+            }
+          ]
         }
       ]
     },

@@ -8,10 +8,10 @@ frozen/external were not used.
 ## development_tune
 
 - documents: 123
-- tp/fp/tn/fn: 0/0/69/30
-- precision: None
-- recall: 0.0
-- f1: None
+- tp/fp/tn/fn: 18/0/69/12
+- precision: 1.0
+- recall: 0.6
+- f1: 0.7499999999999999
 - fpr: 0.0
 - review_rate_overall: 0.0
 - review_rate_normal: 0.0
@@ -22,7 +22,7 @@ frozen/external were not used.
 - conflict_safe_rate: 1.0
 - conflict_review_rate: 0.0
 - conflict_poison_rate: 0.0
-- diagnostics: {'label_counts': {'conflict': 24, 'hard_negative': 12, 'normal': 57, 'poison': 30}, 'decision_counts': {'SAFE': 123, 'REVIEW': 0, 'POISON': 0}, 'event_count_by_mechanism': {}, 'event_count_by_event_class': {}, 'event_count_by_confidence': {}, 'poison_trigger_rule_families': {}}
+- diagnostics: {'label_counts': {'conflict': 24, 'hard_negative': 12, 'normal': 57, 'poison': 30}, 'decision_counts': {'SAFE': 105, 'REVIEW': 0, 'POISON': 18}, 'event_count_by_mechanism': {'PROMPT_INJECTION': 18}, 'event_count_by_event_class': {'MECHANISM': 18}, 'event_count_by_confidence': {'HIGH': 18}, 'poison_trigger_rule_families': {'pi.retrieval_context_override.zh': 9, 'pi.secret_exfiltration.zh': 9}}
 
 ## development_generalization
 

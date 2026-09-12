@@ -46,20 +46,20 @@ _PATTERNS: tuple[tuple[str, str, re.Pattern[str]], ...] = (
     ),
     (
         "pi.role_manipulation.en",
-        "role-manipulation mechanism: force a new unconstrained/system identity",
+        "role-manipulation mechanism: force a new unconstrained or system-prompt identity",
         re.compile(
             r"(?is)(?:you\s+are\s+now|from\s+now\s+on(?:\s+you\s+are)?|your\s+new\s+role\s+is|"
             r"act\s+as\s+(?:my\s+)?|pretend\s+(?:to\s+be|you\s+are))\s*.{0,40}?"
-            r"(?:system(?:\s+prompt|\s+administrator)?|developer|unrestricted|"
+            r"(?:system\s+prompt|system\s+message|unrestricted(?:\s+(?:ai|assistant|model))?|"
             r"jailbroken|without\s+(?:any\s+)?restrictions|no\s+(?:safety\s+)?rules)"
         ),
     ),
     (
         "pi.role_manipulation.zh",
-        "role-manipulation mechanism: force a new unconstrained/system identity",
+        "role-manipulation mechanism: force a new unconstrained or system-prompt identity",
         re.compile(
             r"(?:你现在是|从现在起你是|你的新角色是|扮演).{0,24}?"
-            r"(?:系统(?:提示|管理员)?|开发者|无限制|越狱|不受(?:任何)?约束)"
+            r"(?:系统提示|无限制(?:的)?(?:助手|模型|模式)?|越狱|不受(?:任何)?约束)"
         ),
     ),
     (
@@ -95,6 +95,46 @@ _PATTERNS: tuple[tuple[str, str, re.Pattern[str]], ...] = (
             r"(?:绕过|关闭|无视).{0,12}?(?:安全策略|安全限制|内容过滤|防护规则|安全过滤)"
         ),
     ),
+    (
+        "pi.secret_exfiltration.en",
+        "secret-exfiltration mechanism: demand disclosure of protected model instructions",
+        re.compile(
+            r"(?is)(?:reveal|output|print|show|leak|dump|disclose|repeat)\s+"
+            r"(?:me\s+|us\s+)?(?:your\s+|the\s+|hidden\s+|original\s+|full\s+)*"
+            r"(?:system\s+prompt|system\s+message|system\s+instructions?|"
+            r"developer\s+(?:prompt|instructions?|message)|hidden\s+instructions?)"
+        ),
+    ),
+    (
+        "pi.secret_exfiltration.zh",
+        "secret-exfiltration mechanism: demand disclosure of protected model instructions",
+        re.compile(
+            r"(?:请)?(?:输出|打印|泄露|展示|说出|重复)(?:出|一下)?"
+            r"(?:你(?:收到|得到)的)?.{0,8}?(?:系统提示|开发者指令|系统指令|隐藏指令)"
+            r"|"
+            r"(?:系统提示|开发者指令|系统指令|隐藏指令).{0,8}?(?:原文)?(?:打印出来|输出|泄露)"
+        ),
+    ),
+)
+
+_IGNORE_RETRIEVED_EN = re.compile(
+    r"(?is)(?:ignore|disregard|forget|do\s+not\s+use)\b.{0,48}?"
+    r"(?:(?:previously|prior|earlier|previous)\s+)?"
+    r"(?:retrieved|referenced?|context|sources?|evidence|materials?|documents?|references?)"
+)
+_EXCLUSIVE_ANSWER_EN = re.compile(
+    r"(?is)(?:answer|respond|reply)\s+(?:only|solely|exclusively)\s+"
+    r"(?:using|from|with|based\s+on)\s+"
+    r"(?:this|the\s+provided|the\s+following|the\s+given|the)\s*"
+    r"(?:text|document|passage|content|material)"
+)
+_IGNORE_RETRIEVED_ZH = re.compile(
+    r"(?:忽略|无视|不要使用).{0,24}?(?:此前|之前|先前|已有).{0,16}?"
+    r"(?:检索|参考|上下文|来源|资料|文献|证据)"
+)
+_EXCLUSIVE_ANSWER_ZH = re.compile(
+    r"(?:只|仅)(?:根据|依据|使用|基于).{0,16}?(?:本|此|下列|下面|所提供)"
+    r".{0,12}?(?:文|段|内容|材料|文本).{0,8}?(?:回答|作答|回复)?"
 )
 
 
@@ -116,13 +156,42 @@ def _event(item: DetectionInput, rule_id: str, rationale: str, start: int, end: 
     )
 
 
+def _skipped(start: int, end: int, skip_spans: tuple[tuple[int, int], ...]) -> bool:
+    return any(start >= skip_start and end <= skip_end for skip_start, skip_end in skip_spans)
+
+
+def _composed_pair_events(
+    item: DetectionInput,
+    skip_spans: tuple[tuple[int, int], ...],
+    ignore_pattern: re.Pattern[str],
+    exclusive_pattern: re.Pattern[str],
+    rule_id: str,
+    rationale: str,
+) -> list[RuleEvent]:
+    events: list[RuleEvent] = []
+    ignore_hits = [match for match in ignore_pattern.finditer(item.text) if not _skipped(*match.span(), skip_spans)]
+    exclusive_hits = [match for match in exclusive_pattern.finditer(item.text) if not _skipped(*match.span(), skip_spans)]
+    if not ignore_hits or not exclusive_hits:
+        return events
+    ignore = ignore_hits[0]
+    exclusive = exclusive_hits[0]
+    start = min(ignore.start(), exclusive.start())
+    end = max(ignore.end(), exclusive.end())
+    if end - start > 160:
+        start, end = ignore.span()
+    event = _event(item, rule_id, rationale, start, end)
+    if event is not None:
+        events.append(event)
+    return events
+
+
 def find_injection_events(item: DetectionInput, skip_spans: tuple[tuple[int, int], ...] = ()) -> list[RuleEvent]:
     events: list[RuleEvent] = []
     seen: set[tuple[str, int, int]] = set()
     for rule_id, rationale, pattern in _PATTERNS:
         for match in pattern.finditer(item.text):
             start, end = match.span()
-            if any(start >= skip_start and end <= skip_end for skip_start, skip_end in skip_spans):
+            if _skipped(start, end, skip_spans):
                 continue
             key = (rule_id, start, end)
             if key in seen:
@@ -133,4 +202,23 @@ def find_injection_events(item: DetectionInput, skip_spans: tuple[tuple[int, int
                 events.append(event)
             if len(events) >= 12:
                 return events
+    for rule_id, rationale, ignore_pattern, exclusive_pattern in (
+        (
+            "pi.retrieval_context_override.en",
+            "instruction-override mechanism: discard retrieved/reference context and answer only from attacker-provided content",
+            _IGNORE_RETRIEVED_EN,
+            _EXCLUSIVE_ANSWER_EN,
+        ),
+        (
+            "pi.retrieval_context_override.zh",
+            "instruction-override mechanism: discard retrieved/reference context and answer only from attacker-provided content",
+            _IGNORE_RETRIEVED_ZH,
+            _EXCLUSIVE_ANSWER_ZH,
+        ),
+    ):
+        events.extend(
+            _composed_pair_events(item, skip_spans, ignore_pattern, exclusive_pattern, rule_id, rationale)
+        )
+        if len(events) >= 12:
+            return events
     return events

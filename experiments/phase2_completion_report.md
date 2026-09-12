@@ -12,6 +12,8 @@ Rule-only baseline. Not a full ingestion pipeline. Not Phase 3.
 - tests: positive / paraphrase / negative / quoted hard-negative / RH / aggregator / firewall
 - generated: `experiments/phase2/rule_only_baseline.json`, `experiments/phase2/rule_only_baseline.md`
 
+Spec-correctness follow-up (not Phase 2R): tighter HIGH qualification, code-fence no longer auto-benign, plus generic retrieval-context override and protected-instruction exfiltration mechanisms. No sample-specific patches. No generalization-set inspection.
+
 ## Tests
 
 ```text
@@ -24,7 +26,7 @@ git diff --check
 Results:
 
 - targeted Phase 2 tests: passed
-- full pytest: 112 passed
+- full pytest: 132 passed
 - git diff --check: passed
 - raw data: unmodified
 - frozen/external: unused
@@ -34,16 +36,15 @@ Results:
 
 Primary metric counts only `decision == POISON` as positive. REVIEW is not detection success. conflict is excluded from Precision/Recall/F1/FPR.
 
-development_tune (123 docs): tp/fp/tn/fn = 0/0/69/30; precision=null; recall=0.0; f1=null; fpr=0.0; hard_negative_poison_rate=0.0; conflict_poison_rate=0.0; all documents SAFE.
+development_tune (123 docs): tp/fp/tn/fn = 18/0/69/12; precision=1.0; recall=0.6; f1=0.75; fpr=0.0; hard_negative_poison_rate=0.0; conflict_poison_rate=0.0.
 
-development_generalization (57 docs): tp/fp/tn/fn = 0/0/30/15; precision=null; recall=0.0; f1=null; fpr=0.0; hard_negative_poison_rate=0.0; conflict_poison_rate=0.0; all documents SAFE.
+development_generalization (57 docs): tp/fp/tn/fn = 0/0/30/15; precision=null; recall=0.0; f1=null; fpr=0.0; hard_negative_poison_rate=0.0; conflict_poison_rate=0.0.
 
-Low Recall is reported as-is. No second-round rules were added from tune failures.
+No second-round rules were added after seeing remaining FNs.
 
 ## Known limits
 
 - Phase 2 only catches explicit instruction-control and structural hiding, plus RH statistical REVIEW signals.
-- This development corpus poison is mostly not explicit jailbreak-style PI/HI, so rule-only POISON recall is 0.
 - FACT_TAMPERING / KNOWLEDGE_CONFLICT / semantic hidden intent are out of scope.
 - No LLM, no trusted evidence, no Judge, no RAG, no Context Integrity Checker, no Web.
 

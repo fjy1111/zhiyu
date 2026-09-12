@@ -200,14 +200,14 @@ Aggregator 只看同一 `document_id` 的 `RuleEvent[]`。
 
 **CASE 1**  RuleEvent 数量 = 0 → `SAFE`
 
-**CASE 2**  存在事件，但不存在任何  
-`mechanism ∈ {PROMPT_INJECTION, HIDDEN_INSTRUCTION}` 且 `event_class == MECHANISM` 且 `confidence == HIGH`  
+**CASE 2**  存在事件，但不存在任何
+`mechanism ∈ {PROMPT_INJECTION, HIDDEN_INSTRUCTION}` 且 `event_class == MECHANISM` 且 `confidence == HIGH`
 → `REVIEW`
 
 包括：LOW/MEDIUM mechanism、任意 STATISTICAL、任意数量 RH statistical events、多个弱机制事件、弱机制 + 统计异常。全部只能 REVIEW。
 
-**CASE 3**  至少存在 1 条  
-`mechanism ∈ {PROMPT_INJECTION, HIDDEN_INSTRUCTION}` 且 `event_class == MECHANISM` 且 `confidence == HIGH`  
+**CASE 3**  至少存在 1 条
+`mechanism ∈ {PROMPT_INJECTION, HIDDEN_INSTRUCTION}` 且 `event_class == MECHANISM` 且 `confidence == HIGH`
 → `POISON`
 
 其他 LOW / MEDIUM / STATISTICAL 事件可以保留在结果中作为辅助说明，但不改变这个决策。

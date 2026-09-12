@@ -2,8 +2,14 @@
 
 面向 RAG 知识库的投毒检测与主动防御系统。
 
-当前阶段：Phase 1，数据治理、统一文档模型与多格式解析基础设施。
-当前 Phase 1 尚未实现任何投毒检测能力。阶段完成后停止并等待评审，未经明确要求不进入 Phase 2。
+当前状态：
+
+- Phase 1 completed：数据治理、统一文档模型与多格式解析
+- Phase 1.5 completed：Benchmark Adapter、group-aware split、ground-truth firewall
+- Phase 1.6 deferred：External Benchmark Freeze 不阻塞后续开发
+- Phase 2 completed：rule-only baseline（DetectionInput → Rule Scanner → RuleEvent → Aggregator → SAFE/REVIEW/POISON）
+
+未经明确要求不进入 Phase 3。
 
 `datasets/raw/trusted_provenance/` 中保留的原始 `test_data/` 内容来自 GitHub 仓库 [rag-poisoning-detection-trusted-provenance](https://github.com/rodriguezrobertbfrkx6857-sudo/rag-poisoning-detection-trusted-provenance.git)。这些文件当前仅作为知御的外部研究/实验数据来源，并按原始目录层级只读保存。
 
@@ -30,7 +36,8 @@ zhiyu/
 │   │   ├── document_parser.py
 │   │   └── chunker.py
 │   ├── dataset.py
-│   └── detector/, evidence/, judge/, decision/, retrieval_guard/, rag/（仅占位）
+│   ├── detector/、decision/  Phase 2 rule-only baseline
+│   └── evidence/, judge/, retrieval_guard/, rag/（后续阶段占位）
 ├── datasets/
 │   ├── raw/trusted_provenance/
 │   ├── processed/trusted_provenance/
@@ -43,6 +50,7 @@ zhiyu/
 │   ├── build_development_corpus.py
 │   ├── run_parser_validation.py
 │   ├── audit_dataset_splits.py
+│   ├── evaluate_phase2.py
 │   └── _common.py
 ├── tests/
 └── backend/, frontend/, experiments/（占位）
