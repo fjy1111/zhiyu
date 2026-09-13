@@ -35,6 +35,12 @@ def load_demo_knowledge_base(path: Path | str | None = None, scenario: str = "no
     indexes=build_indexes(chunks,{k:Decision(v) for k,v in decisions.items()},RetrieverConfig(k=3))
     return DemoKnowledgeBase("DEMO", indexes)
 
+def build_scenario_knowledge_base(rows, trusted_ids, truth):
+    from zhiyu.models.detection import Decision
+    chunks=tuple(IndexedChunk(r['demo_document_id'], r['demo_document_id']+':0', r['runtime_text']) for r in rows)
+    decisions={r['demo_document_id']: ('SAFE' if r['demo_document_id'] in trusted_ids else truth.get(r['demo_document_id'],'REVIEW')) for r in rows}
+    return DemoKnowledgeBase('SCENARIO', build_indexes(chunks,{k:Decision(v) for k,v in decisions.items()},RetrieverConfig(k=5)))
+
 class DemoApplication:
     def __init__(self, kb: DemoKnowledgeBase | None = None):
         self.kb=kb or load_demo_knowledge_base()
@@ -52,12 +58,13 @@ class DemoApplication:
             allrows=[json.loads(x) for x in (Path(__file__).resolve().parents[3]/"demo/demo_knowledge_base_v2.jsonl").read_text(encoding="utf8").splitlines()]
             ids=set(spec["trusted_seed_document_ids"]+[spec["incoming_document_id"]]+spec.get("distractor_document_ids",[]))
             rows=[r for r in allrows if r["demo_document_id"] in ids]
-            tmp=Path(__file__).resolve().parents[3]/"demo/.scenario_runtime.jsonl"; tmp.write_text("\n".join(json.dumps(r,ensure_ascii=False) for r in rows),encoding="utf8")
-            self.kb=load_demo_knowledge_base(path=tmp,scenario="")
-            tmp.unlink(missing_ok=True)
+            seed_file=Path(__file__).resolve().parents[3]/"demo/trusted_seed_manifest.json"
+            trusted_ids={x['document_id'] for x in json.loads(seed_file.read_text(encoding='utf8'))['documents']}
+            truth_file=Path(__file__).resolve().parents[3]/"experiments/phase7/prescan_final.json"
+            truth={x['document_id']:x['decision'] for x in json.loads(truth_file.read_text(encoding='utf8'))['documents']}
+            self.kb=build_scenario_knowledge_base(rows,trusted_ids,truth)
             scenario=spec["scenario_id"]
-        elif scenario not in {"", "normal", "factual", "injection"}: raise ValueError("unknown demo scenario")
-        else: self.kb = load_demo_knowledge_base(scenario="normal")
+        else: raise ValueError("scenario_id is required and must be valid")
         self.retriever = SharedRetriever(self.kb.indexes.config)
         result={"scenario_id":scenario, "query":query_text.strip(), "vanilla":self._path(q,"vanilla"), "protected":self._path(q,"protected"), "admission":{"protected_documents":len(self.kb.indexes.protected.document_ids),"quarantined_documents":len(self.kb.indexes.vanilla.document_ids-self.kb.indexes.protected.document_ids)}}
         return result
