@@ -11,6 +11,7 @@ if str(SRC_ROOT) not in sys.path:
 from zhiyu.demo.application import DemoApplication
 from datetime import datetime, timezone
 DEMO_ROWS = [json.loads(x) for x in (REPO_ROOT/'demo/demo_knowledge_base_v2.jsonl').read_text(encoding='utf-8').splitlines() if x.strip()]
+PRESCAN = {x['document_id']: x for x in json.loads((REPO_ROOT/'experiments/phase7/prescan_final.json').read_text(encoding='utf-8'))['documents']}
 STATE = {'incoming': None, 'scans': {}}
 
 app = DemoApplication()
@@ -28,8 +29,8 @@ class Handler(BaseHTTPRequestHandler):
   elif self.path == '/api/scan':
    doc=next((r for r in DEMO_ROWS if r['demo_document_id']==data.get('document_id')), None)
    if not doc: self.send_error(404); return
-   decision=doc.get('decision','REVIEW'); STATE['incoming']={**doc,'scanned_at':datetime.now(timezone.utc).isoformat()}; STATE['scans'][doc['demo_document_id']]=decision
-   body=json.dumps({'document_id':doc['demo_document_id'],'decision':decision,'mechanism':doc.get('mechanism'),'action': '自动准入 Protected KB' if decision=='SAFE' else ('自动阻断 / 隔离' if decision=='POISON' else '隔离等待复核')},ensure_ascii=False).encode()
+   truth=PRESCAN.get(doc['demo_document_id'], {}); decision=truth.get('decision','REVIEW'); STATE['incoming']={**doc,'decision':decision,'prescan_mode':'真实预扫描结果复现','scanned_at':datetime.now(timezone.utc).isoformat()}; STATE['scans'][doc['demo_document_id']]=decision
+   body=json.dumps({'document_id':doc['demo_document_id'],'decision':decision,'mechanism':doc.get('mechanism'),'prescan_mode':'真实预扫描结果复现','component_statuses':truth.get('component_statuses',{}),'rule_event_count':truth.get('rule_event_count',0),'behavior_evidence_count':truth.get('behavior_evidence_count',0),'factual_evidence_summary':truth.get('factual_evidence_summary',{}),'judge_status':truth.get('judge_status'),'action': '自动准入 Protected KB' if decision=='SAFE' else ('自动阻断 / 隔离' if decision=='POISON' else '隔离等待复核')},ensure_ascii=False).encode()
   self.send_response(200); self.send_header("Content-Type","application/json; charset=utf-8"); self.send_header("Content-Length",str(len(body))); self.end_headers(); self.wfile.write(body)
  def do_GET(self):
   if self.path in ("/", "/index.html"):

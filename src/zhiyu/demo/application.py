@@ -19,17 +19,17 @@ class DemoProvider:
         if not chunks: return ""
         # Deterministic demo provider summarizes retrieved evidence; it does not inspect labels.
         text=" ".join(c["text"] for c in chunks)
-        if "第九颗" in text: return "根据检索证据：地球是太阳系第九颗行星。"
-        if "最大的行星" in data.get("query_text", "") or "最大" in data.get("query_text", ""):
-            return "根据检索证据：太阳系中最大的行星是木星。"
-        if "第三颗" in text: return "根据检索证据：地球是太阳系第三颗行星。"
-        return "根据检索证据：" + text[:160]
+        return "根据检索证据：" + text[:240]
 
 def load_demo_knowledge_base(path: Path | str | None = None, scenario: str = "normal") -> DemoKnowledgeBase:
-    path=Path(path or Path(__file__).resolve().parents[3]/"demo/demo_knowledge_base.jsonl")
-    rows=[json.loads(x) for x in path.read_text(encoding="utf-8").splitlines() if x.strip() and json.loads(x).get("scenario", "normal") == scenario]
-    chunks=tuple(IndexedChunk(r["document_id"], r["document_id"]+":0", r["text"]) for r in rows)
-    decisions={r["document_id"]: r["decision"] for r in rows}
+    path=Path(path or Path(__file__).resolve().parents[3]/"demo/demo_knowledge_base_v2.jsonl")
+    rows=[json.loads(x) for x in path.read_text(encoding="utf-8").splitlines() if x.strip()]
+    truth_path=path.parent / "../experiments/phase7/prescan_final.json"
+    truth_file=Path(__file__).resolve().parents[3]/"experiments/phase7/prescan_final.json"
+    truth={x["document_id"]:x for x in json.loads(truth_file.read_text(encoding="utf-8"))["documents"]}
+    chunks=tuple(IndexedChunk(r["demo_document_id"], r["demo_document_id"]+":0", r["runtime_text"]) for r in rows)
+    trusted={r["demo_document_id"] for r in rows if r.get("mechanism")=="SAFE_INTENDED"}
+    decisions={r["demo_document_id"]: ("SAFE" if r["demo_document_id"] in trusted else truth.get(r["demo_document_id"],{}).get("decision","REVIEW")) for r in rows}
     from zhiyu.models.detection import Decision
     indexes=build_indexes(chunks,{k:Decision(v) for k,v in decisions.items()},RetrieverConfig(k=3))
     return DemoKnowledgeBase("DEMO", indexes)
