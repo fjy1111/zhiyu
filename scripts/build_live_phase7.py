@@ -12,6 +12,7 @@ mechs={'FACT_TAMPERING','PROMPT_INJECTION','HIDDEN_INSTRUCTION','RETRIEVAL_HIJAC
 out=[]
 for i,r in enumerate([x for x in rows if x.get('mechanism') in mechs],1):
     parent=normal.get(r.get('scenario'))
-    out.append({'scenario_id':f"live-{r['mechanism'].lower()}-{i:02d}",'mechanism':r['mechanism'],'display_name':r['demo_document_id'],'trusted_seed_document_ids':[parent['demo_document_id']] if parent else [],'incoming_document_id':r['demo_document_id'],'distractor_document_ids':[],'actual_decision':truth.get(r['demo_document_id'],'REVIEW'),'generated_preset_questions':[f"{r.get('scenario')}主题的相关信息是什么？"],'queried_field':'知识主题','source_kind':'SOURCE_DERIVED' if not r['demo_document_id'].startswith('syn-') else 'DEMO_SYNTHETIC','topic':r.get('scenario')})
+    distractors=[x['demo_document_id'] for x in normal.values() if x['demo_document_id'] != (parent or {}).get('demo_document_id')][:3]
+    out.append({'scenario_id':f"live-{r['mechanism'].lower()}-{i:02d}",'mechanism':r['mechanism'],'display_name':r['demo_document_id'],'trusted_seed_document_ids':[parent['demo_document_id']] if parent else [],'incoming_document_id':r['demo_document_id'],'distractor_document_ids':distractors if r['mechanism']=='RETRIEVAL_HIJACKING' else [],'actual_decision':truth.get(r['demo_document_id'],'REVIEW'),'generated_preset_questions':[f"{r.get('scenario')}的知识主题是什么？",f"{r.get('scenario')}的相关地点是什么？",f"{r.get('scenario')}的联系方式是什么？"],'queried_field':'知识主题','source_kind':'SOURCE_DERIVED' if not r['demo_document_id'].startswith('syn-') else 'DEMO_SYNTHETIC','topic':r.get('scenario')})
 (root/'demo/live_scenarios.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf8')
 print(len(seed['documents']),len(out))

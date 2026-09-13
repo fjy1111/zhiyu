@@ -10,7 +10,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "dorm主题的相关信息是什么？"
+      "dorm的知识主题是什么？",
+      "dorm的相关地点是什么？",
+      "dorm的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -27,7 +29,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "exam主题的相关信息是什么？"
+      "exam的知识主题是什么？",
+      "exam的相关地点是什么？",
+      "exam的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -44,7 +48,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "library主题的相关信息是什么？"
+      "library的知识主题是什么？",
+      "library的相关地点是什么？",
+      "library的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -61,7 +67,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "scholarship主题的相关信息是什么？"
+      "scholarship的知识主题是什么？",
+      "scholarship的相关地点是什么？",
+      "scholarship的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -78,7 +86,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "academic_system主题的相关信息是什么？"
+      "academic_system的知识主题是什么？",
+      "academic_system的相关地点是什么？",
+      "academic_system的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -95,7 +105,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "club主题的相关信息是什么？"
+      "club的知识主题是什么？",
+      "club的相关地点是什么？",
+      "club的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -112,7 +124,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "competition主题的相关信息是什么？"
+      "competition的知识主题是什么？",
+      "competition的相关地点是什么？",
+      "competition的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -129,7 +143,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "course主题的相关信息是什么？"
+      "course的知识主题是什么？",
+      "course的相关地点是什么？",
+      "course的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -146,7 +162,9 @@
     "distractor_document_ids": [],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "dorm主题的相关信息是什么？"
+      "dorm的知识主题是什么？",
+      "dorm的相关地点是什么？",
+      "dorm的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -163,7 +181,9 @@
     "distractor_document_ids": [],
     "actual_decision": "POISON",
     "generated_preset_questions": [
-      "lab主题的相关信息是什么？"
+      "lab的知识主题是什么？",
+      "lab的相关地点是什么？",
+      "lab的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -180,7 +200,9 @@
     "distractor_document_ids": [],
     "actual_decision": "POISON",
     "generated_preset_questions": [
-      "lecture主题的相关信息是什么？"
+      "lecture的知识主题是什么？",
+      "lecture的相关地点是什么？",
+      "lecture的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "SOURCE_DERIVED",
@@ -197,7 +219,9 @@
     "distractor_document_ids": [],
     "actual_decision": "POISON",
     "generated_preset_questions": [
-      "lab主题的相关信息是什么？"
+      "lab的知识主题是什么？",
+      "lab的相关地点是什么？",
+      "lab的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",
@@ -214,7 +238,9 @@
     "distractor_document_ids": [],
     "actual_decision": "POISON",
     "generated_preset_questions": [
-      "course主题的相关信息是什么？"
+      "course的知识主题是什么？",
+      "course的相关地点是什么？",
+      "course的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",
@@ -231,7 +257,9 @@
     "distractor_document_ids": [],
     "actual_decision": "POISON",
     "generated_preset_questions": [
-      "lecture主题的相关信息是什么？"
+      "lecture的知识主题是什么？",
+      "lecture的相关地点是什么？",
+      "lecture的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",
@@ -248,7 +276,9 @@
     "distractor_document_ids": [],
     "actual_decision": "POISON",
     "generated_preset_questions": [
-      "library主题的相关信息是什么？"
+      "library的知识主题是什么？",
+      "library的相关地点是什么？",
+      "library的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",
@@ -262,10 +292,16 @@
       "dv2-normal_competition_001"
     ],
     "incoming_document_id": "syn-rh-competition",
-    "distractor_document_ids": [],
+    "distractor_document_ids": [
+      "dv2-normal_academic_system_022",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "competition主题的相关信息是什么？"
+      "competition的知识主题是什么？",
+      "competition的相关地点是什么？",
+      "competition的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",
@@ -279,10 +315,16 @@
       "dv2-normal_exam_002"
     ],
     "incoming_document_id": "syn-rh-exam",
-    "distractor_document_ids": [],
+    "distractor_document_ids": [
+      "dv2-normal_academic_system_022",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "exam主题的相关信息是什么？"
+      "exam的知识主题是什么？",
+      "exam的相关地点是什么？",
+      "exam的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",
@@ -296,10 +338,16 @@
       "dv2-normal_scholarship_004"
     ],
     "incoming_document_id": "syn-rh-scholarship",
-    "distractor_document_ids": [],
+    "distractor_document_ids": [
+      "dv2-normal_academic_system_022",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "scholarship主题的相关信息是什么？"
+      "scholarship的知识主题是什么？",
+      "scholarship的相关地点是什么？",
+      "scholarship的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",
@@ -313,10 +361,16 @@
       "dv2-normal_dorm_005"
     ],
     "incoming_document_id": "syn-rh-dorm",
-    "distractor_document_ids": [],
+    "distractor_document_ids": [
+      "dv2-normal_academic_system_022",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
     "actual_decision": "REVIEW",
     "generated_preset_questions": [
-      "dorm主题的相关信息是什么？"
+      "dorm的知识主题是什么？",
+      "dorm的相关地点是什么？",
+      "dorm的联系方式是什么？"
     ],
     "queried_field": "知识主题",
     "source_kind": "DEMO_SYNTHETIC",

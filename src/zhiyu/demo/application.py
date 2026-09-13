@@ -45,11 +45,21 @@ class DemoApplication:
     def run(self, query_text: str, scenario: str = "DEMO") -> dict:
         if not isinstance(query_text,str) or not query_text.strip(): raise ValueError("query_text must be non-empty")
         q=RuntimeQuery("demo-query",query_text.strip())
-        scenario = {"DEMO":"normal"}.get(scenario, scenario)
-        if scenario not in {"normal", "factual", "injection"}: raise ValueError("unknown demo scenario")
-        self.kb = load_demo_knowledge_base(scenario=scenario)
+        scenario = {"DEMO":""}.get(scenario, scenario)
+        catalog= json.loads((Path(__file__).resolve().parents[3]/"demo/live_scenarios.json").read_text(encoding="utf8"))
+        spec=next((x for x in catalog if x["scenario_id"]==scenario), None)
+        if spec:
+            allrows=[json.loads(x) for x in (Path(__file__).resolve().parents[3]/"demo/demo_knowledge_base_v2.jsonl").read_text(encoding="utf8").splitlines()]
+            ids=set(spec["trusted_seed_document_ids"]+[spec["incoming_document_id"]]+spec.get("distractor_document_ids",[]))
+            rows=[r for r in allrows if r["demo_document_id"] in ids]
+            tmp=Path(__file__).resolve().parents[3]/"demo/.scenario_runtime.jsonl"; tmp.write_text("\n".join(json.dumps(r,ensure_ascii=False) for r in rows),encoding="utf8")
+            self.kb=load_demo_knowledge_base(path=tmp,scenario="")
+            tmp.unlink(missing_ok=True)
+            scenario=spec["scenario_id"]
+        elif scenario not in {"", "normal", "factual", "injection"}: raise ValueError("unknown demo scenario")
+        else: self.kb = load_demo_knowledge_base(scenario="normal")
         self.retriever = SharedRetriever(self.kb.indexes.config)
-        result={"scenario":scenario, "query":query_text.strip(), "vanilla":self._path(q,"vanilla"), "protected":self._path(q,"protected"), "admission":{"protected_documents":len(self.kb.indexes.protected.document_ids),"quarantined_documents":len(self.kb.indexes.vanilla.document_ids-self.kb.indexes.protected.document_ids)}}
+        result={"scenario_id":scenario, "query":query_text.strip(), "vanilla":self._path(q,"vanilla"), "protected":self._path(q,"protected"), "admission":{"protected_documents":len(self.kb.indexes.protected.document_ids),"quarantined_documents":len(self.kb.indexes.vanilla.document_ids-self.kb.indexes.protected.document_ids)}}
         return result
     def _path(self,q,path):
         index=getattr(self.kb.indexes,path); retrieval=self.retriever.retrieve(q,index)
