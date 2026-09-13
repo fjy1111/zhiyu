@@ -28,7 +28,8 @@ def load_demo_knowledge_base(path: Path | str | None = None, scenario: str = "no
     truth_file=Path(__file__).resolve().parents[3]/"experiments/phase7/prescan_final.json"
     truth={x["document_id"]:x for x in json.loads(truth_file.read_text(encoding="utf-8"))["documents"]}
     chunks=tuple(IndexedChunk(r["demo_document_id"], r["demo_document_id"]+":0", r["runtime_text"]) for r in rows)
-    trusted={r["demo_document_id"] for r in rows if r.get("mechanism")=="SAFE_INTENDED"}
+    seed_file=Path(__file__).resolve().parents[3]/"demo/trusted_seed_manifest.json"
+    trusted={r["document_id"] for r in json.loads(seed_file.read_text(encoding="utf-8"))["documents"]}
     decisions={r["demo_document_id"]: ("SAFE" if r["demo_document_id"] in trusted else truth.get(r["demo_document_id"],{}).get("decision","REVIEW")) for r in rows}
     from zhiyu.models.detection import Decision
     indexes=build_indexes(chunks,{k:Decision(v) for k,v in decisions.items()},RetrieverConfig(k=3))

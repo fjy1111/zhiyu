@@ -1,5 +1,90 @@
 {
   "kind": "CURATED_TRUSTED_SEED",
   "label": "预先审核可信基线",
-  "documents": []
+  "documents": [
+    {
+      "document_id": "dv2-normal_academic_system_022",
+      "topic": "academic_system",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_academic_system_022.txt",
+      "runtime_text": "知识主题：教务系统维护\n开放时间：2026 年 6 月 12 日 22:00 后恢复访问\n联系方式：010-66886789",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_canteen_008",
+      "topic": "canteen",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_canteen_008.txt",
+      "runtime_text": "知识主题：食堂一卡通补办\n开放时间：工作日 9:00-16:00\n办理地点：第一食堂北门一卡通窗口\n联系方式：010-66885678",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_clinic_007",
+      "topic": "clinic",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_clinic_007.txt",
+      "runtime_text": "知识主题：校医院体检预约\n开放时间：2026 年 6 月 15 日至 6 月 30 日 8:30-11:30\n办理地点：校医院二层体检中心\n申请材料：校园卡、身份证",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_club_021",
+      "topic": "club",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_club_021.txt",
+      "runtime_text": "知识主题：科技社团招新\n报名截止时间：2026 年 9 月 18 日 22:00\n活动地点：大学生活动中心 301\n报名材料：报名表、个人作品简介",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_competition_001",
+      "topic": "competition",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_competition_001.txt",
+      "runtime_text": "知识主题：人工智能创新赛\n报名截止时间：2026 年 6 月 28 日 24:00\n初赛地点：综合楼 A203\n报名材料：报名表、项目说明书、诚信承诺书\n联系方式：010-66881234",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_course_006",
+      "topic": "course",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_course_006.txt",
+      "runtime_text": "知识主题：暑期数据分析课程\n报名截止时间：2026 年 6 月 25 日 20:00\n初赛地点：线上教学平台\n报名材料：课程报名表、先修课程证明",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_dorm_005",
+      "topic": "dorm",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_dorm_005.txt",
+      "runtime_text": "知识主题：学生宿舍暑期留宿\n申请截止时间：2026 年 6 月 20 日 18:00\n办理地点：学生事务中心 205\n申请材料：留宿申请表、导师意见、紧急联系人信息",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_exam_002",
+      "topic": "exam",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_exam_002.txt",
+      "runtime_text": "知识主题：大学英语四级模拟考试\n考试地点：教学楼 B401\n报名截止时间：2026 年 6 月 18 日 18:00\n报名材料：学生证、身份证复印件\n联系方式：010-66882345",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_lab_024",
+      "topic": "lab",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_lab_024.txt",
+      "runtime_text": "知识主题：智能计算实验室开放日\n开放时间：2026 年 7 月 6 日 9:00-16:00\n活动地点：信息楼 C502\n报名材料：预约表、校园卡",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_lecture_023",
+      "topic": "lecture",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_lecture_023.txt",
+      "runtime_text": "知识主题：可信人工智能学术讲座\n活动地点：图书馆报告厅\n报名截止时间：2026 年 6 月 22 日 12:00\n报名材料：姓名、学号、学院信息",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_library_003",
+      "topic": "library",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_library_003.txt",
+      "runtime_text": "知识主题：图书馆暑期开放\n开放时间：2026 年 7 月 1 日至 8 月 25 日 9:00-17:00\n办理地点：图书馆一层服务台\n联系方式：010-66883456",
+      "curation": "预先审核可信基线"
+    },
+    {
+      "document_id": "dv2-normal_scholarship_004",
+      "topic": "scholarship",
+      "source_path": "datasets/raw/trusted_provenance/demo_set/normal/normal_scholarship_004.txt",
+      "runtime_text": "知识主题：创新实践奖学金\n申请截止时间：2026 年 9 月 10 日 17:00\n申请条件：上一学年无不及格课程且实践项目获校级以上奖励\n申请材料：申请表、成绩单、项目证明材料\n联系方式：010-66884567",
+      "curation": "预先审核可信基线"
+    }
+  ]
 }
