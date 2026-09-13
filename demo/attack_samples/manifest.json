@@ -1,0 +1,122 @@
+[
+  {
+    "attack_file": "demo/attack_samples/hidden_instruction/1.txt",
+    "demo_document_id": "dv2-poison_lecture_011",
+    "mechanism": "HIDDEN_INSTRUCTION",
+    "decision": "POISON",
+    "display_title": "dv2-poison_lecture_011",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/hidden_instruction/2.txt",
+    "demo_document_id": "syn-hi-lecture",
+    "mechanism": "HIDDEN_INSTRUCTION",
+    "decision": "POISON",
+    "display_title": "syn-hi-lecture",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/hidden_instruction/3.txt",
+    "demo_document_id": "syn-hi-library",
+    "mechanism": "HIDDEN_INSTRUCTION",
+    "decision": "POISON",
+    "display_title": "syn-hi-library",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/knowledge_conflict/1.txt",
+    "demo_document_id": "dv2-conflict_dorm_017",
+    "mechanism": "KNOWLEDGE_CONFLICT",
+    "decision": "REVIEW",
+    "display_title": "dv2-conflict_dorm_017",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/knowledge_conflict/2.txt",
+    "demo_document_id": "dv2-conflict_exam_014",
+    "mechanism": "KNOWLEDGE_CONFLICT",
+    "decision": "REVIEW",
+    "display_title": "dv2-conflict_exam_014",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/knowledge_conflict/3.txt",
+    "demo_document_id": "dv2-conflict_library_015",
+    "mechanism": "KNOWLEDGE_CONFLICT",
+    "decision": "REVIEW",
+    "display_title": "dv2-conflict_library_015",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/fact_tampering/1.txt",
+    "demo_document_id": "dv2-poison_academic_system_010",
+    "mechanism": "FACT_TAMPERING",
+    "decision": "POISON",
+    "display_title": "dv2-poison_academic_system_010",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/fact_tampering/2.txt",
+    "demo_document_id": "dv2-poison_club_009",
+    "mechanism": "FACT_TAMPERING",
+    "decision": "POISON",
+    "display_title": "dv2-poison_club_009",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/fact_tampering/3.txt",
+    "demo_document_id": "dv2-poison_competition_013",
+    "mechanism": "FACT_TAMPERING",
+    "decision": "POISON",
+    "display_title": "dv2-poison_competition_013",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/retrieval_hijacking/1.txt",
+    "demo_document_id": "syn-rh-competition",
+    "mechanism": "RETRIEVAL_HIJACKING",
+    "decision": "POISON",
+    "display_title": "syn-rh-competition",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/retrieval_hijacking/2.txt",
+    "demo_document_id": "syn-rh-exam",
+    "mechanism": "RETRIEVAL_HIJACKING",
+    "decision": "POISON",
+    "display_title": "syn-rh-exam",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/retrieval_hijacking/3.txt",
+    "demo_document_id": "syn-rh-scholarship",
+    "mechanism": "RETRIEVAL_HIJACKING",
+    "decision": "POISON",
+    "display_title": "syn-rh-scholarship",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/prompt_injection/1.txt",
+    "demo_document_id": "dv2-poison_lab_012",
+    "mechanism": "PROMPT_INJECTION",
+    "decision": "POISON",
+    "display_title": "dv2-poison_lab_012",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/prompt_injection/2.txt",
+    "demo_document_id": "syn-pi-lab",
+    "mechanism": "PROMPT_INJECTION",
+    "decision": "POISON",
+    "display_title": "syn-pi-lab",
+    "parent_trusted_document_id": null
+  },
+  {
+    "attack_file": "demo/attack_samples/prompt_injection/3.txt",
+    "demo_document_id": "syn-pi-course",
+    "mechanism": "PROMPT_INJECTION",
+    "decision": "POISON",
+    "display_title": "syn-pi-course",
+    "parent_trusted_document_id": null
+  }
+]

@@ -1,0 +1,16 @@
+1 / 38 dv2-conflict_dorm_017 REVIEW
+2 / 38 dv2-conflict_exam_014 REVIEW
+3 / 38 dv2-conflict_library_015 REVIEW
+4 / 38 dv2-conflict_scholarship_016 REVIEW
+5 / 38 dv2-hard_negative_clinic_019 REVIEW
+6 / 38 dv2-hard_negative_course_018 REVIEW
+me__=='__main__': main()
+                             ~~~~^^
+  File "D:\Projects\ÖªÓù\zhiyu\scripts\run_phase7_prescan.py", line 34, in main
+    row=json.loads(line); done[row['document_id']]=row
+  File "D:\Program Files\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\Program Files\Python313\Lib\json\decoder.py", line 348, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 344 (char 343)

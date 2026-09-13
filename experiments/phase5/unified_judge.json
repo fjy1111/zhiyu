@@ -1,0 +1,154 @@
+{
+  "experiment_kind": "REAL LLM",
+  "config": {
+    "evaluation_code_commit": "30c7cdaaea7ff1a816fcde60598e7b0d2917fa9e",
+    "working_tree_tracked_clean": true,
+    "bundle_sha256": "7751429e3674571c9bd500e93f65e250ab2f95722148e5b0472871cdbbabc25c",
+    "judge_prompt_version": "phase5.judge.v1",
+    "decision_policy_version": "phase5.risk_engine.v1",
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com",
+    "api_key_present": true
+  },
+  "ablations": {
+    "rule_only_baseline": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 75,
+        "REVIEW": 0,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.0,
+      "review_rate_poison": 0.0,
+      "review_rate_normal": 0.0,
+      "review_rate_hard_negative": 0.0,
+      "review_rate_conflict": 0.0,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 1.0,
+        "REVIEW": 0.0,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.6,
+      "poison_non_safe_rate": 0.4,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 57
+    },
+    "rule_plus_semantic_baseline": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 46,
+        "REVIEW": 29,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.3118279569892473,
+      "review_rate_poison": 0.26666666666666666,
+      "review_rate_normal": 0.37037037037037035,
+      "review_rate_hard_negative": 0.5,
+      "review_rate_conflict": 0.26666666666666666,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 0.7333333333333333,
+        "REVIEW": 0.26666666666666666,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.3333333333333333,
+      "poison_non_safe_rate": 0.6666666666666666,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 28
+    },
+    "full_evidence_no_judge": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 2,
+        "REVIEW": 73,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.7849462365591398,
+      "review_rate_poison": 0.5555555555555556,
+      "review_rate_normal": 1.0,
+      "review_rate_hard_negative": 1.0,
+      "review_rate_conflict": 1.0,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 0.0,
+        "REVIEW": 1.0,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.044444444444444446,
+      "poison_non_safe_rate": 0.9555555555555556,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 0
+    },
+    "full_judge": {
+      "documents": 93,
+      "primary": {
+        "tp": 18,
+        "fp": 0,
+        "tn": 33,
+        "fn": 27,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285715,
+        "fpr": 0.0
+      },
+      "decision_counts": {
+        "SAFE": 0,
+        "REVIEW": 75,
+        "POISON": 18
+      },
+      "review_rate_overall": 0.8064516129032258,
+      "review_rate_poison": 0.6,
+      "review_rate_normal": 1.0,
+      "review_rate_hard_negative": 1.0,
+      "review_rate_conflict": 1.0,
+      "hard_negative_poison_rate": 0.0,
+      "conflict_distribution": {
+        "SAFE": 0.0,
+        "REVIEW": 1.0,
+        "POISON": 0.0
+      },
+      "unsafe_auto_admission_rate": 0.0,
+      "poison_non_safe_rate": 1.0,
+      "judge_only_poison_count": 0,
+      "unsafe_safe_on_failure_count": 0
+    }
+  },
+  "notes": {
+    "review_is_not_positive": true,
+    "same_bundle": true
+  },
+  "judge_vs_no_judge_transitions": {
+    "SAFE->REVIEW": 2
+  }
+}
