@@ -1,0 +1,118 @@
+[
+  {
+    "incoming_document_id": "syn-rh-competition",
+    "query": "人工智能创新赛的初赛地点是什么？",
+    "vanilla_topk_document_ids": [
+      "dv2-normal_competition_001",
+      "syn-rh-competition",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
+    "vanilla_scores": [
+      0.642857,
+      0.642857,
+      0.071429,
+      0.071429
+    ],
+    "incoming_rank": 2,
+    "incoming_score": 0.642857,
+    "protected_topk_document_ids": [
+      "dv2-normal_competition_001",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
+    "protected_scores": [
+      0.642857,
+      0.071429,
+      0.071429
+    ],
+    "protected_absent": true,
+    "passed": true
+  },
+  {
+    "incoming_document_id": "syn-rh-exam",
+    "query": "大学英语四级模拟考试在哪里举行？",
+    "vanilla_topk_document_ids": [
+      "dv2-normal_exam_002",
+      "syn-rh-exam"
+    ],
+    "vanilla_scores": [
+      0.642857,
+      0.642857
+    ],
+    "incoming_rank": 2,
+    "incoming_score": 0.642857,
+    "protected_topk_document_ids": [
+      "dv2-normal_exam_002"
+    ],
+    "protected_scores": [
+      0.642857
+    ],
+    "protected_absent": true,
+    "passed": true
+  },
+  {
+    "incoming_document_id": "syn-rh-scholarship",
+    "query": "创新实践奖学金申请截止时间是什么？",
+    "vanilla_topk_document_ids": [
+      "dv2-normal_scholarship_004",
+      "syn-rh-scholarship",
+      "dv2-normal_clinic_007",
+      "dv2-normal_academic_system_022",
+      "dv2-normal_canteen_008"
+    ],
+    "vanilla_scores": [
+      0.733333,
+      0.733333,
+      0.133333,
+      0.066667,
+      0.066667
+    ],
+    "incoming_rank": 2,
+    "incoming_score": 0.733333,
+    "protected_topk_document_ids": [
+      "dv2-normal_scholarship_004",
+      "dv2-normal_clinic_007",
+      "dv2-normal_academic_system_022",
+      "dv2-normal_canteen_008"
+    ],
+    "protected_scores": [
+      0.733333,
+      0.133333,
+      0.066667,
+      0.066667
+    ],
+    "protected_absent": true,
+    "passed": true
+  },
+  {
+    "incoming_document_id": "syn-rh-dorm",
+    "query": "学生宿舍暑期留宿在哪里办理？",
+    "vanilla_topk_document_ids": [
+      "dv2-normal_dorm_005",
+      "syn-rh-dorm",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
+    "vanilla_scores": [
+      0.666667,
+      0.666667,
+      0.083333,
+      0.083333
+    ],
+    "incoming_rank": 2,
+    "incoming_score": 0.666667,
+    "protected_topk_document_ids": [
+      "dv2-normal_dorm_005",
+      "dv2-normal_canteen_008",
+      "dv2-normal_clinic_007"
+    ],
+    "protected_scores": [
+      0.666667,
+      0.083333,
+      0.083333
+    ],
+    "protected_absent": true,
+    "passed": true
+  }
+]

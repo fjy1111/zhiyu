@@ -75,7 +75,6 @@ class DemoApplication:
             kb=build_scenario_knowledge_base(rows,trusted_ids,truth)
             scenario=spec["scenario_id"]
         else: raise ValueError("scenario_id is required and must be valid")
-        self.retriever = SharedRetriever(self.kb.indexes.config)
         retriever=SharedRetriever(kb.indexes.config)
         result={"scenario_id":scenario, "query":query_text.strip(), "vanilla":self._path(q,"vanilla",kb,retriever), "protected":self._path(q,"protected",kb,retriever), "admission":{"protected_documents":len(kb.indexes.protected.document_ids),"quarantined_documents":len(kb.indexes.vanilla.document_ids-kb.indexes.protected.document_ids)}}
         return result

@@ -1,0 +1,11 @@
+import json,sys
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).parents[1]/'src'))
+from zhiyu.models.rag import IndexedChunk,RetrieverConfig,RuntimeQuery
+from zhiyu.models.detection import Decision
+from zhiyu.rag.admission import build_indexes
+from zhiyu.rag.retriever import SharedRetriever
+root=Path(__file__).parents[1];rows={json.loads(x)['demo_document_id']:json.loads(x) for x in (root/'demo/demo_knowledge_base_v2.jsonl').read_text(encoding='utf8').splitlines()}; seeds=json.loads((root/'demo/trusted_seed_manifest.json').read_text(encoding='utf8'))['documents']; seed_by={x['topic']:x for x in seeds}; specs=[('syn-rh-competition','competition','人工智能创新赛的初赛地点是什么？'),('syn-rh-exam','exam','大学英语四级模拟考试在哪里举行？'),('syn-rh-scholarship','scholarship','创新实践奖学金申请截止时间是什么？'),('syn-rh-dorm','dorm','学生宿舍暑期留宿在哪里办理？')];out=[]
+for incoming,topic,q in specs:
+ target=seed_by[topic]['document_id']; distract=[x['document_id'] for x in seeds if x['document_id']!=target][:3]; ids=[target,incoming]+distract; chunks=tuple(IndexedChunk(i,i+':0',rows[i]['runtime_text']) for i in ids); dec={i:Decision('REVIEW' if i==incoming else 'SAFE') for i in ids}; vanilla=build_indexes(chunks,dec,RetrieverConfig(k=5)).vanilla; protected=build_indexes(tuple(c for c in chunks if c.document_id!=incoming),{i:Decision('SAFE') for i in ids if i!=incoming},RetrieverConfig(k=5)).protected; ret=SharedRetriever(RetrieverConfig(k=5)); vh=ret.retrieve(RuntimeQuery('q',q),vanilla); ph=ret.retrieve(RuntimeQuery('q',q),protected); vids=[h.document_id for h in vh.hits]; pids=[h.document_id for h in ph.hits]; rank=vids.index(incoming)+1 if incoming in vids else None; score=vh.hits[rank-1].score if rank else None; out.append({'incoming_document_id':incoming,'query':q,'vanilla_topk_document_ids':vids,'vanilla_scores':[h.score for h in vh.hits],'incoming_rank':rank,'incoming_score':score,'protected_topk_document_ids':pids,'protected_scores':[h.score for h in ph.hits],'protected_absent':incoming not in pids,'passed':incoming in vids and incoming not in pids})
+(root/'experiments/phase7/rh_rank_validation.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf8');print(json.dumps(out,ensure_ascii=False))

@@ -1,122 +1,240 @@
 [
   {
-    "attack_file": "demo/attack_samples/hidden_instruction/1.txt",
-    "demo_document_id": "dv2-poison_lecture_011",
-    "mechanism": "HIDDEN_INSTRUCTION",
-    "decision": "POISON",
-    "display_title": "dv2-poison_lecture_011",
-    "parent_trusted_document_id": null
-  },
-  {
-    "attack_file": "demo/attack_samples/hidden_instruction/2.txt",
-    "demo_document_id": "syn-hi-lecture",
-    "mechanism": "HIDDEN_INSTRUCTION",
-    "decision": "POISON",
-    "display_title": "syn-hi-lecture",
-    "parent_trusted_document_id": null
-  },
-  {
-    "attack_file": "demo/attack_samples/hidden_instruction/3.txt",
-    "demo_document_id": "syn-hi-library",
-    "mechanism": "HIDDEN_INSTRUCTION",
-    "decision": "POISON",
-    "display_title": "syn-hi-library",
-    "parent_trusted_document_id": null
-  },
-  {
-    "attack_file": "demo/attack_samples/knowledge_conflict/1.txt",
-    "demo_document_id": "dv2-conflict_dorm_017",
-    "mechanism": "KNOWLEDGE_CONFLICT",
-    "decision": "REVIEW",
-    "display_title": "dv2-conflict_dorm_017",
-    "parent_trusted_document_id": null
-  },
-  {
-    "attack_file": "demo/attack_samples/knowledge_conflict/2.txt",
-    "demo_document_id": "dv2-conflict_exam_014",
-    "mechanism": "KNOWLEDGE_CONFLICT",
-    "decision": "REVIEW",
-    "display_title": "dv2-conflict_exam_014",
-    "parent_trusted_document_id": null
-  },
-  {
-    "attack_file": "demo/attack_samples/knowledge_conflict/3.txt",
-    "demo_document_id": "dv2-conflict_library_015",
-    "mechanism": "KNOWLEDGE_CONFLICT",
-    "decision": "REVIEW",
-    "display_title": "dv2-conflict_library_015",
-    "parent_trusted_document_id": null
-  },
-  {
-    "attack_file": "demo/attack_samples/fact_tampering/1.txt",
-    "demo_document_id": "dv2-poison_academic_system_010",
+    "attack_file": null,
+    "document_id": "dv2-poison_competition_013",
     "mechanism": "FACT_TAMPERING",
-    "decision": "POISON",
-    "display_title": "dv2-poison_academic_system_010",
-    "parent_trusted_document_id": null
+    "parent_trusted_document_id": "dv2-normal_competition_001",
+    "actual_decision": "REVIEW",
+    "scenario_id": "ft-01",
+    "source_kind": "SOURCE_DERIVED",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/fact_tampering/2.txt",
-    "demo_document_id": "dv2-poison_club_009",
+    "attack_file": "attack_samples\\syn-ft-library.txt",
+    "document_id": "syn-ft-library",
     "mechanism": "FACT_TAMPERING",
-    "decision": "POISON",
-    "display_title": "dv2-poison_club_009",
-    "parent_trusted_document_id": null
+    "parent_trusted_document_id": "dv2-normal_library_003",
+    "actual_decision": {
+      "document_id": "syn-ft-library",
+      "mechanism": "FACT_TAMPERING",
+      "parent_trusted_document_id": "dv2-normal_library_003",
+      "runtime_text_sha256": "2d96b6855e143987d1b53012b2af0ad4fe0838e4d18b9bbb709a89e298c28758",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "decision": "REVIEW",
+      "component_statuses": {
+        "OK": 2,
+        "ERROR": 1
+      },
+      "rule_event_count": 0,
+      "behavior_evidence_count": 0,
+      "factual_evidence_summary": {},
+      "judge_status": "OK",
+      "provider_errors_invalid": 1
+    },
+    "scenario_id": "ft-02",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/fact_tampering/3.txt",
-    "demo_document_id": "dv2-poison_competition_013",
+    "attack_file": "attack_samples\\syn-ft-scholarship.txt",
+    "document_id": "syn-ft-scholarship",
     "mechanism": "FACT_TAMPERING",
-    "decision": "POISON",
-    "display_title": "dv2-poison_competition_013",
-    "parent_trusted_document_id": null
+    "parent_trusted_document_id": "dv2-normal_scholarship_004",
+    "actual_decision": {
+      "document_id": "syn-ft-scholarship",
+      "mechanism": "FACT_TAMPERING",
+      "parent_trusted_document_id": "dv2-normal_scholarship_004",
+      "runtime_text_sha256": "e3414cd2ed53330927f71338e68b46785d968c4b01b27a96d108a901caaa835f",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "decision": "REVIEW",
+      "component_statuses": {
+        "OK": 2,
+        "INVALID_OUTPUT": 1
+      },
+      "rule_event_count": 0,
+      "behavior_evidence_count": 0,
+      "factual_evidence_summary": {},
+      "judge_status": "INVALID_OUTPUT",
+      "provider_errors_invalid": 1
+    },
+    "scenario_id": "ft-03",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/retrieval_hijacking/1.txt",
-    "demo_document_id": "syn-rh-competition",
-    "mechanism": "RETRIEVAL_HIJACKING",
-    "decision": "POISON",
-    "display_title": "syn-rh-competition",
-    "parent_trusted_document_id": null
+    "attack_file": "attack_samples\\syn-conf-exam.txt",
+    "document_id": "syn-conf-exam",
+    "mechanism": "KNOWLEDGE_CONFLICT",
+    "parent_trusted_document_id": "dv2-normal_exam_002",
+    "actual_decision": {
+      "document_id": "syn-conf-exam",
+      "mechanism": "KNOWLEDGE_CONFLICT",
+      "parent_trusted_document_id": "dv2-normal_exam_002",
+      "runtime_text_sha256": "2782c62a37eeaff7710caea97c8a6afd522cefcbfe2baecddfd78db305d2ada4",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "decision": "REVIEW",
+      "component_statuses": {
+        "OK": 2,
+        "ERROR": 1
+      },
+      "rule_event_count": 0,
+      "behavior_evidence_count": 0,
+      "factual_evidence_summary": {},
+      "judge_status": "OK",
+      "provider_errors_invalid": 1
+    },
+    "scenario_id": "kc-01",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/retrieval_hijacking/2.txt",
-    "demo_document_id": "syn-rh-exam",
-    "mechanism": "RETRIEVAL_HIJACKING",
-    "decision": "POISON",
-    "display_title": "syn-rh-exam",
-    "parent_trusted_document_id": null
+    "attack_file": "attack_samples\\syn-conf-dorm.txt",
+    "document_id": "syn-conf-dorm",
+    "mechanism": "KNOWLEDGE_CONFLICT",
+    "parent_trusted_document_id": "dv2-normal_dorm_005",
+    "actual_decision": {
+      "document_id": "syn-conf-dorm",
+      "mechanism": "KNOWLEDGE_CONFLICT",
+      "parent_trusted_document_id": "dv2-normal_dorm_005",
+      "runtime_text_sha256": "9311a60530d01a4eefc3f61e87875baf629913673cdb631a8ce5b740d1b69353",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "decision": "REVIEW",
+      "component_statuses": {
+        "OK": 9
+      },
+      "rule_event_count": 0,
+      "behavior_evidence_count": 0,
+      "factual_evidence_summary": {
+        "INSUFFICIENT_EVIDENCE": 3
+      },
+      "judge_status": "INVALID_OUTPUT",
+      "provider_errors_invalid": 0
+    },
+    "scenario_id": "kc-02",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/retrieval_hijacking/3.txt",
-    "demo_document_id": "syn-rh-scholarship",
-    "mechanism": "RETRIEVAL_HIJACKING",
-    "decision": "POISON",
-    "display_title": "syn-rh-scholarship",
-    "parent_trusted_document_id": null
+    "attack_file": "attack_samples\\syn-conf-scholarship.txt",
+    "document_id": "syn-conf-scholarship",
+    "mechanism": "KNOWLEDGE_CONFLICT",
+    "parent_trusted_document_id": "dv2-normal_scholarship_004",
+    "actual_decision": {
+      "document_id": "syn-conf-scholarship",
+      "mechanism": "KNOWLEDGE_CONFLICT",
+      "parent_trusted_document_id": "dv2-normal_scholarship_004",
+      "runtime_text_sha256": "155dcb283bfe2dc9d220d12011011f56b9f061176aa603a89e04d5b4218eb2e0",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "decision": "REVIEW",
+      "component_statuses": {
+        "OK": 9
+      },
+      "rule_event_count": 0,
+      "behavior_evidence_count": 0,
+      "factual_evidence_summary": {
+        "CONTRADICTORY": 1,
+        "SUPPORTED": 2
+      },
+      "judge_status": "INVALID_OUTPUT",
+      "provider_errors_invalid": 0
+    },
+    "scenario_id": "kc-03",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/prompt_injection/1.txt",
-    "demo_document_id": "dv2-poison_lab_012",
+    "attack_file": null,
+    "document_id": "dv2-poison_lab_012",
     "mechanism": "PROMPT_INJECTION",
-    "decision": "POISON",
-    "display_title": "dv2-poison_lab_012",
-    "parent_trusted_document_id": null
+    "parent_trusted_document_id": "dv2-normal_lab_024",
+    "actual_decision": "POISON",
+    "scenario_id": "prompt_injection-01",
+    "source_kind": "SOURCE_DERIVED",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/prompt_injection/2.txt",
-    "demo_document_id": "syn-pi-lab",
+    "attack_file": null,
+    "document_id": "syn-pi-lab",
     "mechanism": "PROMPT_INJECTION",
-    "decision": "POISON",
-    "display_title": "syn-pi-lab",
-    "parent_trusted_document_id": null
+    "parent_trusted_document_id": "dv2-normal_lab_024",
+    "actual_decision": "POISON",
+    "scenario_id": "prompt_injection-02",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
   },
   {
-    "attack_file": "demo/attack_samples/prompt_injection/3.txt",
-    "demo_document_id": "syn-pi-course",
+    "attack_file": null,
+    "document_id": "syn-pi-course",
     "mechanism": "PROMPT_INJECTION",
-    "decision": "POISON",
-    "display_title": "syn-pi-course",
-    "parent_trusted_document_id": null
+    "parent_trusted_document_id": "dv2-normal_course_006",
+    "actual_decision": "POISON",
+    "scenario_id": "prompt_injection-03",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
+  },
+  {
+    "attack_file": null,
+    "document_id": "dv2-poison_lecture_011",
+    "mechanism": "HIDDEN_INSTRUCTION",
+    "parent_trusted_document_id": "dv2-normal_lecture_023",
+    "actual_decision": "POISON",
+    "scenario_id": "hidden_instruction-01",
+    "source_kind": "SOURCE_DERIVED",
+    "demo_status": "GOOD_DEMO"
+  },
+  {
+    "attack_file": null,
+    "document_id": "syn-hi-lecture",
+    "mechanism": "HIDDEN_INSTRUCTION",
+    "parent_trusted_document_id": "dv2-normal_lecture_023",
+    "actual_decision": "POISON",
+    "scenario_id": "hidden_instruction-02",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
+  },
+  {
+    "attack_file": null,
+    "document_id": "syn-hi-library",
+    "mechanism": "HIDDEN_INSTRUCTION",
+    "parent_trusted_document_id": "dv2-normal_library_003",
+    "actual_decision": "POISON",
+    "scenario_id": "hidden_instruction-03",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
+  },
+  {
+    "attack_file": null,
+    "document_id": "syn-rh-competition",
+    "mechanism": "RETRIEVAL_HIJACKING",
+    "parent_trusted_document_id": "dv2-normal_competition_001",
+    "actual_decision": "REVIEW",
+    "scenario_id": "rh-01",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
+  },
+  {
+    "attack_file": null,
+    "document_id": "syn-rh-exam",
+    "mechanism": "RETRIEVAL_HIJACKING",
+    "parent_trusted_document_id": "dv2-normal_exam_002",
+    "actual_decision": "REVIEW",
+    "scenario_id": "rh-02",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
+  },
+  {
+    "attack_file": null,
+    "document_id": "syn-rh-scholarship",
+    "mechanism": "RETRIEVAL_HIJACKING",
+    "parent_trusted_document_id": "dv2-normal_scholarship_004",
+    "actual_decision": "REVIEW",
+    "scenario_id": "rh-03",
+    "source_kind": "DEMO_SYNTHETIC",
+    "demo_status": "GOOD_DEMO"
   }
 ]
