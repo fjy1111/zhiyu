@@ -12,6 +12,9 @@
 - Phase 3 completed：Semantic Behavior Layer（Rule Only vs Rule + Semantic）
 
 - Phase 4 completed：Factual Evidence Layer（SUPPORTED / CONTRADICTORY / INSUFFICIENT_EVIDENCE）
+- Phase 5 completed：Unified Evidence Judge & document-level risk decision（SAFE / REVIEW / POISON）
+- Phase 6 completed：Vanilla RAG vs Protected RAG closed-loop evaluation
+- Phase 7 completed：可运行的竞赛演示前端（场景选择、扫描、证据与 RAG 结果展示）
 
 未经明确要求不进入 Phase 5。
 
@@ -59,6 +62,15 @@ zhiyu/
 ├── tests/
 └── backend/, frontend/, experiments/（占位）
 ```
+
+## 本地 Demo
+
+Demo 是纯本地 Python HTTP 服务，不需要外部 API。启动后访问 `http://127.0.0.1:8000`：
+
+```powershell
+.venv/Scripts/python demo/server.py
+```\r\n
+页面支持预置查询场景、上传文本扫描、查看 SAFE / REVIEW / POISON 分类及证据，并对比 Vanilla RAG 与 Protected RAG 路径。演示数据位于 `demo/`，不会写入 `datasets/raw/`。
 
 ## Dataset Policy
 
@@ -129,3 +141,4 @@ python -m venv .venv
 基线已在 Phase 1 开始时生成，脚本拒绝覆盖已有 before 快照。
 after 比较相对路径与逐文件哈希，不同则非零退出；重命名体现为删除和新增。
 所有标准化语料只写入 processed。raw 只读约束由代码和流程执行，尚未设置操作系统 ACL 或文档资源沙箱。
+
